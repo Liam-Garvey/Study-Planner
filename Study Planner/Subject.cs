@@ -24,16 +24,24 @@ namespace Study_Planner
     }
     public class Class
     {
-        private string classType;
-        private string duration;
+        private string classType { get; }
+        private string duration { get; }
         private int maxSize;
-        private List<Activity> activities;
-        private string startTime;
+        private List<Activity> classDetails;
+        private string startTime { get; }
+        public Class(string type, string length, int size, List<Activity> activities)
+        {
+            classType = type;
+            duration = length;
+            maxSize = size;
+            classDetails = activities;
+        }
         public Class(string type, string length, int size)
         {
             classType = type;
             duration = length;
             maxSize = size;
+            classDetails.Add(CreateActivity());
         }
         public Class (string time, string length)
         {
@@ -41,6 +49,15 @@ namespace Study_Planner
             startTime = time;
             duration = length;
             maxSize = 0;
+        }
+        private Activity CreateActivity()
+        {
+            //would prompt user
+            string day = "";
+            string location = "";
+            string startTime = "";
+            int size = 0;
+            return (new Activity(day, location, startTime, size));
         }
         public bool HasSpace(int size)
         {

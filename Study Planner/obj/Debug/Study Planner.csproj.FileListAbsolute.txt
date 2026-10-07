@@ -1,0 +1,9 @@
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\bin\Debug\Study Planner.exe.config
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\bin\Debug\Study Planner.exe
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\bin\Debug\Study Planner.pdb
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study Planner.csproj.AssemblyReference.cache
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study_Planner.Properties.Resources.resources
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study Planner.csproj.GenerateResource.cache
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study Planner.csproj.CoreCompileInputs.cache
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study Planner.exe
+C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study Planner.pdb

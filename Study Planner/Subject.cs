@@ -5,58 +5,50 @@ namespace Study_Planner
 {
     public class Subject
     {
-        private string subjectName;
-        private string subjectID;
-        private string subjectFaculty;
-        private string teachingSession;
-        private List<Class> lectures;
-        private List<Class> classes;
-        private List<Assignment> assignments;
+        public string subjectName { get; private set; }
+        public string subjectID { get; private set; }
+        public string subjectFaculty { get; private set; }
+        public string teachingSession { get; private set; }
+        public List<Class> lectures { get; private set; }
+        public List<Class> classes { get; private set; }
+        public List<Assignment> assignments { get; private set; }
         public Subject(string name, string id, string faculty, string session)
         {
             subjectName = name;
             subjectID = id;
             subjectFaculty = faculty;
             teachingSession = session;
+            lectures = new List<Class>();
+            classes = new List<Class>();
+            assignments = new List<Assignment>();
         }
-        public void addAssigment(string type, DateTime date, string description, List<Milestone> milestone = null)
+        public void AddAssigment(string type, DateTime date, string description, List<Milestone> milestone = null)
         {
             assignments.Add(new Assignment(type, date, description, milestone));
         }
-        public void addAssignment(string type, string date, string description, List<Milestone> milestone = null)
+        public void AddAssignment(string type, string date, string description, List<Milestone> milestone = null)
         {
             assignments.Add(new Assignment(type, date, description, milestone));
         }
-        public void addLecture()
+        public void AddLecture(string length, string time, string day, string description = "Attendance not required")
         {
-            string duration = "";
-            string startTime = "";
-            string classDay = "";
-            string classDescription = "";
-            lectures.Add(new Class(duration, startTime, classDay, classDescription));
+            lectures.Add(new Class(length, time, day, description));
         }
-        public void addClass(string type, string length, string time, string day, string location, string description = "", string weeks = "All")
+        public void AddClass(string type, string length, string time, string day, string location, string description = "", string weeks = "All")
         {
-            string classType = "";
-            string duration = "";
-            string startTime = "";
-            string classDay = "";
-            string classLocation = "";
-            string classDescription = "";
-            string weeksRunning = "";
-            classes.Add(new Class(classType, duration, startTime, classDay, classLocation, classDescription, weeksRunning));
+            classes.Add(new Class(type, length, time, day, location, description, weeks));
         }
     }
     public class Class
     {
-        private string classType { get; }
-        private string duration { get; }
-        private string startTime { get; }
-        private string classDay { get; }
-        private string classLocation { get; }
-        private string classDescription {  get; }
-        private string weeksRunning { get; }
-        public Class(string type, string length, string time, string day, string location, string description="", string weeks="All")
+        public string classType { get; private set; }
+        public string duration { get; private set; }
+        public string startTime { get; private set; }
+        public string classDay { get; private set; }
+        public string classLocation { get; private set; }
+        public string classDescription { get; private set; }
+        public string weeksRunning { get; private set; }
+        public Class(string type, string length, string time, string day, string location, string weeks="All", string description = "")
         {
             classType = type;
             duration = length;
@@ -79,10 +71,10 @@ namespace Study_Planner
     }
     public class Assignment
     {
-        private string assignmentType { get; }
-        private DateTime dueDate { get; }
-        private string assignmentDescription { get; }
-        private List<Milestone> milestones { get; }
+        public string assignmentType { get; private set; }
+        public DateTime dueDate { get; private set; }
+        public string assignmentDescription { get; private set; }
+        public List<Milestone> milestones { get; private set; }
         public Assignment(string type, DateTime date, string description, List<Milestone> milestone=null)
         {
             assignmentType = type;

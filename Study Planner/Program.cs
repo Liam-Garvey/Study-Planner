@@ -20,17 +20,18 @@ namespace Study_Planner
             var date1 = new DateTime(2008, 5, 1, 8, 30, 52);
             Console.WriteLine((new StudySession(52, 30, 8, 1, 5, 2008)).GetDate().ToString());
             LoadSubjectData();
-            foreach (Subject subject in subjects)
+            /*foreach (Subject subject in subjects)
             {
                 //Console.WriteLine(subject.subjectName);
                 foreach (Assignment c in subject.assignments)
                 {
                     Console.WriteLine(c.dueDate);
                 }
-            }
+            }*/
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(subjects));
         }
         private static void LoadSubjectData()
         {
@@ -55,6 +56,7 @@ namespace Study_Planner
                     subject.AddAssignment(line[1], line[2], line[3]);
                 }
             }
+            subjects.Add(subject);
         }
     }
 }

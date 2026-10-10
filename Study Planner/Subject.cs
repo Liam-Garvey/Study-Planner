@@ -60,13 +60,17 @@ namespace Study_Planner
         }
         public Class(string length, string time, string day, string description="Attendance not required")
         {
-            classType = "lecture";
+            classType = "Lecture";
             duration = length;
             startTime = time;
             classDay= day;
             classLocation = "Online";
             classDescription = description;
             weeksRunning = "All";
+        }
+        public string ClassInfo()
+        {
+            return classType + " " + startTime + " " + duration + " " + classDay + " " + classLocation;
         }
     }
     public class Assignment

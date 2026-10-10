@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 namespace Study_Planner
 {
     public class Subject
@@ -17,6 +18,29 @@ namespace Study_Planner
             subjectID = id;
             subjectFaculty = faculty;
             teachingSession = session;
+        }
+        /*public Assigment addAssigment()
+        {
+            assignments.Add();
+        }*/
+        public void addLecture()
+        {
+            string duration = "";
+            string startTime = "";
+            string classDay = "";
+            string classDescription = "";
+            lectures.Add(new Class(duration, startTime, classDay, classDescription));
+        }
+        public void addClass()
+        {
+            string classType = "";
+            string duration = "";
+            string startTime = "";
+            string classDay = "";
+            string classLocation = "";
+            string classDescription = "";
+            string weeksRunning = "";
+            classes.Add(new Class(classType, duration, startTime, classDay, classLocation, classDescription, weeksRunning));
         }
     }
     public class Class

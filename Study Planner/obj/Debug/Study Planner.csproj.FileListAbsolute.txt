@@ -16,3 +16,4 @@ C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug
 C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug\Study Planner.csproj.CoreCompileInputs.cache
 C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug\Study Planner.exe
 C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug\Study Planner.pdb
+C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug\Study_Planner.Form1.resources

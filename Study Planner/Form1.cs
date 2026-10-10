@@ -36,15 +36,23 @@ namespace Study_Planner
                 GroupBox[] groupBoxes = panel.Controls.OfType<GroupBox>().ToArray();
                 FillGroupBox<Class>(subjects[i].lectures, groupBoxes[0]);
                 FillGroupBox<Class>(subjects[i].classes, groupBoxes[1]);
+                FillAssignmentButtons(subjects[i].assignments, groupBoxes[2]);
             }
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
         {
-            Console.WriteLine(box.Controls[0].Name);
             for (int i = 0; i < box.Controls.Count; ++i)
             {
                 if (i >= classes.Count) { box.Controls[i].Text = ""; }
                 else { box.Controls[i].Text = classes[i].ClassInfo(); }
+            }
+        }
+        private void FillAssignmentButtons(List<Assignment> assignments, GroupBox box)
+        {
+            for (int i = 0; i < box.Controls.Count; ++i)
+            {
+                if (i >= assignments.Count) { box.Controls[i].Text = ""; }
+                else { box.Controls[i].Text = assignments[i].AssignmentInfo(); }
             }
         }
         private void ChangePanel(Panel oldPanel, Panel newPanel)

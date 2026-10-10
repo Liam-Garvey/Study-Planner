@@ -79,6 +79,7 @@ namespace Study_Planner
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }
         public List<Milestone> milestones { get; private set; }
+        public int progress { get; private set; }
         public Assignment(string type, DateTime date, string description, List<Milestone> milestone=null)
         {
             assignmentType = type;
@@ -86,6 +87,7 @@ namespace Study_Planner
             assignmentDescription = description;
             if (milestone != null) { milestones = milestone; }
             else { milestones = new List<Milestone>(); }
+            progress = 0;
         }
         public Assignment(string type, string date, string description, List<Milestone> milestone=null)
         {
@@ -94,10 +96,15 @@ namespace Study_Planner
             assignmentDescription = description;
             if (milestone != null) { milestones = milestone; }
             else { milestones = new List<Milestone>(); }
+            progress = 0;
         }
         public void AddMileStone(string milestoneName, string milestoneDescription, string date)
         {
             milestones.Add(new Milestone(milestoneName, milestoneDescription, date));
+        }
+        public string AssignmentInfo()
+        {
+            return assignmentType + " " + dueDate.ToString() + " " + progress + "%";
         }
 
     }

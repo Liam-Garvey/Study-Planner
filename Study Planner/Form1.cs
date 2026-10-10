@@ -27,9 +27,10 @@ namespace Study_Planner
                 control.Text = subject.subjectID + " " + subject.subjectName;
                 ++pos;
             }
-            for (int i = 1; i < Controls.Count; ++i)
+            Panel[] subjectPanels = new Panel[] { this.Subject1Panel };
+            for (int i = 0; i < subjectPanels.Length; ++i)
             {
-                Panel panel = (Panel)Controls[i];
+                Panel panel = subjectPanels[i];
                 panel.Controls[0].Text = subjects[i].subjectID + " " + subjects[i].subjectName;
                 panel.Controls[1].Text = subjects[i].teachingSession + " " + subjects[i].subjectFaculty;
                 Panel[] panels = new Panel[3];

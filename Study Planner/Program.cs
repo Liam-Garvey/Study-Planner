@@ -14,6 +14,8 @@ namespace Study_Planner
         [STAThread]
         static void Main()
         {
+            var date1 = new DateTime(2008, 5, 1, 8, 30, 52);
+            Console.WriteLine((new StudySession(52, 30, 8, 1, 5, 2008)).GetDate().ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

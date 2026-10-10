@@ -22,12 +22,21 @@ namespace Study_Planner
             studyDetails = details;
             studyDescription = description;
             studyCompleted = false;
+            studyLog = "";
+        }
+        public StudySession(string details, string description="")
+        {
+            studyDetails = DateTime.Parse(details);
+            studyDescription = description;
+            studyCompleted = false;
+            studyLog = "";
         }
         public StudySession(int seconds, int minutes, int hours, int day, int month, int year, string description="")
         {
             studyDetails = new DateTime(year, month, day, hours, minutes, seconds);
             studyDescription = description;
             studyCompleted = false;
+            studyLog = "";
         }
         public DateTime EndDetails
         {

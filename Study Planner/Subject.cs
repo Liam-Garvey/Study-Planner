@@ -11,7 +11,7 @@ namespace Study_Planner
         private string teachingSession;
         private List<Class> lectures;
         private List<Class> classes;
-        //private List<Assignment> assignments;
+        private List<Assignment> assignments;
         public Subject(string name, string id, string faculty, string session)
         {
             subjectName = name;
@@ -19,10 +19,14 @@ namespace Study_Planner
             subjectFaculty = faculty;
             teachingSession = session;
         }
-        /*public Assigment addAssigment()
+        public void addAssigment(string type, DateTime date, string description, List<Milestone> milestone = null)
         {
-            assignments.Add();
-        }*/
+            assignments.Add(new Assignment(type, date, description, milestone));
+        }
+        public void addAssignment(string type, string date, string description, List<Milestone> milestone = null)
+        {
+            assignments.Add(new Assignment(type, date, description, milestone));
+        }
         public void addLecture()
         {
             string duration = "";
@@ -31,7 +35,7 @@ namespace Study_Planner
             string classDescription = "";
             lectures.Add(new Class(duration, startTime, classDay, classDescription));
         }
-        public void addClass()
+        public void addClass(string type, string length, string time, string day, string location, string description = "", string weeks = "All")
         {
             string classType = "";
             string duration = "";
@@ -72,5 +76,48 @@ namespace Study_Planner
             classDescription = description;
             weeksRunning = "All";
         }
+    }
+    public class Assignment
+    {
+        private string assignmentType { get; }
+        private DateTime dueDate { get; }
+        private string assignmentDescription { get; }
+        private List<Milestone> milestones { get; }
+        public Assignment(string type, DateTime date, string description, List<Milestone> milestone=null)
+        {
+            assignmentType = type;
+            dueDate = date;
+            assignmentDescription = description;
+            if (milestone != null) { milestones = milestone; }
+            else { milestones = new List<Milestone>(); }
+        }
+        public Assignment(string type, string date, string description, List<Milestone> milestone=null)
+        {
+            assignmentType = type;
+            dueDate = DateTime.Parse(date);
+            assignmentDescription = description;
+            if (milestone != null) { milestones = milestone; }
+            else { milestones = new List<Milestone>(); }
+        }
+        public void AddMileStone(string milestoneName, string milestoneDescription, string date)
+        {
+            milestones.Add(new Milestone(milestoneName, milestoneDescription, date));
+        }
+
+    }
+    public struct Milestone
+    {
+        public Milestone(string milestoneName, string milestoneDescription, string date)
+        {
+            name = milestoneName;
+            description = milestoneDescription;
+            expectedDate = DateTime.Parse(date);
+            isComplete = false;
+        }
+        public string name { get; }
+        public string description { get; }
+        public DateTime expectedDate { get; }
+        public bool isComplete { get; }
+
     }
 }

@@ -21,34 +21,23 @@ namespace Study_Planner
         private void DisplaySubjectData(List<Subject> subjects)
         {
             Button[] subjectButtons =
-            {
-        Subject1, Subject2, Subject3, Subject4
-    };
+            { Subject1, Subject2, Subject3, Subject4 };
 
             for (int i = 0; i < subjectButtons.Length; i++)
             {
                 subjectButtons[i].Enabled = i < subjects.Count;
-
                 subjectButtons[i].Text = i < subjects.Count
                     ? subjects[i].subjectID + " " + subjects[i].subjectName
                     : "No subject";
             }
-
             BackButton.Text = "Back";
-
             if (subjects.Count == 0)
             {
                 return;
             }
-
             Subject subject = subjects[0];
-
-            SubjectTitle.Text =
-                subject.subjectID + " " + subject.subjectName;
-
-            FacultySession.Text =
-                subject.teachingSession + " " + subject.subjectFaculty;
-
+            SubjectTitle.Text = subject.subjectID + " " + subject.subjectName;
+            FacultySession.Text = subject.teachingSession + " " + subject.subjectFaculty;
             FillGroupBox<Class>(subject.lectures, LectureList);
             FillGroupBox<Class>(subject.classes, ClassBox);
             FillAssignmentButtons(subject.assignments, Assignments);
@@ -61,15 +50,13 @@ namespace Study_Planner
                 else { box.Controls[i].Text = classes[i].ClassInfo(); }
             }
         }
-        private void FillAssignmentButtons(
-    List<Assignment> assignments, GroupBox box)
+        private void FillAssignmentButtons(List<Assignment> assignments, GroupBox box)
         {
             Button[] buttons = box.Controls
                 .OfType<Button>()
                 .OrderBy(button => button.Top)
                 .ThenBy(button => button.Left)
                 .ToArray();
-
             for (int i = 0; i < buttons.Length; i++)
             {
                 Button button = buttons[i];
@@ -148,8 +135,7 @@ namespace Study_Planner
                 return;
             }
 
-            using (AssignmentDetailsForm details =
-                new AssignmentDetailsForm(assignment))
+            using (AssignmentDetailsForm details = new AssignmentDetailsForm(assignment))
             {
                 details.ShowDialog(this);
             }

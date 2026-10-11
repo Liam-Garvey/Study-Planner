@@ -31,10 +31,10 @@
             this.HomePanel = new System.Windows.Forms.Panel();
             this.subjectList = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Subject4 = new System.Windows.Forms.Button();
-            this.Subject3 = new System.Windows.Forms.Button();
-            this.Subject2 = new System.Windows.Forms.Button();
             this.Subject1 = new System.Windows.Forms.Button();
+            this.Subject2 = new System.Windows.Forms.Button();
+            this.Subject3 = new System.Windows.Forms.Button();
+            this.Subject4 = new System.Windows.Forms.Button();
             this.Subject1Panel = new System.Windows.Forms.Panel();
             this.SubjectTitle = new System.Windows.Forms.Label();
             this.FacultySession = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -103,29 +104,17 @@
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.UseWaitCursor = true;
             // 
-            // Subject4
+            // Subject1
             // 
-            this.Subject4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Subject4.Location = new System.Drawing.Point(12, 339);
-            this.Subject4.Name = "Subject4";
-            this.Subject4.Size = new System.Drawing.Size(228, 87);
-            this.Subject4.TabIndex = 5;
-            this.Subject4.Text = "Subject 4";
-            this.Subject4.UseVisualStyleBackColor = true;
-            this.Subject4.UseWaitCursor = true;
-            this.Subject4.Click += new System.EventHandler(this.Subject4_Click);
-            // 
-            // Subject3
-            // 
-            this.Subject3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Subject3.Location = new System.Drawing.Point(12, 246);
-            this.Subject3.Name = "Subject3";
-            this.Subject3.Size = new System.Drawing.Size(228, 87);
-            this.Subject3.TabIndex = 4;
-            this.Subject3.Text = "Subject 3";
-            this.Subject3.UseVisualStyleBackColor = true;
-            this.Subject3.UseWaitCursor = true;
-            this.Subject3.Click += new System.EventHandler(this.Subject3_Click);
+            this.Subject1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.Subject1.Location = new System.Drawing.Point(12, 61);
+            this.Subject1.Name = "Subject1";
+            this.Subject1.Size = new System.Drawing.Size(228, 88);
+            this.Subject1.TabIndex = 0;
+            this.Subject1.Text = "Subject 1";
+            this.Subject1.UseVisualStyleBackColor = true;
+            this.Subject1.UseWaitCursor = true;
+            this.Subject1.Click += new System.EventHandler(this.Subject1_Click);
             // 
             // Subject2
             // 
@@ -139,21 +128,34 @@
             this.Subject2.UseWaitCursor = true;
             this.Subject2.Click += new System.EventHandler(this.Subject2_Click);
             // 
-            // Subject1
+            // Subject3
             // 
-            this.Subject1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Subject1.Location = new System.Drawing.Point(12, 61);
-            this.Subject1.Name = "Subject1";
-            this.Subject1.Size = new System.Drawing.Size(228, 88);
-            this.Subject1.TabIndex = 0;
-            this.Subject1.Text = "Subject 1";
-            this.Subject1.UseVisualStyleBackColor = true;
-            this.Subject1.UseWaitCursor = true;
-            this.Subject1.Click += new System.EventHandler(this.Subject1_Click);
+            this.Subject3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.Subject3.Location = new System.Drawing.Point(12, 246);
+            this.Subject3.Name = "Subject3";
+            this.Subject3.Size = new System.Drawing.Size(228, 87);
+            this.Subject3.TabIndex = 4;
+            this.Subject3.Text = "Subject 3";
+            this.Subject3.UseVisualStyleBackColor = true;
+            this.Subject3.UseWaitCursor = true;
+            this.Subject3.Click += new System.EventHandler(this.Subject3_Click);
+            // 
+            // Subject4
+            // 
+            this.Subject4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.Subject4.Location = new System.Drawing.Point(12, 339);
+            this.Subject4.Name = "Subject4";
+            this.Subject4.Size = new System.Drawing.Size(228, 87);
+            this.Subject4.TabIndex = 5;
+            this.Subject4.Text = "Subject 4";
+            this.Subject4.UseVisualStyleBackColor = true;
+            this.Subject4.UseWaitCursor = true;
+            this.Subject4.Click += new System.EventHandler(this.Subject4_Click);
             // 
             // Subject1Panel
             // 
             this.Subject1Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Subject1Panel.Controls.Add(this.BackButton);
             this.Subject1Panel.Controls.Add(this.SubjectTitle);
             this.Subject1Panel.Controls.Add(this.FacultySession);
             this.Subject1Panel.Controls.Add(this.LectureList);
@@ -385,13 +387,23 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(0, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 14;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Subject1Panel);
+            this.Controls.Add(this.HomePanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.HomePanel.ResumeLayout(false);
@@ -436,6 +448,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BackButton;
     }
 }
 

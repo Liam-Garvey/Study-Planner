@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq.Expressions;
 namespace Study_Planner
 {
@@ -22,7 +23,7 @@ namespace Study_Planner
             classes = new List<Class>();
             assignments = new List<Assignment>();
         }
-        public void AddAssigment(string type, DateTime date, string description, List<Milestone> milestone = null)
+        public void AddAssignment(string type, DateTime date, string description, List<Milestone> milestone = null)
         {
             assignments.Add(new Assignment(type, date, description, milestone));
         }
@@ -79,48 +80,128 @@ namespace Study_Planner
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }
         public List<Milestone> milestones { get; private set; }
-        public int progress { get; private set; }
-        public Assignment(string type, DateTime date, string description, List<Milestone> milestone=null)
+
+        public int progress
         {
-            assignmentType = type;
+            get
+            {
+                if (milestones.Count == 0)
+                {
+                    return 0;
+                }
+
+                int completed = 0;
+
+                foreach (Milestone milestone in milestones)
+                {
+                    if (milestone.isComplete)
+                    {
+                        completed++;
+                    }
+                }
+
+                return (int)(completed * 100L / milestones.Count);
+            }
+        }
+
+        public Assignment(string type, DateTime date, string description,
+            List<Milestone> milestone = null)
+        {
+            UpdateDetails(type, date, description);
+            milestones = milestone ?? new List<Milestone>();
+        }
+
+        public Assignment(string type, string date, string description,
+            List<Milestone> milestone = null)
+            : this(type,
+                DateTime.Parse(date, CultureInfo.GetCultureInfo("en-AU")),
+                description, milestone)
+        {
+        }
+
+        public void UpdateDetails(string type, DateTime date,
+            string description)
+        {
+            if (string.IsNullOrWhiteSpace(type))
+            {
+                throw new ArgumentException(
+                    "Enter an assignment type or title.", nameof(type));
+            }
+
+            assignmentType = type.Trim();
             dueDate = date;
-            assignmentDescription = description;
-            if (milestone != null) { milestones = milestone; }
-            else { milestones = new List<Milestone>(); }
-            progress = 0;
+            assignmentDescription = description ?? "";
         }
-        public Assignment(string type, string date, string description, List<Milestone> milestone=null)
+
+        public void AddMileStone(string milestoneName,
+            string milestoneDescription, DateTime date)
         {
-            assignmentType = type;
-            dueDate = DateTime.Parse(date);
-            assignmentDescription = description;
-            if (milestone != null) { milestones = milestone; }
-            else { milestones = new List<Milestone>(); }
-            progress = 0;
+            milestones.Add(new Milestone(
+                milestoneName, milestoneDescription, date));
         }
-        public void AddMileStone(string milestoneName, string milestoneDescription, string date)
+
+        public void AddMileStone(string milestoneName,
+            string milestoneDescription, string date)
         {
-            milestones.Add(new Milestone(milestoneName, milestoneDescription, date));
+            AddMileStone(milestoneName, milestoneDescription,
+                DateTime.Parse(date, CultureInfo.GetCultureInfo("en-AU")));
         }
+
+        public void SetMilestoneCompletion(int index, bool complete = true)
+        {
+            if (index < 0 || index >= milestones.Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index));
+            }
+
+            milestones[index].SetComplete(complete);
+        }
+
         public string AssignmentInfo()
         {
-            return assignmentType + " " + dueDate.ToString() + " " + progress + "%";
+            return assignmentType + " " + dueDate.ToString("dd/MM/yyyy")
+                + " " + progress + "%";
         }
-
     }
-    public struct Milestone
+
+    public class Milestone
     {
-        public Milestone(string milestoneName, string milestoneDescription, string date)
+        public string name { get; private set; }
+        public string description { get; private set; }
+        public DateTime expectedDate { get; private set; }
+        public bool isComplete { get; private set; }
+
+        public Milestone(string milestoneName,
+            string milestoneDescription, DateTime date)
         {
-            name = milestoneName;
-            description = milestoneDescription;
-            expectedDate = DateTime.Parse(date);
+            UpdateDetails(milestoneName, milestoneDescription, date);
             isComplete = false;
         }
-        public string name { get; }
-        public string description { get; }
-        public DateTime expectedDate { get; }
-        public bool isComplete { get; }
 
+        public Milestone(string milestoneName,
+            string milestoneDescription, string date)
+            : this(milestoneName, milestoneDescription,
+                DateTime.Parse(date, CultureInfo.GetCultureInfo("en-AU")))
+        {
+        }
+
+        public void UpdateDetails(string milestoneName,
+            string milestoneDescription, DateTime date)
+        {
+            if (string.IsNullOrWhiteSpace(milestoneName))
+            {
+                throw new ArgumentException(
+                    "Enter a milestone name.", nameof(milestoneName));
+            }
+
+            name = milestoneName.Trim();
+            description = milestoneDescription ?? "";
+            expectedDate = date;
+        }
+
+        public void SetComplete(bool complete = true)
+        {
+            isComplete = complete;
+        }
     }
 }

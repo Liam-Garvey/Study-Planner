@@ -20,25 +20,27 @@ namespace Study_Planner
         }
         private void DisplaySubjectData(List<Subject> subjects)
         {
-            int pos = 0;
-            foreach (Control control in this.HomePanel.Controls[1].Controls)
+            Button[] subjectButtons =
+            { Subject1, Subject2, Subject3, Subject4 };
+
+            for (int i = 0; i < subjectButtons.Length; i++)
             {
-                Subject subject = subjects[pos];
-                control.Text = subject.subjectID + " " + subject.subjectName;
-                ++pos;
+                subjectButtons[i].Enabled = i < subjects.Count;
+                subjectButtons[i].Text = i < subjects.Count
+                    ? subjects[i].subjectID + " " + subjects[i].subjectName
+                    : "No subject";
             }
-            Panel[] subjectPanels = new Panel[] { this.Subject1Panel };
-            for (int i = 0; i < subjectPanels.Length; ++i)
+            BackButton.Text = "Back";
+            if (subjects.Count == 0)
             {
-                Panel panel = subjectPanels[i];
-                panel.Controls[0].Text = subjects[i].subjectID + " " + subjects[i].subjectName;
-                panel.Controls[1].Text = subjects[i].teachingSession + " " + subjects[i].subjectFaculty;
-                Panel[] panels = new Panel[3];
-                GroupBox[] groupBoxes = panel.Controls.OfType<GroupBox>().ToArray();
-                FillGroupBox<Class>(subjects[i].lectures, groupBoxes[0]);
-                FillGroupBox<Class>(subjects[i].classes, groupBoxes[1]);
-                FillAssignmentButtons(subjects[i].assignments, groupBoxes[2]);
+                return;
             }
+            Subject subject = subjects[0];
+            SubjectTitle.Text = subject.subjectID + " " + subject.subjectName;
+            FacultySession.Text = subject.teachingSession + " " + subject.subjectFaculty;
+            FillGroupBox<Class>(subject.lectures, LectureList);
+            FillGroupBox<Class>(subject.classes, ClassBox);
+            FillAssignmentButtons(subject.assignments, Assignments);
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
         {
@@ -50,10 +52,30 @@ namespace Study_Planner
         }
         private void FillAssignmentButtons(List<Assignment> assignments, GroupBox box)
         {
-            for (int i = 0; i < box.Controls.Count; ++i)
+            Button[] buttons = box.Controls
+                .OfType<Button>()
+                .OrderBy(button => button.Top)
+                .ThenBy(button => button.Left)
+                .ToArray();
+            for (int i = 0; i < buttons.Length; i++)
             {
-                if (i >= assignments.Count) { box.Controls[i].Text = ""; }
-                else { box.Controls[i].Text = assignments[i].AssignmentInfo(); }
+                Button button = buttons[i];
+
+                button.Click -= AssignmentButton_Click;
+
+                bool hasAssignment = i < assignments.Count;
+
+                button.Visible = hasAssignment;
+                button.Enabled = hasAssignment;
+                button.Tag = hasAssignment ? assignments[i] : null;
+                button.Text = hasAssignment
+                    ? assignments[i].AssignmentInfo()
+                    : "";
+
+                if (hasAssignment)
+                {
+                    button.Click += AssignmentButton_Click;
+                }
             }
         }
         private void ChangePanel(Panel oldPanel, Panel newPanel)
@@ -95,6 +117,36 @@ namespace Study_Planner
         private void Subject1Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void AssignmentButton_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+
+            if (button == null)
+            {
+                return;
+            }
+
+            Assignment assignment = button.Tag as Assignment;
+
+            if (assignment == null)
+            {
+                return;
+            }
+
+            using (AssignmentDetailsForm details = new AssignmentDetailsForm(assignment))
+            {
+                details.ShowDialog(this);
+            }
+
+            button.Text = assignment.AssignmentInfo();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            ChangePanel(Subject1Panel, HomePanel);
+            HomePanel.BringToFront();
         }
     }
 }

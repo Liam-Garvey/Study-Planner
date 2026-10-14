@@ -12,24 +12,34 @@ namespace Study_Planner
 {
     public partial class StudySessionForm : Form
     {
+
+        private List<StudySession> sessions = new List<StudySession>();
+
         public StudySessionForm()
         {
             InitializeComponent();
         }
 
-        private void txtStudyDescription_TextChanged(object sender, EventArgs e)
+        private void btnNewStudySession_Click(object sender, EventArgs e)
         {
 
-        }
+            // IMPORTANT TO DO
+            // MAKE SURE THERE IS A CONFIRM THE STUDY SESSION BUTTON
+            // MAKE SURE THERE IS INPUT VALIDATION for the task description
 
-        private void NewStudySession_Click(object sender, EventArgs e)
-        {
+            string TaskDescription = txtStudyDescription.Text;
+            DateTime SessionDate = dtpSessionDate.Value.Date;
+            TimeSpan StartTime = dtpStartTime.Value.TimeOfDay;
 
-        }
+            // time duration
+            int hours = (int)numHours.Value;
+            int minutes = (int)numMinutes.Value;
+            TimeSpan SessionDuration = new TimeSpan(hours, minutes, 0);
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+            StudySession newSession = new StudySession(SessionDate, SessionDuration, SessionDuration, TaskDescription);
+            sessions.Add(newSession);
 
+            testTxt.Text = newSession.ToString();
         }
     }
 }

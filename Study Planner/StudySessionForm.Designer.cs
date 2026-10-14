@@ -31,22 +31,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UpcomingStudySession = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NewStudySession = new System.Windows.Forms.Button();
+            this.btnNewStudySession = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.MinutesDuration = new System.Windows.Forms.NumericUpDown();
-            this.HoursDuration = new System.Windows.Forms.NumericUpDown();
+            this.numMinutes = new System.Windows.Forms.NumericUpDown();
+            this.numHours = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtStudyDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpSessionDate = new System.Windows.Forms.DateTimePicker();
+            this.testTxt = new System.Windows.Forms.Label();
+            this.UpcomingStudySession.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MinutesDuration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HoursDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +63,7 @@
             // 
             // UpcomingStudySession
             // 
+            this.UpcomingStudySession.Controls.Add(this.testTxt);
             this.UpcomingStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.UpcomingStudySession.Location = new System.Drawing.Point(18, 52);
             this.UpcomingStudySession.Name = "UpcomingStudySession";
@@ -78,37 +81,36 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Study Log";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // NewStudySession
+            // btnNewStudySession
             // 
-            this.NewStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NewStudySession.Location = new System.Drawing.Point(154, 154);
-            this.NewStudySession.Name = "NewStudySession";
-            this.NewStudySession.Size = new System.Drawing.Size(298, 31);
-            this.NewStudySession.TabIndex = 4;
-            this.NewStudySession.Text = "Add New Session";
-            this.NewStudySession.UseVisualStyleBackColor = true;
-            this.NewStudySession.Click += new System.EventHandler(this.NewStudySession_Click);
+            this.btnNewStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnNewStudySession.Location = new System.Drawing.Point(154, 154);
+            this.btnNewStudySession.Name = "btnNewStudySession";
+            this.btnNewStudySession.Size = new System.Drawing.Size(298, 31);
+            this.btnNewStudySession.TabIndex = 4;
+            this.btnNewStudySession.Text = "Add New Session";
+            this.btnNewStudySession.UseVisualStyleBackColor = true;
+            this.btnNewStudySession.Click += new System.EventHandler(this.btnNewStudySession_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.MinutesDuration);
-            this.groupBox2.Controls.Add(this.HoursDuration);
+            this.groupBox2.Controls.Add(this.numMinutes);
+            this.groupBox2.Controls.Add(this.numHours);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtStudyDescription);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.NewStudySession);
+            this.groupBox2.Controls.Add(this.dtpStartTime);
+            this.groupBox2.Controls.Add(this.dtpSessionDate);
+            this.groupBox2.Controls.Add(this.btnNewStudySession);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(18, 242);
+            this.groupBox2.Location = new System.Drawing.Point(0, 254);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(493, 196);
+            this.groupBox2.Size = new System.Drawing.Size(800, 196);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create new study session";
@@ -133,31 +135,31 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "hr";
             // 
-            // MinutesDuration
+            // numMinutes
             // 
-            this.MinutesDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MinutesDuration.Location = new System.Drawing.Point(303, 120);
-            this.MinutesDuration.Maximum = new decimal(new int[] {
+            this.numMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.numMinutes.Location = new System.Drawing.Point(303, 120);
+            this.numMinutes.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.MinutesDuration.Name = "MinutesDuration";
-            this.MinutesDuration.Size = new System.Drawing.Size(116, 23);
-            this.MinutesDuration.TabIndex = 13;
+            this.numMinutes.Name = "numMinutes";
+            this.numMinutes.Size = new System.Drawing.Size(116, 23);
+            this.numMinutes.TabIndex = 13;
             // 
-            // HoursDuration
+            // numHours
             // 
-            this.HoursDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.HoursDuration.Location = new System.Drawing.Point(154, 120);
-            this.HoursDuration.Maximum = new decimal(new int[] {
+            this.numHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.numHours.Location = new System.Drawing.Point(154, 120);
+            this.numHours.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.HoursDuration.Name = "HoursDuration";
-            this.HoursDuration.Size = new System.Drawing.Size(116, 23);
-            this.HoursDuration.TabIndex = 12;
+            this.numHours.Name = "numHours";
+            this.numHours.Size = new System.Drawing.Size(116, 23);
+            this.numHours.TabIndex = 12;
             // 
             // label5
             // 
@@ -186,7 +188,6 @@
             this.txtStudyDescription.Name = "txtStudyDescription";
             this.txtStudyDescription.Size = new System.Drawing.Size(298, 23);
             this.txtStudyDescription.TabIndex = 9;
-            this.txtStudyDescription.TextChanged += new System.EventHandler(this.txtStudyDescription_TextChanged);
             // 
             // label3
             // 
@@ -208,24 +209,34 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Date";
             // 
-            // dateTimePicker2
+            // dtpStartTime
             // 
-            this.dateTimePicker2.CustomFormat = "hh:mm";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(154, 90);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(298, 23);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dtpStartTime.CustomFormat = "hh:mm tt";
+            this.dtpStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartTime.Location = new System.Drawing.Point(154, 90);
+            this.dtpStartTime.Name = "dtpStartTime";
+            this.dtpStartTime.ShowUpDown = true;
+            this.dtpStartTime.Size = new System.Drawing.Size(298, 23);
+            this.dtpStartTime.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // dtpSessionDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 23);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpSessionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpSessionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSessionDate.Location = new System.Drawing.Point(154, 61);
+            this.dtpSessionDate.Name = "dtpSessionDate";
+            this.dtpSessionDate.Size = new System.Drawing.Size(298, 23);
+            this.dtpSessionDate.TabIndex = 5;
+            // 
+            // testTxt
+            // 
+            this.testTxt.AutoSize = true;
+            this.testTxt.Location = new System.Drawing.Point(24, 49);
+            this.testTxt.Name = "testTxt";
+            this.testTxt.Size = new System.Drawing.Size(70, 26);
+            this.testTxt.TabIndex = 16;
+            this.testTxt.Text = "label8";
             // 
             // StudySessionForm
             // 
@@ -238,10 +249,12 @@
             this.Controls.Add(this.label1);
             this.Name = "StudySessionForm";
             this.Text = "StudySessionForm";
+            this.UpcomingStudySession.ResumeLayout(false);
+            this.UpcomingStudySession.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MinutesDuration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HoursDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,18 +265,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox UpcomingStudySession;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button NewStudySession;
+        private System.Windows.Forms.Button btnNewStudySession;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpStartTime;
+        private System.Windows.Forms.DateTimePicker dtpSessionDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtStudyDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown MinutesDuration;
-        private System.Windows.Forms.NumericUpDown HoursDuration;
+        private System.Windows.Forms.NumericUpDown numMinutes;
+        private System.Windows.Forms.NumericUpDown numHours;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label testTxt;
     }
 }

@@ -33,7 +33,9 @@ namespace Study_Planner
 
         public override string ToString()
         {
-            return StudyDescription + StudyDate + StartTime + SessionDuration;
+            DateTime start = StudyDate + StartTime;
+
+            return $"{StudyDate:dd/MM/yyyy}, {start:hh:mm tt}, {SessionDuration}, {StudyDescription}";
         }
     }
 }

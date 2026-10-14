@@ -31,7 +31,10 @@ namespace Study_Planner
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(subjects));
+
+            // REMEMBER TO REMOVE THIS LATER !!!
+            Application.Run(new StudySessionForm());
+            //Application.Run(new Form1(subjects));
         }
         private static void LoadSubjectData()
         {

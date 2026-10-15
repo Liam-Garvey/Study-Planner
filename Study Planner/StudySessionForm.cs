@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,6 +68,7 @@ namespace Study_Planner
         // adding in the list
         private void SessionsInListStudySessions()
         {
+            
             ListStudySessions.Items.Clear();
 
             foreach (StudySession session in sessions)
@@ -75,9 +77,9 @@ namespace Study_Planner
 
                 // fix the formatting
                 item.SubItems.Add(session.StudyDescription);
-                item.SubItems.Add(session.StudyDate.ToString("dd/MM/yyyy"));
-                item.SubItems.Add((session.StudyDate + session.StartTime).ToString("hh:mm tt"));
-                // fix adding session duration
+                item.SubItems.Add(session.GetFormattedStudyDate());
+                item.SubItems.Add(session.GetFormattedStartTime());
+                item.SubItems.Add(session.GetFormattedDuration());
 
                 ListStudySessions.Items.Add(item);
             }
@@ -86,9 +88,9 @@ namespace Study_Planner
         }
         private void AddDummyData()
         {
-            sessions.Add(new StudySession(DateTime.Today, new TimeSpan(9, 0, 0), new TimeSpan(1, 30, 0), "Work on flashcards"));
-            sessions.Add(new StudySession(DateTime.Today, new TimeSpan(14, 30, 0), new TimeSpan(0, 45, 0), "Complete lab 3"));
-            sessions.Add(new StudySession(DateTime.Today.AddDays(1), new TimeSpan(18, 0, 0), new TimeSpan(2, 0, 0), "Work on assignment"));
+            sessions.Add(new StudySession(DateTime.Today, new TimeSpan(11, 30, 0), new TimeSpan(0, 25, 0), "Work on flashcards"));
+            sessions.Add(new StudySession(DateTime.Today.AddDays(2), new TimeSpan(20, 0, 0), new TimeSpan(1, 0, 0), "Study for quiz"));
+            sessions.Add(new StudySession(DateTime.Today, new TimeSpan(13, 0, 0), new TimeSpan(0, 45, 0), "Work on assignment"));
 
         }
     }

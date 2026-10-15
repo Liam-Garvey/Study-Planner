@@ -27,9 +27,20 @@ namespace Study_Planner
             StudyCompleted = false;
         }
 
+        public string GetFormattedDuration()
+        {
+            return SessionDuration.ToString(@"hh' hr 'mm' min'");
+        }
 
+        public string GetFormattedStartTime()
+        {
+            return (StudyDate + StartTime).ToString("hh:mm tt");
+        }
 
-        // NEED TO CREATE A TOSTRING
+        public string GetFormattedStudyDate() 
+        {
+            return StudyDate.ToString("dd/MM/yyyy");
+        }
 
         public override string ToString()
         {

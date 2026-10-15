@@ -1,20 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-/* things to do
- * add validation to add study session button
- * fix up formatting for items in list
- * add completed sessions into study log
- * 
-*/
 
 namespace Study_Planner
 {
@@ -55,8 +41,8 @@ namespace Study_Planner
             ClearInputs();
         }
 
-        private void ClearInputs() {
-            // clear inputs
+        private void ClearInputs()
+        {
             txtStudyDescription.Clear();
 
             numHours.Value = 0;
@@ -68,29 +54,42 @@ namespace Study_Planner
         // adding in the list
         private void SessionsInListStudySessions()
         {
-            
+
             ListStudySessions.Items.Clear();
 
             foreach (StudySession session in sessions)
             {
-                ListViewItem item = new ListViewItem();
-
-                // fix the formatting
-                item.SubItems.Add(session.StudyDescription);
+                ListViewItem item = new ListViewItem(session.StudyDescription);
                 item.SubItems.Add(session.GetFormattedStudyDate());
                 item.SubItems.Add(session.GetFormattedStartTime());
                 item.SubItems.Add(session.GetFormattedDuration());
-
+                item.Tag = session;
+                item.Checked = session.StudyCompleted;
                 ListStudySessions.Items.Add(item);
             }
 
 
         }
+
         private void AddDummyData()
         {
             sessions.Add(new StudySession(DateTime.Today, new TimeSpan(11, 30, 0), new TimeSpan(0, 25, 0), "Work on flashcards"));
             sessions.Add(new StudySession(DateTime.Today.AddDays(2), new TimeSpan(20, 0, 0), new TimeSpan(1, 0, 0), "Study for quiz"));
             sessions.Add(new StudySession(DateTime.Today, new TimeSpan(13, 0, 0), new TimeSpan(0, 45, 0), "Work on assignment"));
+        }
+
+        private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            // get the session object from item
+            StudySession session = (StudySession)e.Item.Tag;
+
+            //get checked state
+            bool isChecked = e.Item.Checked;
+            // update the object's studycompleted property using =
+            session.StudyCompleted = isChecked;
+
+            // value test
+            testTxt.Text = session.StudyDescription + " : " + session.StudyCompleted;
 
         }
     }

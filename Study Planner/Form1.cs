@@ -44,10 +44,17 @@ namespace Study_Planner
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
         {
-            for (int i = 0; i < box.Controls.Count; ++i)
+            ListView list = (ListView)box.Controls[0];
+            foreach (T item in classes)
             {
-                if (i >= classes.Count) { box.Controls[i].Text = ""; }
-                else { box.Controls[i].Text = classes[i].ClassInfo(); }
+                ListViewItem listItem = new ListViewItem(item.classType);
+                listItem.Font = new Font(list.Font, listItem.Font.Style);
+                Console.WriteLine(list.Font.Size);
+                listItem.SubItems.Add(item.startTime.ToString());
+                listItem.SubItems.Add(item.duration);
+                listItem.SubItems.Add(item.classDay);
+                listItem.SubItems.Add(item.classLocation);
+                list.Items.Add(listItem);
             }
         }
         private void FillAssignmentButtons(List<Assignment> assignments, GroupBox box)

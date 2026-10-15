@@ -36,13 +36,11 @@
             this.Subject3 = new System.Windows.Forms.Button();
             this.Subject4 = new System.Windows.Forms.Button();
             this.Subject1Panel = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SubjectTitle = new System.Windows.Forms.Label();
             this.FacultySession = new System.Windows.Forms.Label();
             this.LectureList = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.Lecture1 = new System.Windows.Forms.Label();
             this.ClassBox = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,7 +54,24 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BackButton = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958 = new System.Windows.Forms.GroupBox();
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a = new System.Windows.Forms.ListView();
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -169,6 +184,16 @@
             this.Subject1Panel.Visible = false;
             this.Subject1Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Subject1Panel_Paint);
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(0, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 14;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // SubjectTitle
             // 
             this.SubjectTitle.AutoSize = true;
@@ -191,6 +216,7 @@
             // 
             // LectureList
             // 
+            this.LectureList.Controls.Add(this.listView1);
             this.LectureList.Controls.Add(this.label4);
             this.LectureList.Controls.Add(this.label3);
             this.LectureList.Controls.Add(this.label2);
@@ -199,51 +225,29 @@
             this.LectureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.LectureList.Location = new System.Drawing.Point(12, 57);
             this.LectureList.Name = "LectureList";
-            this.LectureList.Size = new System.Drawing.Size(228, 369);
+            this.LectureList.Size = new System.Drawing.Size(264, 369);
             this.LectureList.TabIndex = 1;
             this.LectureList.TabStop = false;
             this.LectureList.Text = "Lectures";
             this.LectureList.UseCompatibleTextRendering = true;
             // 
-            // label4
+            // listView1
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(7, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 58);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(6, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 58);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(6, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 56);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(7, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 56);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 28);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(258, 338);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // Lecture1
             // 
@@ -257,6 +261,7 @@
             // 
             // ClassBox
             // 
+            this.ClassBox.Controls.Add(this.listView2);
             this.ClassBox.Controls.Add(this.label5);
             this.ClassBox.Controls.Add(this.label6);
             this.ClassBox.Controls.Add(this.label7);
@@ -265,7 +270,7 @@
             this.ClassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.ClassBox.Location = new System.Drawing.Point(282, 57);
             this.ClassBox.Name = "ClassBox";
-            this.ClassBox.Size = new System.Drawing.Size(228, 369);
+            this.ClassBox.Size = new System.Drawing.Size(262, 369);
             this.ClassBox.TabIndex = 11;
             this.ClassBox.TabStop = false;
             this.ClassBox.Text = "Classes";
@@ -387,15 +392,143 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // BackButton
+            // listView2
             // 
-            this.BackButton.Location = new System.Drawing.Point(0, 0);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 14;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(3, 28);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(256, 338);
+            this.listView2.TabIndex = 16;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Type";
+            this.columnHeader6.Width = 75;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Time";
+            this.columnHeader7.Width = 75;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Length";
+            this.columnHeader8.Width = 75;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Day";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Location";
+            this.columnHeader10.Width = 110;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(7, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 56);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(6, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(215, 56);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "label2";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(7, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 58);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(6, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 58);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "label3";
+            // 
+            // object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958
+            // 
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.Location = new System.Drawing.Point(282, 57);
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.Name = "object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958";
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.Size = new System.Drawing.Size(228, 369);
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.TabIndex = 11;
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.TabStop = false;
+            this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.UseCompatibleTextRendering = true;
+            // 
+            // object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a
+            // 
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.HideSelection = false;
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.Location = new System.Drawing.Point(42, -7);
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.Name = "object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a";
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.Size = new System.Drawing.Size(464, 338);
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.TabIndex = 15;
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.UseCompatibleStateImageBehavior = false;
+            this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a.View = System.Windows.Forms.View.Details;
+            // 
+            // object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f
+            // 
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.HideSelection = false;
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.Location = new System.Drawing.Point(42, -7);
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.Name = "object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f";
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.Size = new System.Drawing.Size(464, 338);
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.TabIndex = 15;
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.UseCompatibleStateImageBehavior = false;
+            this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Location";
+            this.columnHeader5.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Day";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Length";
+            this.columnHeader3.Width = 75;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Time";
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Type";
+            this.columnHeader1.Width = 75;
             // 
             // Form1
             // 
@@ -434,10 +567,6 @@
         private System.Windows.Forms.GroupBox ClassBox;
         private System.Windows.Forms.Label FacultySession;
         private System.Windows.Forms.GroupBox Assignments;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -449,6 +578,25 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958;
+        private System.Windows.Forms.ListView object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a;
+        private System.Windows.Forms.ListView object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f;
     }
 }
 

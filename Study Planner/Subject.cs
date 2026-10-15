@@ -44,7 +44,7 @@ namespace Study_Planner
     {
         public string classType { get; private set; }
         public string duration { get; private set; }
-        public string startTime { get; private set; }
+        public TimeSpan startTime { get; private set; }
         public string classDay { get; private set; }
         public string classLocation { get; private set; }
         public string classDescription { get; private set; }
@@ -53,7 +53,7 @@ namespace Study_Planner
         {
             classType = type;
             duration = length;
-            startTime = time;
+            startTime = TimeSpan.Parse(time);
             classDay = day;
             classLocation = location;
             classDescription = description;
@@ -63,7 +63,7 @@ namespace Study_Planner
         {
             classType = "Lecture";
             duration = length;
-            startTime = time;
+            startTime = TimeSpan.Parse(time);
             classDay= day;
             classLocation = "Online";
             classDescription = description;
@@ -71,7 +71,7 @@ namespace Study_Planner
         }
         public string ClassInfo()
         {
-            return classType + " " + startTime + " " + duration + " " + classDay + " " + classLocation;
+            return classType + " " + startTime.ToString() + " " + duration + " " + classDay + " " + classLocation;
         }
     }
     public class Assignment

@@ -41,8 +41,23 @@
             this.FacultySession = new System.Windows.Forms.Label();
             this.LectureList = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Lecture1 = new System.Windows.Forms.Label();
             this.ClassBox = new System.Windows.Forms.GroupBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,30 +69,26 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958 = new System.Windows.Forms.GroupBox();
             this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a = new System.Windows.Forms.ListView();
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AssignmentPanel = new System.Windows.Forms.Panel();
+            this.AssignmentList = new System.Windows.Forms.GroupBox();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button6 = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
             this.LectureList.SuspendLayout();
             this.ClassBox.SuspendLayout();
             this.Assignments.SuspendLayout();
+            this.AssignmentPanel.SuspendLayout();
+            this.AssignmentList.SuspendLayout();
             this.SuspendLayout();
             // 
             // HomePanel
@@ -249,6 +260,71 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Type";
+            this.columnHeader1.Width = 75;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Time";
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Length";
+            this.columnHeader3.Width = 75;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Day";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Location";
+            this.columnHeader5.Width = 110;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(7, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 58);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(6, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 58);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(6, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(215, 56);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(7, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 56);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            // 
             // Lecture1
             // 
             this.Lecture1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -275,6 +351,49 @@
             this.ClassBox.TabStop = false;
             this.ClassBox.Text = "Classes";
             this.ClassBox.UseCompatibleTextRendering = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(3, 28);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(256, 338);
+            this.listView2.TabIndex = 16;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Type";
+            this.columnHeader6.Width = 75;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Time";
+            this.columnHeader7.Width = 75;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Length";
+            this.columnHeader8.Width = 75;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Day";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Location";
+            this.columnHeader10.Width = 110;
             // 
             // label5
             // 
@@ -392,89 +511,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(3, 28);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(256, 338);
-            this.listView2.TabIndex = 16;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Type";
-            this.columnHeader6.Width = 75;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Time";
-            this.columnHeader7.Width = 75;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Length";
-            this.columnHeader8.Width = 75;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Day";
-            this.columnHeader9.Width = 100;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Location";
-            this.columnHeader10.Width = 110;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(7, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 56);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(6, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 56);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(7, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 58);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(6, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 58);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
-            // 
             // object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958
             // 
             this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -505,36 +541,88 @@
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.UseCompatibleStateImageBehavior = false;
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader5
+            // AssignmentPanel
             // 
-            this.columnHeader5.Text = "Location";
-            this.columnHeader5.Width = 110;
+            this.AssignmentPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.AssignmentPanel.Controls.Add(this.AssignmentList);
+            this.AssignmentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AssignmentPanel.Location = new System.Drawing.Point(0, 0);
+            this.AssignmentPanel.Name = "AssignmentPanel";
+            this.AssignmentPanel.Size = new System.Drawing.Size(800, 450);
+            this.AssignmentPanel.TabIndex = 15;
             // 
-            // columnHeader4
+            // AssignmentList
             // 
-            this.columnHeader4.Text = "Day";
-            this.columnHeader4.Width = 100;
+            this.AssignmentList.Controls.Add(this.listView3);
+            this.AssignmentList.Controls.Add(this.button6);
+            this.AssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.AssignmentList.Location = new System.Drawing.Point(6, 3);
+            this.AssignmentList.Name = "AssignmentList";
+            this.AssignmentList.Size = new System.Drawing.Size(782, 435);
+            this.AssignmentList.TabIndex = 0;
+            this.AssignmentList.TabStop = false;
+            this.AssignmentList.Text = "Assignments";
             // 
-            // columnHeader3
+            // listView3
             // 
-            this.columnHeader3.Text = "Length";
-            this.columnHeader3.Width = 75;
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(3, 28);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(776, 404);
+            this.listView3.TabIndex = 16;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader2
+            // columnHeader11
             // 
-            this.columnHeader2.Text = "Time";
-            this.columnHeader2.Width = 80;
+            this.columnHeader11.Text = "Type";
+            this.columnHeader11.Width = 100;
             // 
-            // columnHeader1
+            // columnHeader12
             // 
-            this.columnHeader1.Text = "Type";
-            this.columnHeader1.Width = 75;
+            this.columnHeader12.Text = "Due Date";
+            this.columnHeader12.Width = 100;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Progress";
+            this.columnHeader13.Width = 90;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Description";
+            this.columnHeader15.Width = 360;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Milestones";
+            this.columnHeader14.Width = 120;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button6.Location = new System.Drawing.Point(716, -3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Back";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AssignmentPanel);
             this.Controls.Add(this.Subject1Panel);
             this.Controls.Add(this.HomePanel);
             this.Name = "Form1";
@@ -547,6 +635,8 @@
             this.LectureList.ResumeLayout(false);
             this.ClassBox.ResumeLayout(false);
             this.Assignments.ResumeLayout(false);
+            this.AssignmentPanel.ResumeLayout(false);
+            this.AssignmentList.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -597,6 +687,15 @@
         private System.Windows.Forms.GroupBox object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958;
         private System.Windows.Forms.ListView object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a;
         private System.Windows.Forms.ListView object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f;
+        private System.Windows.Forms.Panel AssignmentPanel;
+        private System.Windows.Forms.GroupBox AssignmentList;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.Button button6;
     }
 }
 

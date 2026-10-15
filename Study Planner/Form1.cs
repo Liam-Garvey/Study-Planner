@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,7 @@ namespace Study_Planner
             FillGroupBox<Class>(subject.lectures, LectureList);
             FillGroupBox<Class>(subject.classes, ClassBox);
             FillAssignmentButtons(subject.assignments, Assignments);
+            FillAssignmentList(subjects);
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
         {
@@ -49,7 +51,6 @@ namespace Study_Planner
             {
                 ListViewItem listItem = new ListViewItem(item.classType);
                 listItem.Font = new Font(list.Font, listItem.Font.Style);
-                Console.WriteLine(list.Font.Size);
                 listItem.SubItems.Add(item.startTime.ToString());
                 listItem.SubItems.Add(item.duration);
                 listItem.SubItems.Add(item.classDay);
@@ -82,6 +83,23 @@ namespace Study_Planner
                 if (hasAssignment)
                 {
                     button.Click += AssignmentButton_Click;
+                }
+            }
+        }
+        private void FillAssignmentList(List<Subject> subjects)
+        {
+            ListView assList = (ListView)AssignmentPanel.Controls[0].Controls[0];
+            foreach (Subject subject in subjects)
+            {
+                foreach (Assignment assignment in subject.assignments)
+                {
+                    ListViewItem listItem = new ListViewItem(assignment.assignmentType);
+                    listItem.Font = new Font(assList.Font, listItem.Font.Style);
+                    listItem.SubItems.Add(assignment.dueDate.ToString("dd/MM/yyyy"));
+                    listItem.SubItems.Add(assignment.progress.ToString());
+                    listItem.SubItems.Add(assignment.milestones.Count + " Milestones");
+                    listItem.SubItems.Add(assignment.assignmentDescription);
+                    assList.Items.Add(listItem);
                 }
             }
         }
@@ -153,6 +171,12 @@ namespace Study_Planner
         private void BackButton_Click(object sender, EventArgs e)
         {
             ChangePanel(Subject1Panel, HomePanel);
+            HomePanel.BringToFront();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ChangePanel(AssignmentPanel, HomePanel);
             HomePanel.BringToFront();
         }
     }

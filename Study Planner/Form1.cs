@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -93,12 +94,14 @@ namespace Study_Planner
             {
                 foreach (Assignment assignment in subject.assignments)
                 {
-                    ListViewItem listItem = new ListViewItem(assignment.assignmentType);
+                    ListViewItem listItem = new ListViewItem(subject.subjectID + " " + subject.subjectName);
                     listItem.Font = new Font(assList.Font, listItem.Font.Style);
+                    listItem.SubItems.Add(assignment.assignmentType);
                     listItem.SubItems.Add(assignment.dueDate.ToString("dd/MM/yyyy"));
                     listItem.SubItems.Add(assignment.progress.ToString());
                     listItem.SubItems.Add(assignment.milestones.Count + " Milestones");
                     listItem.SubItems.Add(assignment.assignmentDescription);
+                    listItem.Tag = assignment;
                     assList.Items.Add(listItem);
                 }
             }
@@ -147,7 +150,6 @@ namespace Study_Planner
         private void AssignmentButton_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-
             if (button == null)
             {
                 return;
@@ -178,6 +180,22 @@ namespace Study_Planner
         {
             ChangePanel(AssignmentPanel, HomePanel);
             HomePanel.BringToFront();
+        }
+
+        private void AllAssignmentList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView list = (ListView)sender;
+            if (list.SelectedItems.Count > 0)
+            {
+                LoadAssignment(list.SelectedItems[0], e);
+            }
+        }
+        private void LoadAssignment(object sender, EventArgs e)
+        {
+            ListViewItem item = (ListViewItem)sender;
+            Assignment assignment = (Assignment) item.Tag;
+            AssignmentDetailsForm details = new AssignmentDetailsForm(assignment);
+            details.ShowDialog(this);
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("testy");
             this.HomePanel = new System.Windows.Forms.Panel();
             this.subjectList = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -74,12 +75,13 @@
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f = new System.Windows.Forms.ListView();
             this.AssignmentPanel = new System.Windows.Forms.Panel();
             this.AssignmentList = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.AllAssignmentList = new System.Windows.Forms.ListView();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button6 = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -553,7 +555,7 @@
             // 
             // AssignmentList
             // 
-            this.AssignmentList.Controls.Add(this.listView3);
+            this.AssignmentList.Controls.Add(this.AllAssignmentList);
             this.AssignmentList.Controls.Add(this.button6);
             this.AssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.AssignmentList.Location = new System.Drawing.Point(6, 3);
@@ -563,23 +565,33 @@
             this.AssignmentList.TabStop = false;
             this.AssignmentList.Text = "Assignments";
             // 
-            // listView3
+            // AllAssignmentList
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.AllAssignmentList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader16,
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(3, 28);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(776, 404);
-            this.listView3.TabIndex = 16;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.AllAssignmentList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AllAssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllAssignmentList.HideSelection = false;
+            this.AllAssignmentList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3});
+            this.AllAssignmentList.Location = new System.Drawing.Point(3, 28);
+            this.AllAssignmentList.MultiSelect = false;
+            this.AllAssignmentList.Name = "AllAssignmentList";
+            this.AllAssignmentList.Size = new System.Drawing.Size(776, 404);
+            this.AllAssignmentList.TabIndex = 16;
+            this.AllAssignmentList.UseCompatibleStateImageBehavior = false;
+            this.AllAssignmentList.View = System.Windows.Forms.View.Details;
+            this.AllAssignmentList.SelectedIndexChanged += new System.EventHandler(this.AllAssignmentList_SelectedIndexChanged);
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Subject";
+            this.columnHeader16.Width = 300;
             // 
             // columnHeader11
             // 
@@ -596,15 +608,15 @@
             this.columnHeader13.Text = "Progress";
             this.columnHeader13.Width = 90;
             // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Description";
-            this.columnHeader15.Width = 360;
-            // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Milestones";
             this.columnHeader14.Width = 120;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Description";
+            this.columnHeader15.Width = 360;
             // 
             // button6
             // 
@@ -689,13 +701,14 @@
         private System.Windows.Forms.ListView object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f;
         private System.Windows.Forms.Panel AssignmentPanel;
         private System.Windows.Forms.GroupBox AssignmentList;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView AllAssignmentList;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
     }
 }
 

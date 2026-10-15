@@ -25,11 +25,11 @@ namespace Study_Planner
         }
         public void AddAssignment(string type, DateTime date, string description, List<Milestone> milestone = null)
         {
-            assignments.Add(new Assignment(type, date, description, milestone));
+            assignments.Add(new Assignment(type, date, description, this, milestone));
         }
         public void AddAssignment(string type, string date, string description, List<Milestone> milestone = null)
         {
-            assignments.Add(new Assignment(type, date, description, milestone));
+            assignments.Add(new Assignment(type, date, description, this, milestone));
         }
         public void AddLecture(string length, string time, string day, string description = "Attendance not required")
         {
@@ -80,6 +80,7 @@ namespace Study_Planner
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }
         public List<Milestone> milestones { get; private set; }
+        public Subject subject { get; private set; }
 
         public int progress
         {
@@ -104,18 +105,19 @@ namespace Study_Planner
             }
         }
 
-        public Assignment(string type, DateTime date, string description,
+        public Assignment(string type, DateTime date, string description, Subject relatedSubject, 
             List<Milestone> milestone = null)
         {
             UpdateDetails(type, date, description);
+            subject = relatedSubject;
             milestones = milestone ?? new List<Milestone>();
         }
 
-        public Assignment(string type, string date, string description,
+        public Assignment(string type, string date, string description, Subject relatedSubject,
             List<Milestone> milestone = null)
             : this(type,
                 DateTime.Parse(date, CultureInfo.GetCultureInfo("en-AU")),
-                description, milestone)
+                description, relatedSubject, milestone)
         {
         }
 

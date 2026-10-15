@@ -111,6 +111,7 @@ namespace Study_Planner
             UpdateDetails(type, date, description);
             subject = relatedSubject;
             milestones = milestone ?? new List<Milestone>();
+            assignmentType = type.Trim();
         }
 
         public Assignment(string type, string date, string description, Subject relatedSubject,

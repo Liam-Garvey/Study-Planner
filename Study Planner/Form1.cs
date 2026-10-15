@@ -197,5 +197,11 @@ namespace Study_Planner
             AssignmentDetailsForm details = new AssignmentDetailsForm(assignment);
             details.ShowDialog(this);
         }
+
+        private void AssignmentListButton_Click(object sender, EventArgs e)
+        {
+            ChangePanel(HomePanel, AssignmentPanel);
+            Console.WriteLine(AssignmentPanel.Visible);
+        }
     }
 }

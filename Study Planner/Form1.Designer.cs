@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("testy");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("testy");
             this.HomePanel = new System.Windows.Forms.Panel();
             this.subjectList = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,6 +83,7 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button6 = new System.Windows.Forms.Button();
+            this.AssignmentListButton = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -96,6 +97,7 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.HomePanel.Controls.Add(this.AssignmentListButton);
             this.HomePanel.Controls.Add(this.subjectList);
             this.HomePanel.Controls.Add(this.groupBox1);
             this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -552,6 +554,7 @@
             this.AssignmentPanel.Name = "AssignmentPanel";
             this.AssignmentPanel.Size = new System.Drawing.Size(800, 450);
             this.AssignmentPanel.TabIndex = 15;
+            this.AssignmentPanel.Visible = false;
             // 
             // AssignmentList
             // 
@@ -578,7 +581,7 @@
             this.AllAssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllAssignmentList.HideSelection = false;
             this.AllAssignmentList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem4});
             this.AllAssignmentList.Location = new System.Drawing.Point(3, 28);
             this.AllAssignmentList.MultiSelect = false;
             this.AllAssignmentList.Name = "AllAssignmentList";
@@ -629,14 +632,25 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // AssignmentListButton
+            // 
+            this.AssignmentListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.AssignmentListButton.Location = new System.Drawing.Point(556, 339);
+            this.AssignmentListButton.Name = "AssignmentListButton";
+            this.AssignmentListButton.Size = new System.Drawing.Size(228, 88);
+            this.AssignmentListButton.TabIndex = 3;
+            this.AssignmentListButton.Text = "View All Assignments";
+            this.AssignmentListButton.UseVisualStyleBackColor = true;
+            this.AssignmentListButton.Click += new System.EventHandler(this.AssignmentListButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AssignmentPanel);
             this.Controls.Add(this.Subject1Panel);
             this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.AssignmentPanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.HomePanel.ResumeLayout(false);
@@ -709,6 +723,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Button AssignmentListButton;
     }
 }
 

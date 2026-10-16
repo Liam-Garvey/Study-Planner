@@ -32,18 +32,23 @@ namespace Study_Planner
                     ? subjects[i].subjectID + " " + subjects[i].subjectName
                     : "No subject";
             }
-            BackButton.Text = "Back";
+            S1BackButton.Text = "Back";
             if (subjects.Count == 0)
             {
                 return;
             }
-            Subject subject = subjects[0];
-            SubjectTitle.Text = subject.subjectID + " " + subject.subjectName;
-            FacultySession.Text = subject.teachingSession + " " + subject.subjectFaculty;
-            FillGroupBox<Class>(subject.lectures, LectureList);
-            FillGroupBox<Class>(subject.classes, ClassBox);
-            FillAssignmentButtons(subject.assignments, Assignments);
-            FillAssignmentList(subjects);
+            Panel[] panels = new Panel[] { Subject1Panel, Subject2Panel, Subject3Panel, Subject4Panel };
+            for (int i = 0; i < panels.Length; ++i)
+            {
+                Subject subject = subjects[i];
+                Control.ControlCollection panelItems = panels[i].Controls;
+                panelItems[1].Text = subject.subjectID + " " + subject.subjectName;
+                panelItems[2].Text = subject.teachingSession + ", " + subject.subjectFaculty;
+                FillGroupBox<Class>(subject.lectures, (GroupBox)panelItems[4]);
+                FillGroupBox<Class>(subject.classes, (GroupBox)panelItems[5]);
+                FillAssignmentList(new List<Subject>() { subject }, panels[i]);
+            }
+            FillAssignmentList(subjects, AssignmentPanel);
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
         {
@@ -56,6 +61,7 @@ namespace Study_Planner
                 listItem.SubItems.Add(item.duration);
                 listItem.SubItems.Add(item.classDay);
                 listItem.SubItems.Add(item.classLocation);
+                listItem.SubItems.Add(item.weeksRunning);
                 list.Items.Add(listItem);
             }
         }
@@ -87,9 +93,9 @@ namespace Study_Planner
                 }
             }
         }
-        private void FillAssignmentList(List<Subject> subjects)
+        private void FillAssignmentList(List<Subject> subjects, Panel panel)
         {
-            ListView assList = (ListView)AssignmentPanel.Controls[0].Controls[0];
+            ListView assList = (ListView)panel.Controls[1].Controls[0];
             foreach (Subject subject in subjects)
             {
                 foreach (Assignment assignment in subject.assignments)
@@ -129,17 +135,17 @@ namespace Study_Planner
 
         private void Subject2_Click(object sender, EventArgs e)
         {
-
+            ChangePanel(HomePanel, Subject2Panel);
         }
 
         private void Subject3_Click(object sender, EventArgs e)
         {
-
+            ChangePanel(HomePanel, Subject3Panel);
         }
 
         private void Subject4_Click(object sender, EventArgs e)
         {
-
+            ChangePanel(HomePanel, Subject4Panel);
         }
 
         private void Subject1Panel_Paint(object sender, PaintEventArgs e)
@@ -201,7 +207,33 @@ namespace Study_Planner
         private void AssignmentListButton_Click(object sender, EventArgs e)
         {
             ChangePanel(HomePanel, AssignmentPanel);
-            Console.WriteLine(AssignmentPanel.Visible);
+        }
+
+        private void S1Assignment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView list = (ListView)sender;
+            if (list.SelectedItems.Count > 0)
+            {
+                LoadAssignment(list.SelectedItems[0], e);
+            }
+        }
+
+        private void S4Back_Click(object sender, EventArgs e)
+        {
+            ChangePanel(Subject4Panel, HomePanel);
+            HomePanel.BringToFront();
+        }
+
+        private void S3BackButton_Click(object sender, EventArgs e)
+        {
+            ChangePanel(Subject3Panel, HomePanel);
+            HomePanel.BringToFront();
+        }
+
+        private void S2BackButton_Click(object sender, EventArgs e)
+        {
+            ChangePanel(Subject2Panel, HomePanel);
+            HomePanel.BringToFront();
         }
     }
 }

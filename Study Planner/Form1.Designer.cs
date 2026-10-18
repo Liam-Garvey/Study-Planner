@@ -55,6 +55,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader77 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.S1ClassList = new System.Windows.Forms.GroupBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,6 +63,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader78 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958 = new System.Windows.Forms.GroupBox();
             this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a = new System.Windows.Forms.ListView();
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f = new System.Windows.Forms.ListView();
@@ -94,6 +96,7 @@
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader75 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -101,6 +104,7 @@
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader76 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Subject3Panel = new System.Windows.Forms.Panel();
             this.S3BackButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -120,6 +124,7 @@
             this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader73 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listView8 = new System.Windows.Forms.ListView();
             this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -127,6 +132,7 @@
             this.columnHeader52 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader53 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader74 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Subject4Panel = new System.Windows.Forms.Panel();
             this.S4Back = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -146,6 +152,7 @@
             this.columnHeader63 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader64 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader65 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader71 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.listView11 = new System.Windows.Forms.ListView();
             this.columnHeader66 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -153,14 +160,7 @@
             this.columnHeader68 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader71 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader73 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader74 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader75 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader76 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader77 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader78 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -450,6 +450,11 @@
             this.columnHeader5.Text = "Location";
             this.columnHeader5.Width = 90;
             // 
+            // columnHeader77
+            // 
+            this.columnHeader77.Text = "Weeks Held";
+            this.columnHeader77.Width = 150;
+            // 
             // S1ClassList
             // 
             this.S1ClassList.Controls.Add(this.listView2);
@@ -505,6 +510,11 @@
             // 
             this.columnHeader10.Text = "Location";
             this.columnHeader10.Width = 90;
+            // 
+            // columnHeader78
+            // 
+            this.columnHeader78.Text = "Weeks Held";
+            this.columnHeader78.Width = 150;
             // 
             // object_4b6cc8dc_a3ae_4a7e_9859_1ceeb4ab1958
             // 
@@ -786,6 +796,11 @@
             this.columnHeader33.Text = "Location";
             this.columnHeader33.Width = 90;
             // 
+            // columnHeader75
+            // 
+            this.columnHeader75.Text = "Weeks Held";
+            this.columnHeader75.Width = 150;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.listView5);
@@ -841,6 +856,11 @@
             // 
             this.columnHeader38.Text = "Location";
             this.columnHeader38.Width = 90;
+            // 
+            // columnHeader76
+            // 
+            this.columnHeader76.Text = "Weeks Held";
+            this.columnHeader76.Width = 150;
             // 
             // Subject3Panel
             // 
@@ -1007,6 +1027,11 @@
             this.columnHeader49.Text = "Location";
             this.columnHeader49.Width = 90;
             // 
+            // columnHeader73
+            // 
+            this.columnHeader73.Text = "Weeks Held";
+            this.columnHeader73.Width = 150;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.listView8);
@@ -1062,6 +1087,11 @@
             // 
             this.columnHeader54.Text = "Location";
             this.columnHeader54.Width = 90;
+            // 
+            // columnHeader74
+            // 
+            this.columnHeader74.Text = "Weeks Held";
+            this.columnHeader74.Width = 150;
             // 
             // Subject4Panel
             // 
@@ -1228,6 +1258,11 @@
             this.columnHeader65.Text = "Location";
             this.columnHeader65.Width = 90;
             // 
+            // columnHeader71
+            // 
+            this.columnHeader71.Text = "Weeks Held";
+            this.columnHeader71.Width = 150;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.listView11);
@@ -1284,45 +1319,10 @@
             this.columnHeader70.Text = "Location";
             this.columnHeader70.Width = 90;
             // 
-            // columnHeader71
-            // 
-            this.columnHeader71.Text = "Weeks Held";
-            this.columnHeader71.Width = 150;
-            // 
             // columnHeader72
             // 
             this.columnHeader72.Text = "Weeks Held";
             this.columnHeader72.Width = 150;
-            // 
-            // columnHeader73
-            // 
-            this.columnHeader73.Text = "Weeks Held";
-            this.columnHeader73.Width = 150;
-            // 
-            // columnHeader74
-            // 
-            this.columnHeader74.Text = "Weeks Held";
-            this.columnHeader74.Width = 150;
-            // 
-            // columnHeader75
-            // 
-            this.columnHeader75.Text = "Weeks Held";
-            this.columnHeader75.Width = 150;
-            // 
-            // columnHeader76
-            // 
-            this.columnHeader76.Text = "Weeks Held";
-            this.columnHeader76.Width = 150;
-            // 
-            // columnHeader77
-            // 
-            this.columnHeader77.Text = "Weeks Held";
-            this.columnHeader77.Width = 150;
-            // 
-            // columnHeader78
-            // 
-            this.columnHeader78.Text = "Weeks Held";
-            this.columnHeader78.Width = 150;
             // 
             // Form1
             // 

@@ -15,11 +15,35 @@ namespace Study_Planner
 {
     public partial class Form1 : Form
     {
+        private readonly List<Subject> subjects;
+        private bool refreshingAssignments;
+
         public Form1(List<Subject> subjects)
         {
             InitializeComponent();
+
+            AllAssignmentList.SelectedIndexChanged -= AllAssignmentList_SelectedIndexChanged;
+            S1Assignment.SelectedIndexChanged -= S1Assignment_SelectedIndexChanged;
+
+            ListView[] assignmentLists =
+            {
+            AllAssignmentList,
+            S1Assignment,
+            listView3,
+            listView6,
+            listView9
+            };
+
+            foreach (ListView list in assignmentLists)
+            {
+                list.ItemActivate += AssignmentList_ItemActivate;
+            }
+
+            if (subjects == null) throw new ArgumentNullException(nameof(subjects));
+            this.subjects = subjects;
             DisplaySubjectData(subjects);
         }
+
         private void DisplaySubjectData(List<Subject> subjects)
         {
             Button[] subjectButtons =
@@ -32,13 +56,12 @@ namespace Study_Planner
                     ? subjects[i].subjectID + " " + subjects[i].subjectName
                     : "No subject";
             }
-            S1BackButton.Text = "Back";
             if (subjects.Count == 0)
             {
                 return;
             }
             Panel[] panels = new Panel[] { Subject1Panel, Subject2Panel, Subject3Panel, Subject4Panel };
-            for (int i = 0; i < panels.Length; ++i)
+            for (int i = 0; i < panels.Length && i < subjects.Count; ++i)
             {
                 Subject subject = subjects[i];
                 Control.ControlCollection panelItems = panels[i].Controls;
@@ -112,6 +135,59 @@ namespace Study_Planner
                 }
             }
         }
+        private void RefreshAssignmentLists()
+        {
+            refreshingAssignments = true;
+
+            try
+            {
+                AllAssignmentList.Items.Clear();
+                FillAssignmentList(subjects, AssignmentPanel);
+
+                Panel[] panels =
+                {
+            Subject1Panel, Subject2Panel,
+            Subject3Panel, Subject4Panel
+        };
+
+                ListView[] lists =
+                {
+            S1Assignment, listView3, listView6, listView9
+        };
+
+                for (int i = 0; i < panels.Length; i++)
+                {
+                    lists[i].Items.Clear();
+
+                    if (i < subjects.Count)
+                    {
+                        FillAssignmentList(
+                            new List<Subject> { subjects[i] },
+                            panels[i]);
+                    }
+                }
+            }
+            finally
+            {
+                refreshingAssignments = false;
+            }
+        }
+
+        private void AssignmentList_ItemActivate(object sender, EventArgs e)
+        {
+            if (refreshingAssignments)
+            {
+                return;
+            }
+
+            ListView list = (ListView)sender;
+
+            if (list.SelectedItems.Count > 0)
+            {
+                LoadAssignment(list.SelectedItems[0], e);
+            }
+        }
+
         private void ChangePanel(Panel oldPanel, Panel newPanel)
         {
             oldPanel.Visible = false;
@@ -173,6 +249,7 @@ namespace Study_Planner
                 details.ShowDialog(this);
             }
 
+            RefreshAssignmentLists();
             button.Text = assignment.AssignmentInfo();
         }
 
@@ -190,6 +267,10 @@ namespace Study_Planner
 
         private void AllAssignmentList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (refreshingAssignments)
+            {
+                return;
+            }
             ListView list = (ListView)sender;
             if (list.SelectedItems.Count > 0)
             {
@@ -199,9 +280,15 @@ namespace Study_Planner
         private void LoadAssignment(object sender, EventArgs e)
         {
             ListViewItem item = (ListViewItem)sender;
-            Assignment assignment = (Assignment) item.Tag;
-            AssignmentDetailsForm details = new AssignmentDetailsForm(assignment);
-            details.ShowDialog(this);
+            Assignment assignment = (Assignment)item.Tag;
+
+            using (AssignmentDetailsForm details =
+                new AssignmentDetailsForm(assignment))
+            {
+                details.ShowDialog(this);
+            }
+
+            RefreshAssignmentLists();
         }
 
         private void AssignmentListButton_Click(object sender, EventArgs e)
@@ -211,6 +298,10 @@ namespace Study_Planner
 
         private void S1Assignment_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (refreshingAssignments)
+            {
+                return;
+            }
             ListView list = (ListView)sender;
             if (list.SelectedItems.Count > 0)
             {

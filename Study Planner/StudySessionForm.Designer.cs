@@ -89,22 +89,20 @@
             // 
             // ListStudySessions
             // 
-            this.ListStudySessions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ListStudySessions.CheckBoxes = true;
             this.ListStudySessions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.ListStudySessions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListStudySessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ListStudySessions.FullRowSelect = true;
             this.ListStudySessions.HideSelection = false;
             this.ListStudySessions.Location = new System.Drawing.Point(5, 30);
             this.ListStudySessions.MultiSelect = false;
             this.ListStudySessions.Name = "ListStudySessions";
-            this.ListStudySessions.Size = new System.Drawing.Size(763, 149);
+            this.ListStudySessions.Size = new System.Drawing.Size(766, 160);
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;

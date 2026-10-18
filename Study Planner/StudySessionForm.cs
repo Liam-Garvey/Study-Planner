@@ -8,7 +8,7 @@ namespace Study_Planner
     public partial class StudySessionForm : Form
     {
         private bool refreshingView;
-        private List<StudySession> sessions = new List<StudySession>();
+        private readonly List<StudySession> sessions = new List<StudySession>();
 
         public StudySessionForm()
         {
@@ -34,6 +34,34 @@ namespace Study_Planner
             int hours = (int)numHours.Value;
             int minutes = (int)numMinutes.Value;
             TimeSpan SessionDuration = new TimeSpan(hours, minutes, 0);
+            TimeSpan currentTime = DateTime.Now.TimeOfDay;
+
+            // validation - all inputs must be entered
+
+            if (string.IsNullOrWhiteSpace(TaskDescription))
+            {
+                MessageBox.Show("Please enter a description!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if ((SessionDate < DateTime.Now)) 
+            {
+                MessageBox.Show("Please enter a date date!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // today's date and time 
+            if ((SessionDate + StartTime < DateTime.Now))
+            {
+                MessageBox.Show("Please enter a valid time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (hours == 0 && minutes == 0)
+            {
+                MessageBox.Show("Please enter a duration of time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             StudySession newSession = new StudySession(SessionDate, StartTime, SessionDuration, TaskDescription);
             sessions.Add(newSession);

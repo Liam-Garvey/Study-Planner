@@ -64,8 +64,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 31);
             this.label1.TabIndex = 0;
@@ -73,8 +74,7 @@
             // 
             // UpcomingStudySession
             // 
-            this.UpcomingStudySession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.UpcomingStudySession.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UpcomingStudySession.AutoSize = true;
             this.UpcomingStudySession.Controls.Add(this.ListStudySessions);
@@ -82,7 +82,7 @@
             this.UpcomingStudySession.Location = new System.Drawing.Point(12, 43);
             this.UpcomingStudySession.Name = "UpcomingStudySession";
             this.UpcomingStudySession.Padding = new System.Windows.Forms.Padding(5);
-            this.UpcomingStudySession.Size = new System.Drawing.Size(757, 211);
+            this.UpcomingStudySession.Size = new System.Drawing.Size(776, 195);
             this.UpcomingStudySession.TabIndex = 2;
             this.UpcomingStudySession.TabStop = false;
             this.UpcomingStudySession.Text = "Upcoming Sessions";
@@ -104,7 +104,7 @@
             this.ListStudySessions.Location = new System.Drawing.Point(5, 30);
             this.ListStudySessions.MultiSelect = false;
             this.ListStudySessions.Name = "ListStudySessions";
-            this.ListStudySessions.Size = new System.Drawing.Size(744, 148);
+            this.ListStudySessions.Size = new System.Drawing.Size(763, 149);
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
@@ -138,6 +138,7 @@
             this.testTxt.Size = new System.Drawing.Size(35, 13);
             this.testTxt.TabIndex = 16;
             this.testTxt.Text = "label8";
+            this.testTxt.Visible = false;
             // 
             // groupBox1
             // 
@@ -151,7 +152,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(333, 217);
+            this.groupBox1.Size = new System.Drawing.Size(347, 217);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Study Log";
@@ -167,7 +168,7 @@
             this.ListStudyLog.HideSelection = false;
             this.ListStudyLog.Location = new System.Drawing.Point(5, 30);
             this.ListStudyLog.Name = "ListStudyLog";
-            this.ListStudyLog.Size = new System.Drawing.Size(323, 182);
+            this.ListStudyLog.Size = new System.Drawing.Size(337, 182);
             this.ListStudyLog.TabIndex = 17;
             this.ListStudyLog.UseCompatibleStateImageBehavior = false;
             this.ListStudyLog.View = System.Windows.Forms.View.Details;
@@ -200,8 +201,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);

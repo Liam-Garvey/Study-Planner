@@ -85,8 +85,8 @@ namespace Study_Planner
 
             var completeSessions = (from session in sessions
                                      where session.StudyCompleted
-                                     orderby session.StudyDate
-                                     select session).Reverse().ToList();
+                                     orderby session.StudyDate, session.StartTime
+                                    select session).Reverse().ToList();
 
             foreach (StudySession session in completeSessions)
             {

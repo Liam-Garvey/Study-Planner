@@ -22,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 523,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudySessionForm.cs",
+              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
+              "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
+              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
+              "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T07:24:57.159Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -38,26 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudySessionForm.cs",
-              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
-              "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
-              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
-              "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwAsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T07:24:57.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "StudySession.cs",
               "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySession.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySession.cs",
               "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySession.cs",
               "RelativeToolTip": "Study Planner\\StudySession.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T07:24:17.369Z",
               "EditorCaption": ""

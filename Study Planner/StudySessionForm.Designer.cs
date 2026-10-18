@@ -81,7 +81,7 @@
             this.UpcomingStudySession.Location = new System.Drawing.Point(12, 43);
             this.UpcomingStudySession.Name = "UpcomingStudySession";
             this.UpcomingStudySession.Padding = new System.Windows.Forms.Padding(5);
-            this.UpcomingStudySession.Size = new System.Drawing.Size(762, 180);
+            this.UpcomingStudySession.Size = new System.Drawing.Size(762, 193);
             this.UpcomingStudySession.TabIndex = 2;
             this.UpcomingStudySession.TabStop = false;
             this.UpcomingStudySession.Text = "Upcoming Sessions";
@@ -101,7 +101,7 @@
             this.ListStudySessions.Location = new System.Drawing.Point(5, 30);
             this.ListStudySessions.MultiSelect = false;
             this.ListStudySessions.Name = "ListStudySessions";
-            this.ListStudySessions.Size = new System.Drawing.Size(752, 145);
+            this.ListStudySessions.Size = new System.Drawing.Size(752, 158);
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
@@ -144,11 +144,11 @@
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.ListStudyLog);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(480, 244);
+            this.groupBox1.Location = new System.Drawing.Point(441, 244);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(294, 207);
+            this.groupBox1.Size = new System.Drawing.Size(333, 217);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Study Log";
@@ -164,7 +164,7 @@
             this.ListStudyLog.HideSelection = false;
             this.ListStudyLog.Location = new System.Drawing.Point(5, 30);
             this.ListStudyLog.Name = "ListStudyLog";
-            this.ListStudyLog.Size = new System.Drawing.Size(284, 172);
+            this.ListStudyLog.Size = new System.Drawing.Size(323, 182);
             this.ListStudyLog.TabIndex = 17;
             this.ListStudyLog.UseCompatibleStateImageBehavior = false;
             this.ListStudyLog.View = System.Windows.Forms.View.Details;
@@ -188,7 +188,7 @@
             this.BtnNewStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.BtnNewStudySession.Location = new System.Drawing.Point(154, 154);
             this.BtnNewStudySession.Name = "BtnNewStudySession";
-            this.BtnNewStudySession.Size = new System.Drawing.Size(298, 31);
+            this.BtnNewStudySession.Size = new System.Drawing.Size(227, 31);
             this.BtnNewStudySession.TabIndex = 4;
             this.BtnNewStudySession.Text = "Add New Session";
             this.BtnNewStudySession.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 244);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(467, 228);
+            this.groupBox2.Size = new System.Drawing.Size(421, 217);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create new study session";
@@ -224,7 +224,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(420, 133);
+            this.label7.Location = new System.Drawing.Point(351, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 17);
             this.label7.TabIndex = 15;
@@ -234,7 +234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(274, 133);
+            this.label6.Location = new System.Drawing.Point(231, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 17);
             this.label6.TabIndex = 14;
@@ -243,14 +243,14 @@
             // numMinutes
             // 
             this.numMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.numMinutes.Location = new System.Drawing.Point(300, 126);
+            this.numMinutes.Location = new System.Drawing.Point(269, 127);
             this.numMinutes.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.numMinutes.Name = "numMinutes";
-            this.numMinutes.Size = new System.Drawing.Size(116, 23);
+            this.numMinutes.Size = new System.Drawing.Size(76, 23);
             this.numMinutes.TabIndex = 13;
             // 
             // numHours
@@ -263,7 +263,7 @@
             0,
             0});
             this.numHours.Name = "numHours";
-            this.numHours.Size = new System.Drawing.Size(116, 23);
+            this.numHours.Size = new System.Drawing.Size(71, 23);
             this.numHours.TabIndex = 12;
             // 
             // label5
@@ -292,7 +292,7 @@
             this.txtStudyDescription.Location = new System.Drawing.Point(154, 43);
             this.txtStudyDescription.Multiline = true;
             this.txtStudyDescription.Name = "txtStudyDescription";
-            this.txtStudyDescription.Size = new System.Drawing.Size(298, 20);
+            this.txtStudyDescription.Size = new System.Drawing.Size(227, 20);
             this.txtStudyDescription.TabIndex = 9;
             // 
             // label3
@@ -323,7 +323,7 @@
             this.dtpStartTime.Location = new System.Drawing.Point(154, 97);
             this.dtpStartTime.Name = "dtpStartTime";
             this.dtpStartTime.ShowUpDown = true;
-            this.dtpStartTime.Size = new System.Drawing.Size(298, 23);
+            this.dtpStartTime.Size = new System.Drawing.Size(227, 23);
             this.dtpStartTime.TabIndex = 6;
             // 
             // dtpSessionDate
@@ -332,7 +332,7 @@
             this.dtpSessionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSessionDate.Location = new System.Drawing.Point(154, 69);
             this.dtpSessionDate.Name = "dtpSessionDate";
-            this.dtpSessionDate.Size = new System.Drawing.Size(298, 23);
+            this.dtpSessionDate.Size = new System.Drawing.Size(227, 23);
             this.dtpSessionDate.TabIndex = 5;
             // 
             // StudySessionForm

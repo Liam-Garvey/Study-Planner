@@ -15,6 +15,7 @@ namespace Study_Planner
             InitializeComponent();
             AddDummyData();
             SessionsInListStudySessions();
+            SessionsInStudyLog();
         }
 
         // ADDS NEW SESSIONS
@@ -36,7 +37,9 @@ namespace Study_Planner
 
             StudySession newSession = new StudySession(SessionDate, StartTime, SessionDuration, TaskDescription);
             sessions.Add(newSession);
-            //ShowInCompleteSession();
+
+            SessionsInListStudySessions();
+            SessionsInStudyLog();
 
                 // tester code
                 testTxt.Text = newSession.ToString();
@@ -58,8 +61,9 @@ namespace Study_Planner
         {
             ListStudySessions.Items.Clear();
 
-            // creates list on incompleted and filters them 
-            List<StudySession> incompleteSessions = GetIncompleteSessions();
+            var incompleteSessions = (from session in sessions
+                                     where !session.StudyCompleted
+                                     select session).ToList(); // creates a new list
 
             foreach (StudySession session in incompleteSessions)
             {
@@ -77,9 +81,12 @@ namespace Study_Planner
         private void SessionsInStudyLog()
         {
            ListStudyLog.Items.Clear();
-            List<StudySession> completedSessions = GetCompletedSessions();
 
-            foreach (StudySession session in completedSessions)
+            var completeSessions = (from session in sessions
+                                     where session.StudyCompleted
+                                     select session).ToList();
+
+            foreach (StudySession session in completeSessions)
             {
                 ListViewItem item = new ListViewItem(session.StudyDescription);
                 item.SubItems.Add(session.GetFormattedDuration());
@@ -109,23 +116,12 @@ namespace Study_Planner
             // update the object's studycompleted property using =
             session.StudyCompleted = isChecked;
 
+            //SessionsInListStudySessions();
+            //SessionsInStudyLog();
+
             // value test
             testTxt.Text = session.StudyDescription + " : " + session.StudyCompleted;
 
-        }
-
-        // incomplete sessions
-        private List<StudySession> GetIncompleteSessions()
-        {
-            return sessions
-                .Where(session => !session.StudyCompleted).ToList();
-        }
-
-        // complete sessions
-        private List<StudySession> GetCompletedSessions()
-        {
-            return sessions
-                .Where(session => session.StudyCompleted).ToList();
         }
 
 

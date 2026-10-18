@@ -41,8 +41,9 @@ namespace Study_Planner
             SessionsInListStudySessions();
             SessionsInStudyLog();
 
-                // tester code
-                testTxt.Text = newSession.ToString();
+            // tester code
+            //testTxt.Text = newSession.ToString();
+            
             ClearInputs();
         }
 
@@ -56,14 +57,14 @@ namespace Study_Planner
             numMinutes.Value = 0;
         }
 
-        // adding in the list
         private void SessionsInListStudySessions()
         {
             ListStudySessions.Items.Clear();
 
             var incompleteSessions = (from session in sessions
                                      where !session.StudyCompleted
-                                     select session).ToList(); // creates a new list
+                                      orderby session.StudyDate, session.StartTime
+                                      select session).ToList(); // creates a new list
 
             foreach (StudySession session in incompleteSessions)
             {
@@ -84,7 +85,8 @@ namespace Study_Planner
 
             var completeSessions = (from session in sessions
                                      where session.StudyCompleted
-                                     select session).ToList();
+                                     orderby session.StudyDate
+                                     select session).Reverse().ToList();
 
             foreach (StudySession session in completeSessions)
             {
@@ -111,7 +113,9 @@ namespace Study_Planner
             if (refreshingView) { return; } // refreshing view
 
             StudySession session = (StudySession)e.Item.Tag;
-            session.StudyCompleted = e.Item.Checked;
+
+            bool isChecked = e.Item.Checked;
+            session.StudyCompleted = isChecked;
 
             BeginInvoke(new Action(RefreshLists));
 
@@ -128,7 +132,5 @@ namespace Study_Planner
             }
             finally { refreshingView = false; } 
         }
-
-
     }
 }

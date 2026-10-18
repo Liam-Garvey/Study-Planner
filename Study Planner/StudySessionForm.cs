@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Study_Planner
 {
@@ -16,6 +17,7 @@ namespace Study_Planner
             SessionsInListStudySessions();
         }
 
+        // ADDS NEW SESSIONS
         private void BtnNewStudySession_Click(object sender, EventArgs e)
         {
 
@@ -23,9 +25,9 @@ namespace Study_Planner
             // MAKE SURE THERE IS A CONFIRM THE STUDY SESSION BUTTON
             // MAKE SURE THERE IS INPUT VALIDATION for the task description
 
-            string TaskDescription = txtStudyDescription.Text;
+            string TaskDescription = txtStudyDescription.Text; 
             DateTime SessionDate = dtpSessionDate.Value.Date;
-            TimeSpan StartTime = dtpStartTime.Value.TimeOfDay;
+            TimeSpan StartTime = dtpStartTime .Value.TimeOfDay;
 
             // time duration
             int hours = (int)numHours.Value;
@@ -34,10 +36,10 @@ namespace Study_Planner
 
             StudySession newSession = new StudySession(SessionDate, StartTime, SessionDuration, TaskDescription);
             sessions.Add(newSession);
-            SessionsInListStudySessions();
+            //ShowInCompleteSession();
 
-            // tester code
-            testTxt.Text = newSession.ToString();
+                // tester code
+                testTxt.Text = newSession.ToString();
             ClearInputs();
         }
 
@@ -54,10 +56,12 @@ namespace Study_Planner
         // adding in the list
         private void SessionsInListStudySessions()
         {
-
             ListStudySessions.Items.Clear();
 
-            foreach (StudySession session in sessions)
+            // creates list on incompleted and filters them 
+            List<StudySession> incompleteSessions = GetIncompleteSessions();
+
+            foreach (StudySession session in incompleteSessions)
             {
                 ListViewItem item = new ListViewItem(session.StudyDescription);
                 item.SubItems.Add(session.GetFormattedStudyDate());
@@ -68,7 +72,22 @@ namespace Study_Planner
                 ListStudySessions.Items.Add(item);
             }
 
+        }
 
+        private void SessionsInStudyLog()
+        {
+           ListStudyLog.Items.Clear();
+            List<StudySession> completedSessions = GetCompletedSessions();
+
+            foreach (StudySession session in completedSessions)
+            {
+                ListViewItem item = new ListViewItem(session.StudyDescription);
+                item.SubItems.Add(session.GetFormattedDuration());
+                item.SubItems.Add(session.GetFormattedStudyDate());
+                item.Tag = session;
+                item.Checked = session.StudyCompleted;
+                ListStudyLog.Items.Add(item);
+            }
         }
 
         private void AddDummyData()
@@ -76,6 +95,8 @@ namespace Study_Planner
             sessions.Add(new StudySession(DateTime.Today, new TimeSpan(11, 30, 0), new TimeSpan(0, 25, 0), "Work on flashcards"));
             sessions.Add(new StudySession(DateTime.Today.AddDays(2), new TimeSpan(20, 0, 0), new TimeSpan(1, 0, 0), "Study for quiz"));
             sessions.Add(new StudySession(DateTime.Today, new TimeSpan(13, 0, 0), new TimeSpan(0, 45, 0), "Work on assignment"));
+            sessions.Add(new StudySession(DateTime.Today, new TimeSpan(14, 0, 0), new TimeSpan(1, 0, 0), "Do labs", true));
+            sessions.Add(new StudySession(DateTime.Today.AddDays(1), new TimeSpan(14, 0, 0), new TimeSpan(1, 0, 0), "Do labs", true));
         }
 
         private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
@@ -92,5 +113,21 @@ namespace Study_Planner
             testTxt.Text = session.StudyDescription + " : " + session.StudyCompleted;
 
         }
+
+        // incomplete sessions
+        private List<StudySession> GetIncompleteSessions()
+        {
+            return sessions
+                .Where(session => !session.StudyCompleted).ToList();
+        }
+
+        // complete sessions
+        private List<StudySession> GetCompletedSessions()
+        {
+            return sessions
+                .Where(session => session.StudyCompleted).ToList();
+        }
+
+
     }
 }

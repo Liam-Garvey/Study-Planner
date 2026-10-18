@@ -37,7 +37,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.testTxt = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ListStudyLog = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BtnNewStudySession = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
             this.dtpSessionDate = new System.Windows.Forms.DateTimePicker();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UpcomingStudySession.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,30 +78,30 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UpcomingStudySession.Controls.Add(this.ListStudySessions);
             this.UpcomingStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UpcomingStudySession.Location = new System.Drawing.Point(11, 43);
+            this.UpcomingStudySession.Location = new System.Drawing.Point(12, 43);
             this.UpcomingStudySession.Name = "UpcomingStudySession";
-            this.UpcomingStudySession.Size = new System.Drawing.Size(763, 193);
+            this.UpcomingStudySession.Padding = new System.Windows.Forms.Padding(5);
+            this.UpcomingStudySession.Size = new System.Drawing.Size(762, 180);
             this.UpcomingStudySession.TabIndex = 2;
             this.UpcomingStudySession.TabStop = false;
             this.UpcomingStudySession.Text = "Upcoming Sessions";
             // 
             // ListStudySessions
             // 
-            this.ListStudySessions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.ListStudySessions.CheckBoxes = true;
             this.ListStudySessions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.ListStudySessions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListStudySessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ListStudySessions.FullRowSelect = true;
             this.ListStudySessions.HideSelection = false;
-            this.ListStudySessions.Location = new System.Drawing.Point(3, 28);
+            this.ListStudySessions.Location = new System.Drawing.Point(5, 30);
             this.ListStudySessions.MultiSelect = false;
             this.ListStudySessions.Name = "ListStudySessions";
-            this.ListStudySessions.Size = new System.Drawing.Size(754, 150);
+            this.ListStudySessions.Size = new System.Drawing.Size(752, 145);
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
@@ -142,30 +142,46 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.ListStudyLog);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(501, 242);
+            this.groupBox1.Location = new System.Drawing.Point(480, 244);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 196);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Size = new System.Drawing.Size(294, 207);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Study Log";
             // 
-            // listView1
+            // ListStudyLog
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListStudyLog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 28);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(267, 165);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.ListStudyLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListStudyLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ListStudyLog.HideSelection = false;
+            this.ListStudyLog.Location = new System.Drawing.Point(5, 30);
+            this.ListStudyLog.Name = "ListStudyLog";
+            this.ListStudyLog.Size = new System.Drawing.Size(284, 172);
+            this.ListStudyLog.TabIndex = 17;
+            this.ListStudyLog.UseCompatibleStateImageBehavior = false;
+            this.ListStudyLog.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Description";
+            this.columnHeader1.Width = 99;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Duration";
+            this.columnHeader6.Width = 90;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Date";
             // 
             // BtnNewStudySession
             // 
@@ -196,9 +212,10 @@
             this.groupBox2.Controls.Add(this.dtpSessionDate);
             this.groupBox2.Controls.Add(this.BtnNewStudySession);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 242);
+            this.groupBox2.Location = new System.Drawing.Point(12, 244);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(458, 216);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(467, 228);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create new study session";
@@ -207,7 +224,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(419, 132);
+            this.label7.Location = new System.Drawing.Point(420, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 17);
             this.label7.TabIndex = 15;
@@ -217,7 +234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(273, 132);
+            this.label6.Location = new System.Drawing.Point(274, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 17);
             this.label6.TabIndex = 14;
@@ -253,7 +270,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(6, 128);
+            this.label5.Location = new System.Drawing.Point(7, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 11;
@@ -263,7 +280,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(6, 97);
+            this.label4.Location = new System.Drawing.Point(7, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 17);
             this.label4.TabIndex = 10;
@@ -282,7 +299,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(6, 43);
+            this.label3.Location = new System.Drawing.Point(7, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 8;
@@ -292,7 +309,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Location = new System.Drawing.Point(7, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 7;
@@ -318,30 +335,17 @@
             this.dtpSessionDate.Size = new System.Drawing.Size(298, 23);
             this.dtpSessionDate.TabIndex = 5;
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Description";
-            this.columnHeader1.Width = 99;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Duration";
-            this.columnHeader6.Width = 90;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Date";
-            // 
             // StudySessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 461);
             this.Controls.Add(this.testTxt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.UpcomingStudySession);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(750, 500);
             this.Name = "StudySessionForm";
             this.Text = "StudySessionForm";
             this.UpcomingStudySession.ResumeLayout(false);
@@ -379,7 +383,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ListStudyLog;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;

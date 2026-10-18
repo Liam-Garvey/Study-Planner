@@ -27,6 +27,16 @@ namespace Study_Planner
             StudyCompleted = false;
         }
 
+        // second constructor
+        public StudySession(DateTime date, TimeSpan start, TimeSpan duration, string description, bool completed)
+        {
+            StartTime = start;
+            StudyDate = date;
+            SessionDuration = duration;
+            StudyDescription = description;
+            StudyCompleted = completed;
+        }
+
         public string GetFormattedDuration()
         {
             return SessionDuration.ToString(@"hh' hr 'mm' min'");

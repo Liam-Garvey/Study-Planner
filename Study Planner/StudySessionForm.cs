@@ -7,7 +7,7 @@ namespace Study_Planner
 {
     public partial class StudySessionForm : Form
     {
-
+        private bool refreshingView;
         private List<StudySession> sessions = new List<StudySession>();
 
         public StudySessionForm()
@@ -108,20 +108,25 @@ namespace Study_Planner
 
         private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            // get the session object from item
+            if (refreshingView) { return; } // refreshing view
+
             StudySession session = (StudySession)e.Item.Tag;
+            session.StudyCompleted = e.Item.Checked;
 
-            //get checked state
-            bool isChecked = e.Item.Checked;
-            // update the object's studycompleted property using =
-            session.StudyCompleted = isChecked;
+            BeginInvoke(new Action(RefreshLists));
 
-            //SessionsInListStudySessions();
-            //SessionsInStudyLog();
+        }
 
-            // value test
-            testTxt.Text = session.StudyDescription + " : " + session.StudyCompleted;
+        private void RefreshLists() 
+        {
+            refreshingView = true;
 
+            try
+            {
+                SessionsInListStudySessions();
+                SessionsInStudyLog();
+            }
+            finally { refreshingView = false; } 
         }
 
 

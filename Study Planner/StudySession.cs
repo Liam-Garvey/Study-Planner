@@ -27,7 +27,6 @@ namespace Study_Planner
             StudyCompleted = false;
         }
 
-        // second constructor
         public StudySession(DateTime date, TimeSpan start, TimeSpan duration, string description, bool completed)
         {
             StartTime = start;

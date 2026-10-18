@@ -76,32 +76,35 @@
             this.UpcomingStudySession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpcomingStudySession.AutoSize = true;
             this.UpcomingStudySession.Controls.Add(this.ListStudySessions);
             this.UpcomingStudySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.UpcomingStudySession.Location = new System.Drawing.Point(12, 43);
             this.UpcomingStudySession.Name = "UpcomingStudySession";
             this.UpcomingStudySession.Padding = new System.Windows.Forms.Padding(5);
-            this.UpcomingStudySession.Size = new System.Drawing.Size(762, 193);
+            this.UpcomingStudySession.Size = new System.Drawing.Size(757, 211);
             this.UpcomingStudySession.TabIndex = 2;
             this.UpcomingStudySession.TabStop = false;
             this.UpcomingStudySession.Text = "Upcoming Sessions";
             // 
             // ListStudySessions
             // 
+            this.ListStudySessions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ListStudySessions.CheckBoxes = true;
             this.ListStudySessions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.ListStudySessions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListStudySessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ListStudySessions.FullRowSelect = true;
             this.ListStudySessions.HideSelection = false;
             this.ListStudySessions.Location = new System.Drawing.Point(5, 30);
             this.ListStudySessions.MultiSelect = false;
             this.ListStudySessions.Name = "ListStudySessions";
-            this.ListStudySessions.Size = new System.Drawing.Size(752, 158);
+            this.ListStudySessions.Size = new System.Drawing.Size(744, 148);
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
@@ -172,7 +175,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Description";
-            this.columnHeader1.Width = 99;
+            this.columnHeader1.Width = 125;
             // 
             // columnHeader6
             // 
@@ -182,6 +185,7 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Date";
+            this.columnHeader7.Width = 90;
             // 
             // BtnNewStudySession
             // 
@@ -196,8 +200,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);

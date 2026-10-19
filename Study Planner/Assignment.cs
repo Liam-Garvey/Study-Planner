@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 
 namespace Study_Planner
 {
     public class Assignment
     {
+        public string assignmentId { get; private set; }
         public string assignmentType { get; private set; }
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }
@@ -39,7 +39,6 @@ namespace Study_Planner
             milestones = CopyMilestones(milestone ?? new List<Milestone>());
         }
 
-        //accepts dates from csv text and reuses datetime constructor
         public Assignment(string type, string date, string description,
             Subject relatedSubject, List<Milestone> milestone = null)
             : this(type, DateTime.Parse(date), description, relatedSubject, milestone)

@@ -59,10 +59,10 @@ namespace Study_Planner
             loadingControls = true;
             try
             {
-                AssignmentTypeBox.Text = assignment.assignmentType;
+                AssignmentTypeBox.Text = assignment.typeName;
                 AssignmentDate.Value = assignment.dueDate;
                 AssignmentDescriptionBox.Text = assignment.assignmentDescription;
-                Text = assignment.assignmentType + " - Details";
+                Text = assignment.typeName + " - Details";
 
                 Control[] labels = Controls.Find("SubjectLabel", true);
                 if (labels.Length > 0)

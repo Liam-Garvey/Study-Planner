@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Study_Planner
 {
-    public class Assignment
+    public class Assignment : Type
     {
-        public string assignmentType { get; private set; }
+        public string typeName { get; set; }
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }
         public List<Milestone> milestones { get; private set; }
@@ -50,7 +50,7 @@ namespace Study_Planner
         {
             if (string.IsNullOrWhiteSpace(type))
                 throw new ArgumentException("Enter an assignment type.", nameof(type));
-            assignmentType = type.Trim();
+            typeName = type.Trim();
             dueDate = date.Date;
             assignmentDescription = description ?? "";
         }
@@ -74,7 +74,7 @@ namespace Study_Planner
 
         public Assignment CreateEditCopy()
         {
-            return new Assignment(assignmentType, dueDate, assignmentDescription,
+            return new Assignment(typeName, dueDate, assignmentDescription,
                 subject, milestones);
         }
 
@@ -85,7 +85,7 @@ namespace Study_Planner
                 throw new ArgumentException("This edit belongs to another subject.");
 
             List<Milestone> replacement = CopyMilestones(edited.milestones);
-            UpdateDetails(edited.assignmentType, edited.dueDate,
+            UpdateDetails(edited.typeName, edited.dueDate,
                 edited.assignmentDescription);
             milestones = replacement;
         }
@@ -108,7 +108,7 @@ namespace Study_Planner
 
         public string AssignmentInfo()
         {
-            return assignmentType + " " + dueDate.ToString("dd/MM/yyyy")
+            return typeName + " " + dueDate.ToString("dd/MM/yyyy")
                 + " " + progress + "%";
         }
     }

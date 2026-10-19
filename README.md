@@ -11,4 +11,9 @@ Generic Methods:
 FillGroupBox Method of Form1.cs
 Anonymous Method/LINQ/Lambda:
 progress member variable in Assignment.cs
+Interface#1:
+Type Interface, used by Class and Assignment, in Subject.cs
+
+
+NUnit Testing:
 

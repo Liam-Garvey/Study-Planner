@@ -41,9 +41,9 @@ namespace Study_Planner
             classes.Add(new Class(type, length, time, day, location, description, weeks));
         }
     }
-    public class Class
+    public class Class : Type
     {
-        public string classType { get; private set; }
+        public string typeName { get; set; }
         public TimeSpan duration { get; private set; }
         public TimeSpan startTime { get; private set; }
         public string classDay { get; private set; }
@@ -53,7 +53,7 @@ namespace Study_Planner
         //Different constructors allow for creation of class subtypes (lectures/other classes)
         public Class(string type, string length, string time, string day, string location, string weeks="All", string description = "")
         {
-            classType = type;
+            typeName = type;
             duration = TimeSpan.Parse(length);
             startTime = TimeSpan.Parse(time);
             classDay = day;
@@ -63,7 +63,7 @@ namespace Study_Planner
         }
         public Class(string length, string time, string day, string description="Attendance not required")
         {
-            classType = "Lecture";
+            typeName = "Lecture";
             duration = TimeSpan.Parse(length);
             startTime = TimeSpan.Parse(time);
             classDay= day;
@@ -73,7 +73,7 @@ namespace Study_Planner
         }
         public string ClassInfo()
         {
-            return classType + " " + startTime.ToString() + " " + duration + " " + classDay + " " + classLocation;
+            return typeName + " " + startTime.ToString() + " " + duration + " " + classDay + " " + classLocation;
         }
     }
 
@@ -116,5 +116,9 @@ namespace Study_Planner
         {
             isComplete = complete;
         }
+    }
+    interface Type
+    {
+        string typeName { get; set; }
     }
 }

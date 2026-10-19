@@ -78,7 +78,7 @@ namespace Study_Planner
             ListView list = (ListView)box.Controls[0];
             foreach (T item in classes)
             {
-                ListViewItem listItem = new ListViewItem(item.classType);
+                ListViewItem listItem = new ListViewItem(item.typeName);
                 listItem.Font = new Font(list.Font, listItem.Font.Style);
                 listItem.SubItems.Add(item.startTime.ToString());
                 listItem.SubItems.Add(item.duration.ToString());
@@ -97,7 +97,7 @@ namespace Study_Planner
                 {
                     ListViewItem listItem = new ListViewItem(subject.subjectID + " " + subject.subjectName);
                     listItem.Font = new Font(assList.Font, listItem.Font.Style);
-                    listItem.SubItems.Add(assignment.assignmentType);
+                    listItem.SubItems.Add(assignment.typeName);
                     listItem.SubItems.Add(assignment.dueDate.ToString("dd/MM/yyyy"));
                     listItem.SubItems.Add(assignment.progress.ToString());
                     listItem.SubItems.Add(assignment.milestones.Count + " Milestones");

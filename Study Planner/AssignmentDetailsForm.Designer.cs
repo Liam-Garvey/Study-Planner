@@ -46,9 +46,9 @@
             this.SubjectLabel = new System.Windows.Forms.Label();
             this.AssignmentTypeBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.CancelAssignmentButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,15 +57,17 @@
             // AssignmentDate
             // 
             this.AssignmentDate.CustomFormat = "dd/MM/yyyy";
+            this.AssignmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.AssignmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.AssignmentDate.Location = new System.Drawing.Point(301, 22);
+            this.AssignmentDate.Location = new System.Drawing.Point(332, 26);
             this.AssignmentDate.Name = "AssignmentDate";
             this.AssignmentDate.Size = new System.Drawing.Size(116, 23);
             this.AssignmentDate.TabIndex = 1;
             // 
             // MilestoneNameBox
             // 
-            this.MilestoneNameBox.Location = new System.Drawing.Point(6, 43);
+            this.MilestoneNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MilestoneNameBox.Location = new System.Drawing.Point(54, 23);
             this.MilestoneNameBox.Name = "MilestoneNameBox";
             this.MilestoneNameBox.Size = new System.Drawing.Size(100, 23);
             this.MilestoneNameBox.TabIndex = 2;
@@ -73,7 +75,7 @@
             // SaveAssignmentButton
             // 
             this.SaveAssignmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.SaveAssignmentButton.Location = new System.Drawing.Point(195, 361);
+            this.SaveAssignmentButton.Location = new System.Drawing.Point(205, 323);
             this.SaveAssignmentButton.Name = "SaveAssignmentButton";
             this.SaveAssignmentButton.Size = new System.Drawing.Size(160, 69);
             this.SaveAssignmentButton.TabIndex = 3;
@@ -85,39 +87,43 @@
             this.MilestonesList.CheckOnClick = true;
             this.MilestonesList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.MilestonesList.FormattingEnabled = true;
-            this.MilestonesList.Location = new System.Drawing.Point(39, 151);
+            this.MilestonesList.Location = new System.Drawing.Point(371, 151);
             this.MilestonesList.Name = "MilestonesList";
-            this.MilestonesList.Size = new System.Drawing.Size(180, 130);
+            this.MilestonesList.Size = new System.Drawing.Size(254, 184);
             this.MilestonesList.TabIndex = 4;
             // 
             // AssignmentDescriptionBox
             // 
-            this.AssignmentDescriptionBox.Location = new System.Drawing.Point(97, 49);
+            this.AssignmentDescriptionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.AssignmentDescriptionBox.Location = new System.Drawing.Point(172, 52);
             this.AssignmentDescriptionBox.Multiline = true;
             this.AssignmentDescriptionBox.Name = "AssignmentDescriptionBox";
-            this.AssignmentDescriptionBox.Size = new System.Drawing.Size(366, 52);
+            this.AssignmentDescriptionBox.Size = new System.Drawing.Size(276, 49);
             this.AssignmentDescriptionBox.TabIndex = 5;
             // 
             // MilestoneDate
             // 
             this.MilestoneDate.CustomFormat = "dd/MM/yyyy";
+            this.MilestoneDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.MilestoneDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MilestoneDate.Location = new System.Drawing.Point(6, 89);
+            this.MilestoneDate.Location = new System.Drawing.Point(211, 23);
             this.MilestoneDate.Name = "MilestoneDate";
             this.MilestoneDate.Size = new System.Drawing.Size(104, 23);
             this.MilestoneDate.TabIndex = 6;
             // 
             // MilestoneDescriptionBox
             // 
-            this.MilestoneDescriptionBox.Location = new System.Drawing.Point(115, 43);
+            this.MilestoneDescriptionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MilestoneDescriptionBox.Location = new System.Drawing.Point(82, 58);
             this.MilestoneDescriptionBox.Multiline = true;
             this.MilestoneDescriptionBox.Name = "MilestoneDescriptionBox";
-            this.MilestoneDescriptionBox.Size = new System.Drawing.Size(162, 69);
+            this.MilestoneDescriptionBox.Size = new System.Drawing.Size(211, 69);
             this.MilestoneDescriptionBox.TabIndex = 7;
             // 
             // AddMilestoneButton
             // 
-            this.AddMilestoneButton.Location = new System.Drawing.Point(9, 151);
+            this.AddMilestoneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.AddMilestoneButton.Location = new System.Drawing.Point(166, 136);
             this.AddMilestoneButton.Name = "AddMilestoneButton";
             this.AddMilestoneButton.Size = new System.Drawing.Size(140, 25);
             this.AddMilestoneButton.TabIndex = 8;
@@ -126,7 +132,8 @@
             // 
             // UpdateMilestoneButton
             // 
-            this.UpdateMilestoneButton.Location = new System.Drawing.Point(9, 118);
+            this.UpdateMilestoneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.UpdateMilestoneButton.Location = new System.Drawing.Point(17, 136);
             this.UpdateMilestoneButton.Name = "UpdateMilestoneButton";
             this.UpdateMilestoneButton.Size = new System.Drawing.Size(140, 25);
             this.UpdateMilestoneButton.TabIndex = 9;
@@ -137,7 +144,7 @@
             // 
             this.ProgressLabel.AutoSize = true;
             this.ProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ProgressLabel.Location = new System.Drawing.Point(26, 336);
+            this.ProgressLabel.Location = new System.Drawing.Point(393, 375);
             this.ProgressLabel.Name = "ProgressLabel";
             this.ProgressLabel.Size = new System.Drawing.Size(210, 17);
             this.ProgressLabel.TabIndex = 10;
@@ -145,28 +152,30 @@
             // 
             // AssignmentProgress
             // 
-            this.AssignmentProgress.Location = new System.Drawing.Point(39, 296);
+            this.AssignmentProgress.Location = new System.Drawing.Point(371, 341);
             this.AssignmentProgress.Name = "AssignmentProgress";
-            this.AssignmentProgress.Size = new System.Drawing.Size(180, 37);
+            this.AssignmentProgress.Size = new System.Drawing.Size(254, 31);
             this.AssignmentProgress.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(6, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 23);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(3, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 17);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Description";
+            this.label2.Text = "Description:";
             // 
             // groupBox1
             // 
@@ -178,10 +187,10 @@
             this.groupBox1.Controls.Add(this.UpdateMilestoneButton);
             this.groupBox1.Controls.Add(this.MilestoneNameBox);
             this.groupBox1.Controls.Add(this.AddMilestoneButton);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(225, 151);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.groupBox1.Location = new System.Drawing.Point(39, 145);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 182);
+            this.groupBox1.Size = new System.Drawing.Size(322, 167);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Edit Milestones";
@@ -189,11 +198,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 69);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(163, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 17);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Date";
+            this.label3.Text = "Date:";
             // 
             // SubjectLabel
             // 
@@ -207,7 +217,8 @@
             // 
             // AssignmentTypeBox
             // 
-            this.AssignmentTypeBox.Location = new System.Drawing.Point(97, 23);
+            this.AssignmentTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.AssignmentTypeBox.Location = new System.Drawing.Point(128, 26);
             this.AssignmentTypeBox.Name = "AssignmentTypeBox";
             this.AssignmentTypeBox.Size = new System.Drawing.Size(120, 23);
             this.AssignmentTypeBox.TabIndex = 0;
@@ -220,47 +231,48 @@
             this.groupBox2.Controls.Add(this.AssignmentTypeBox);
             this.groupBox2.Controls.Add(this.AssignmentDescriptionBox);
             this.groupBox2.Controls.Add(this.AssignmentDate);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.groupBox2.Location = new System.Drawing.Point(39, 38);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(483, 107);
+            this.groupBox2.Size = new System.Drawing.Size(457, 107);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edit Assignment Details";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(254, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Due Date:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(8, 50);
+            this.label5.Location = new System.Drawing.Point(6, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 17);
+            this.label5.Size = new System.Drawing.Size(160, 17);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Description:";
+            this.label5.Text = "Assignment Description:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(47, 23);
+            this.label4.Location = new System.Drawing.Point(6, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.Size = new System.Drawing.Size(121, 17);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Type:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(254, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 17);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Date:";
+            this.label4.Text = "Assignment Type:";
             // 
             // CancelAssignmentButton
             // 
             this.CancelAssignmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.CancelAssignmentButton.Location = new System.Drawing.Point(29, 361);
+            this.CancelAssignmentButton.Location = new System.Drawing.Point(29, 323);
             this.CancelAssignmentButton.Name = "CancelAssignmentButton";
             this.CancelAssignmentButton.Size = new System.Drawing.Size(160, 69);
             this.CancelAssignmentButton.TabIndex = 17;
@@ -271,7 +283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 461);
+            this.ClientSize = new System.Drawing.Size(659, 436);
             this.Controls.Add(this.CancelAssignmentButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.SubjectLabel);

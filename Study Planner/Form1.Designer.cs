@@ -166,6 +166,7 @@
             this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StudySessionButton = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -191,6 +192,7 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.HomePanel.Controls.Add(this.StudySessionButton);
             this.HomePanel.Controls.Add(this.AssignmentListButton);
             this.HomePanel.Controls.Add(this.subjectList);
             this.HomePanel.Controls.Add(this.groupBox1);
@@ -237,7 +239,6 @@
             this.groupBox1.Size = new System.Drawing.Size(254, 450);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             this.groupBox1.UseWaitCursor = true;
             // 
             // Subject1
@@ -1386,6 +1387,18 @@
             this.columnHeader72.Text = "Weeks Held";
             this.columnHeader72.Width = 150;
             // 
+            // StudySessionButton
+            // 
+            this.StudySessionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.StudySessionButton.Location = new System.Drawing.Point(563, 28);
+            this.StudySessionButton.Name = "StudySessionButton";
+            this.StudySessionButton.Size = new System.Drawing.Size(228, 88);
+            this.StudySessionButton.TabIndex = 4;
+            this.StudySessionButton.Text = "View Study Sessions";
+            this.StudySessionButton.UseVisualStyleBackColor = true;
+            this.StudySessionButton.UseWaitCursor = true;
+            this.StudySessionButton.Click += new System.EventHandler(this.StudySessionButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1569,6 +1582,7 @@
         private System.Windows.Forms.Button S4AddAss;
         private System.Windows.Forms.Button S2AddAss;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button StudySessionButton;
     }
 }
 

@@ -333,5 +333,13 @@ namespace Study_Planner
         {
             AddAssignment(subjects[3]);
         }
+
+        private void StudySessionButton_Click(object sender, EventArgs e)
+        {
+            using (StudySessionForm studySessions = new StudySessionForm())
+            {
+                studySessions.ShowDialog(this);
+            }
+        }
     }
 }

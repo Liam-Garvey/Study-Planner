@@ -61,8 +61,6 @@ namespace Study_Planner
         }
         private static void SaveSubjectData()
         {
-            Console.WriteLine(subjects[3]);
-            Console.WriteLine(subjects[3].assignments[1].milestones.Count);
             StreamWriter fileWriter = new StreamWriter("Data\\SubjectData.csv");
             foreach (Subject subject in subjects)
             {

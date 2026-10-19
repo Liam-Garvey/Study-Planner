@@ -8,7 +8,7 @@ namespace Study_Planner
 {
     public partial class StudySessionForm : Form
     {
-        private bool refreshingView;
+        private readonly bool refreshingView;
         private readonly List<StudySession> sessions = new List<StudySession>();
 
         public StudySessionForm()
@@ -139,35 +139,6 @@ namespace Study_Planner
             sessions.Add(new StudySession(DateTime.Today, new TimeSpan(14, 0, 0), new TimeSpan(1, 0, 0), "Do labs", true));
             sessions.Add(new StudySession(DateTime.Today.AddDays(1), new TimeSpan(14, 0, 0), new TimeSpan(1, 0, 0), "Do labs", true));
         }
-
-        // OLD FUNCTIONALITY
-        /*
-        private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
-        {
-
-            if (refreshingView) { return; } // refreshing view
-
-            StudySession session = (StudySession)e.Item.Tag;
-
-            bool isChecked = e.Item.Checked;
-
-            DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                session.StudyCompleted = true;
-                MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
-                BeginInvoke(new Action(RefreshLists));
-            }
-            
-            else if (result == DialogResult.No)
-            {
-                e.Item.Checked = false;
-                return;
-            }
-
-        }
-        */
-
         private void RefreshLists() 
         {
             SessionsInListStudySessions();
@@ -176,13 +147,21 @@ namespace Study_Planner
 
         private StudySession GetSelectedItem() 
         {
+            if (ListStudySessions.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a session in the list", "Select a session", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return null;
+            }
+
             return (StudySession)ListStudySessions.SelectedItems[0].Tag;
         }
 
-        private void btnRemoveSession_Click(object sender, EventArgs e)
+        private void BtnRemoveSession_Click(object sender, EventArgs e)
         {
 
             StudySession session = GetSelectedItem();
+            if (session == null) { return;  }
             
             DialogResult result = MessageBox.Show("Do you want to remove this session?", "Remove session", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -194,16 +173,19 @@ namespace Study_Planner
             }
         }
 
-        private void btnSessionCompleted_Click(object sender, EventArgs e)
+        private void BtnSessionCompleted_Click(object sender, EventArgs e)
         {
             StudySession session = GetSelectedItem();
+
+            if (session == null) { return; }
+
 
             DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 session.StudyCompleted = true;
                 MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
-                BeginInvoke(new Action(RefreshLists));
+                RefreshLists();
             }
 
             else if (result == DialogResult.No)
@@ -211,5 +193,6 @@ namespace Study_Planner
                 return;
             }
         }
+
     }
 }

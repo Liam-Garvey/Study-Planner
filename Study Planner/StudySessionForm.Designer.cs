@@ -54,8 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
             this.dtpSessionDate = new System.Windows.Forms.DateTimePicker();
-            this.btnRemoveSession = new System.Windows.Forms.Button();
-            this.btnSessionCompleted = new System.Windows.Forms.Button();
+            this.BtnRemoveSession = new System.Windows.Forms.Button();
+            this.BtnSessionCompleted = new System.Windows.Forms.Button();
             this.UpcomingStudySession.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -338,33 +338,35 @@
             this.dtpSessionDate.Size = new System.Drawing.Size(227, 23);
             this.dtpSessionDate.TabIndex = 5;
             // 
-            // btnRemoveSession
+            // BtnRemoveSession
             // 
-            this.btnRemoveSession.Location = new System.Drawing.Point(658, 24);
-            this.btnRemoveSession.Name = "btnRemoveSession";
-            this.btnRemoveSession.Size = new System.Drawing.Size(110, 23);
-            this.btnRemoveSession.TabIndex = 17;
-            this.btnRemoveSession.Text = "Remove Session";
-            this.btnRemoveSession.UseVisualStyleBackColor = true;
-            this.btnRemoveSession.Click += new System.EventHandler(this.btnRemoveSession_Click);
+            this.BtnRemoveSession.BackColor = System.Drawing.Color.Firebrick;
+            this.BtnRemoveSession.ForeColor = System.Drawing.SystemColors.Info;
+            this.BtnRemoveSession.Location = new System.Drawing.Point(658, 24);
+            this.BtnRemoveSession.Name = "BtnRemoveSession";
+            this.BtnRemoveSession.Size = new System.Drawing.Size(110, 23);
+            this.BtnRemoveSession.TabIndex = 17;
+            this.BtnRemoveSession.Text = "Remove Session";
+            this.BtnRemoveSession.UseVisualStyleBackColor = false;
+            this.BtnRemoveSession.Click += new System.EventHandler(this.BtnRemoveSession_Click);
             // 
-            // btnSessionCompleted
+            // BtnSessionCompleted
             // 
-            this.btnSessionCompleted.Location = new System.Drawing.Point(528, 24);
-            this.btnSessionCompleted.Name = "btnSessionCompleted";
-            this.btnSessionCompleted.Size = new System.Drawing.Size(111, 23);
-            this.btnSessionCompleted.TabIndex = 18;
-            this.btnSessionCompleted.Text = "Session Completed";
-            this.btnSessionCompleted.UseVisualStyleBackColor = true;
-            this.btnSessionCompleted.Click += new System.EventHandler(this.btnSessionCompleted_Click);
+            this.BtnSessionCompleted.Location = new System.Drawing.Point(528, 24);
+            this.BtnSessionCompleted.Name = "BtnSessionCompleted";
+            this.BtnSessionCompleted.Size = new System.Drawing.Size(111, 23);
+            this.BtnSessionCompleted.TabIndex = 18;
+            this.BtnSessionCompleted.Text = "Session Completed";
+            this.BtnSessionCompleted.UseVisualStyleBackColor = true;
+            this.BtnSessionCompleted.Click += new System.EventHandler(this.BtnSessionCompleted_Click);
             // 
             // StudySessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 461);
-            this.Controls.Add(this.btnSessionCompleted);
-            this.Controls.Add(this.btnRemoveSession);
+            this.Controls.Add(this.BtnSessionCompleted);
+            this.Controls.Add(this.BtnRemoveSession);
             this.Controls.Add(this.testTxt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -412,7 +414,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button btnRemoveSession;
-        private System.Windows.Forms.Button btnSessionCompleted;
+        private System.Windows.Forms.Button BtnRemoveSession;
+        private System.Windows.Forms.Button BtnSessionCompleted;
     }
 }

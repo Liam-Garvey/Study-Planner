@@ -18,6 +18,7 @@ namespace Study_Planner
         static void Main()
         {
             LoadSubjectData();
+            Console.WriteLine(subjects[3].assignments[1].milestones.Count);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(subjects));
@@ -34,7 +35,7 @@ namespace Study_Planner
                 string[] line = fileReader.ReadLine().Split(',');
                 if (line[0] == "Subject")
                 {
-                    if (assignment != null) { subject.assignments.Add(assignment); }
+                    if (assignment != null) { subject.assignments.Add(assignment); assignment = null; }
                     if (subject != null) { subjects.Add(subject); }
                     subject = new Subject(line[1], line[2], line[3], line[4]);
                 } else if (line[0] == "Lecture")
@@ -45,19 +46,21 @@ namespace Study_Planner
                     subject.AddClass(line[1], line[2], line[3], line[4], line[5], line[6]);
                 } else if (line[0] == "Assignment")
                 {
-                    if (assignment != null) {  subject.assignments.Add(assignment); }
+                    if (assignment != null) {  subject.assignments.Add(assignment); assignment = null; }
                     assignment = new Assignment(line[1], line[2], line[3], subject);
                 } else if (line[0] == "Milestone")
                 {
                     assignment.AddMileStone(line[1], line[2], line[3], Convert.ToBoolean(line[4]));
-                    Console.WriteLine(assignment.milestones.Count);
                 }
             }
+            subject.assignments.Add(assignment);
             subjects.Add(subject);
             fileReader.Close();
         }
         private static void SaveSubjectData()
         {
+            Console.WriteLine(subjects[3]);
+            Console.WriteLine(subjects[3].assignments[1].milestones.Count);
             StreamWriter fileWriter = new StreamWriter("Data\\SubjectData.csv");
             foreach (Subject subject in subjects)
             {

@@ -65,10 +65,10 @@ namespace Study_Planner
             {
                 Subject subject = subjects[i];
                 Control.ControlCollection panelItems = panels[i].Controls;
-                panelItems[1].Text = subject.subjectID + " " + subject.subjectName;
-                panelItems[2].Text = subject.teachingSession + ", " + subject.subjectFaculty;
-                FillGroupBox<Class>(subject.lectures, (GroupBox)panelItems[4]);
-                FillGroupBox<Class>(subject.classes, (GroupBox)panelItems[5]);
+                panelItems[3].Text = subject.subjectID + " " + subject.subjectName;
+                panelItems[4].Text = subject.teachingSession + ", " + subject.subjectFaculty;
+                FillGroupBox<Class>(subject.lectures, (GroupBox)panelItems[5]);
+                FillGroupBox<Class>(subject.classes, (GroupBox)panelItems[6]);
                 FillAssignmentList(new List<Subject>() { subject }, panels[i]);
             }
             FillAssignmentList(subjects, AssignmentPanel);
@@ -90,7 +90,7 @@ namespace Study_Planner
         }
         private void FillAssignmentList(List<Subject> subjects, Panel panel)
         {
-            ListView assList = (ListView)panel.Controls[1].Controls[0];
+            ListView assList = (ListView)panel.Controls[2].Controls[0];
             foreach (Subject subject in subjects)
             {
                 foreach (Assignment assignment in subject.assignments)
@@ -297,6 +297,30 @@ namespace Study_Planner
         {
             ChangePanel(Subject2Panel, HomePanel);
             HomePanel.BringToFront();
+        }
+        private void AddAssignment(Subject subject)
+        {
+
+        }
+
+        private void S1AddAss_Click(object sender, EventArgs e)
+        {
+            AddAssignment(subjects[0]);
+        }
+
+        private void S2AddAss_Click(object sender, EventArgs e)
+        {
+            AddAssignment(subjects[1]);
+        }
+
+        private void S3AddAss_Click(object sender, EventArgs e)
+        {
+            AddAssignment(subjects[2]);
+        }
+
+        private void S4AddAss_Click(object sender, EventArgs e)
+        {
+            AddAssignment(subjects[3]);
         }
     }
 }

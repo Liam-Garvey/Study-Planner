@@ -37,6 +37,7 @@
             this.Subject3 = new System.Windows.Forms.Button();
             this.Subject4 = new System.Windows.Forms.Button();
             this.Subject1Panel = new System.Windows.Forms.Panel();
+            this.S1AddAss = new System.Windows.Forms.Button();
             this.S1BackButton = new System.Windows.Forms.Button();
             this.S1AssignmentList = new System.Windows.Forms.GroupBox();
             this.S1Assignment = new System.Windows.Forms.ListView();
@@ -78,6 +79,7 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Subject2Panel = new System.Windows.Forms.Panel();
+            this.S2AddAss = new System.Windows.Forms.Button();
             this.S2BackButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView3 = new System.Windows.Forms.ListView();
@@ -106,6 +108,7 @@
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader76 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Subject3Panel = new System.Windows.Forms.Panel();
+            this.S3AddAss = new System.Windows.Forms.Button();
             this.S3BackButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listView6 = new System.Windows.Forms.ListView();
@@ -134,6 +137,7 @@
             this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader74 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Subject4Panel = new System.Windows.Forms.Panel();
+            this.S4AddAss = new System.Windows.Forms.Button();
             this.S4Back = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.listView9 = new System.Windows.Forms.ListView();
@@ -161,6 +165,7 @@
             this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -286,6 +291,7 @@
             // Subject1Panel
             // 
             this.Subject1Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Subject1Panel.Controls.Add(this.S1AddAss);
             this.Subject1Panel.Controls.Add(this.S1BackButton);
             this.Subject1Panel.Controls.Add(this.S1AssignmentList);
             this.Subject1Panel.Controls.Add(this.SubjectTitle);
@@ -299,6 +305,17 @@
             this.Subject1Panel.TabIndex = 6;
             this.Subject1Panel.Visible = false;
             this.Subject1Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Subject1Panel_Paint);
+            // 
+            // S1AddAss
+            // 
+            this.S1AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.S1AddAss.Location = new System.Drawing.Point(6, 413);
+            this.S1AddAss.Name = "S1AddAss";
+            this.S1AddAss.Size = new System.Drawing.Size(145, 33);
+            this.S1AddAss.TabIndex = 15;
+            this.S1AddAss.Text = "Add Assignment";
+            this.S1AddAss.UseVisualStyleBackColor = true;
+            this.S1AddAss.Click += new System.EventHandler(this.S1AddAss_Click);
             // 
             // S1BackButton
             // 
@@ -315,7 +332,7 @@
             // 
             this.S1AssignmentList.Controls.Add(this.S1Assignment);
             this.S1AssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.S1AssignmentList.Location = new System.Drawing.Point(16, 246);
+            this.S1AssignmentList.Location = new System.Drawing.Point(16, 228);
             this.S1AssignmentList.Name = "S1AssignmentList";
             this.S1AssignmentList.Size = new System.Drawing.Size(772, 198);
             this.S1AssignmentList.TabIndex = 13;
@@ -398,9 +415,9 @@
             // 
             this.S1LectureList.Controls.Add(this.listView1);
             this.S1LectureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.S1LectureList.Location = new System.Drawing.Point(17, 37);
+            this.S1LectureList.Location = new System.Drawing.Point(17, 34);
             this.S1LectureList.Name = "S1LectureList";
-            this.S1LectureList.Size = new System.Drawing.Size(388, 213);
+            this.S1LectureList.Size = new System.Drawing.Size(388, 191);
             this.S1LectureList.TabIndex = 1;
             this.S1LectureList.TabStop = false;
             this.S1LectureList.Text = "Lectures";
@@ -420,7 +437,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 28);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(382, 182);
+            this.listView1.Size = new System.Drawing.Size(382, 160);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -459,9 +476,9 @@
             // 
             this.S1ClassList.Controls.Add(this.listView2);
             this.S1ClassList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.S1ClassList.Location = new System.Drawing.Point(408, 37);
+            this.S1ClassList.Location = new System.Drawing.Point(411, 34);
             this.S1ClassList.Name = "S1ClassList";
-            this.S1ClassList.Size = new System.Drawing.Size(380, 213);
+            this.S1ClassList.Size = new System.Drawing.Size(380, 191);
             this.S1ClassList.TabIndex = 11;
             this.S1ClassList.TabStop = false;
             this.S1ClassList.Text = "Classes";
@@ -481,7 +498,7 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(3, 28);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(374, 182);
+            this.listView2.Size = new System.Drawing.Size(374, 160);
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -549,6 +566,7 @@
             // AssignmentPanel
             // 
             this.AssignmentPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.AssignmentPanel.Controls.Add(this.label7);
             this.AssignmentPanel.Controls.Add(this.ALBackButton);
             this.AssignmentPanel.Controls.Add(this.AssignmentList);
             this.AssignmentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -634,6 +652,7 @@
             // Subject2Panel
             // 
             this.Subject2Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Subject2Panel.Controls.Add(this.S2AddAss);
             this.Subject2Panel.Controls.Add(this.S2BackButton);
             this.Subject2Panel.Controls.Add(this.groupBox2);
             this.Subject2Panel.Controls.Add(this.label1);
@@ -646,6 +665,17 @@
             this.Subject2Panel.Size = new System.Drawing.Size(800, 450);
             this.Subject2Panel.TabIndex = 16;
             this.Subject2Panel.Visible = false;
+            // 
+            // S2AddAss
+            // 
+            this.S2AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.S2AddAss.Location = new System.Drawing.Point(9, 408);
+            this.S2AddAss.Name = "S2AddAss";
+            this.S2AddAss.Size = new System.Drawing.Size(145, 33);
+            this.S2AddAss.TabIndex = 16;
+            this.S2AddAss.Text = "Add Assignment";
+            this.S2AddAss.UseVisualStyleBackColor = true;
+            this.S2AddAss.Click += new System.EventHandler(this.S2AddAss_Click);
             // 
             // S2BackButton
             // 
@@ -662,7 +692,7 @@
             // 
             this.groupBox2.Controls.Add(this.listView3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(16, 246);
+            this.groupBox2.Location = new System.Drawing.Point(16, 225);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(772, 198);
             this.groupBox2.TabIndex = 13;
@@ -746,7 +776,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox3.Location = new System.Drawing.Point(17, 37);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(388, 213);
+            this.groupBox3.Size = new System.Drawing.Size(388, 188);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lectures";
@@ -766,7 +796,7 @@
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(3, 28);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(382, 182);
+            this.listView4.Size = new System.Drawing.Size(382, 157);
             this.listView4.TabIndex = 15;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -807,7 +837,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox4.Location = new System.Drawing.Point(408, 37);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(380, 213);
+            this.groupBox4.Size = new System.Drawing.Size(380, 188);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Classes";
@@ -827,7 +857,7 @@
             this.listView5.HideSelection = false;
             this.listView5.Location = new System.Drawing.Point(3, 28);
             this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(374, 182);
+            this.listView5.Size = new System.Drawing.Size(374, 157);
             this.listView5.TabIndex = 16;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
@@ -865,6 +895,7 @@
             // Subject3Panel
             // 
             this.Subject3Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Subject3Panel.Controls.Add(this.S3AddAss);
             this.Subject3Panel.Controls.Add(this.S3BackButton);
             this.Subject3Panel.Controls.Add(this.groupBox5);
             this.Subject3Panel.Controls.Add(this.label3);
@@ -877,6 +908,17 @@
             this.Subject3Panel.Size = new System.Drawing.Size(800, 450);
             this.Subject3Panel.TabIndex = 17;
             this.Subject3Panel.Visible = false;
+            // 
+            // S3AddAss
+            // 
+            this.S3AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.S3AddAss.Location = new System.Drawing.Point(6, 408);
+            this.S3AddAss.Name = "S3AddAss";
+            this.S3AddAss.Size = new System.Drawing.Size(145, 33);
+            this.S3AddAss.TabIndex = 16;
+            this.S3AddAss.Text = "Add Assignment";
+            this.S3AddAss.UseVisualStyleBackColor = true;
+            this.S3AddAss.Click += new System.EventHandler(this.S3AddAss_Click);
             // 
             // S3BackButton
             // 
@@ -893,7 +935,7 @@
             // 
             this.groupBox5.Controls.Add(this.listView6);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox5.Location = new System.Drawing.Point(16, 246);
+            this.groupBox5.Location = new System.Drawing.Point(16, 225);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(772, 198);
             this.groupBox5.TabIndex = 13;
@@ -977,7 +1019,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox6.Location = new System.Drawing.Point(17, 37);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(388, 213);
+            this.groupBox6.Size = new System.Drawing.Size(388, 188);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Lectures";
@@ -997,7 +1039,7 @@
             this.listView7.HideSelection = false;
             this.listView7.Location = new System.Drawing.Point(3, 28);
             this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(382, 182);
+            this.listView7.Size = new System.Drawing.Size(382, 157);
             this.listView7.TabIndex = 15;
             this.listView7.UseCompatibleStateImageBehavior = false;
             this.listView7.View = System.Windows.Forms.View.Details;
@@ -1038,7 +1080,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox7.Location = new System.Drawing.Point(408, 37);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(380, 213);
+            this.groupBox7.Size = new System.Drawing.Size(380, 188);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Classes";
@@ -1058,7 +1100,7 @@
             this.listView8.HideSelection = false;
             this.listView8.Location = new System.Drawing.Point(3, 28);
             this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(374, 182);
+            this.listView8.Size = new System.Drawing.Size(374, 157);
             this.listView8.TabIndex = 16;
             this.listView8.UseCompatibleStateImageBehavior = false;
             this.listView8.View = System.Windows.Forms.View.Details;
@@ -1096,6 +1138,7 @@
             // Subject4Panel
             // 
             this.Subject4Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Subject4Panel.Controls.Add(this.S4AddAss);
             this.Subject4Panel.Controls.Add(this.S4Back);
             this.Subject4Panel.Controls.Add(this.groupBox8);
             this.Subject4Panel.Controls.Add(this.label5);
@@ -1108,6 +1151,17 @@
             this.Subject4Panel.Size = new System.Drawing.Size(800, 450);
             this.Subject4Panel.TabIndex = 18;
             this.Subject4Panel.Visible = false;
+            // 
+            // S4AddAss
+            // 
+            this.S4AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.S4AddAss.Location = new System.Drawing.Point(6, 413);
+            this.S4AddAss.Name = "S4AddAss";
+            this.S4AddAss.Size = new System.Drawing.Size(145, 33);
+            this.S4AddAss.TabIndex = 16;
+            this.S4AddAss.Text = "Add Assignment";
+            this.S4AddAss.UseVisualStyleBackColor = true;
+            this.S4AddAss.Click += new System.EventHandler(this.S4AddAss_Click);
             // 
             // S4Back
             // 
@@ -1124,7 +1178,7 @@
             // 
             this.groupBox8.Controls.Add(this.listView9);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox8.Location = new System.Drawing.Point(16, 246);
+            this.groupBox8.Location = new System.Drawing.Point(16, 228);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(772, 198);
             this.groupBox8.TabIndex = 13;
@@ -1208,7 +1262,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox9.Location = new System.Drawing.Point(17, 37);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(388, 213);
+            this.groupBox9.Size = new System.Drawing.Size(388, 188);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Lectures";
@@ -1228,7 +1282,7 @@
             this.listView10.HideSelection = false;
             this.listView10.Location = new System.Drawing.Point(3, 28);
             this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(382, 182);
+            this.listView10.Size = new System.Drawing.Size(382, 157);
             this.listView10.TabIndex = 15;
             this.listView10.UseCompatibleStateImageBehavior = false;
             this.listView10.View = System.Windows.Forms.View.Details;
@@ -1269,7 +1323,7 @@
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox10.Location = new System.Drawing.Point(408, 37);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(380, 213);
+            this.groupBox10.Size = new System.Drawing.Size(380, 188);
             this.groupBox10.TabIndex = 11;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Classes";
@@ -1289,7 +1343,7 @@
             this.listView11.HideSelection = false;
             this.listView11.Location = new System.Drawing.Point(3, 28);
             this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(374, 182);
+            this.listView11.Size = new System.Drawing.Size(374, 157);
             this.listView11.TabIndex = 16;
             this.listView11.UseCompatibleStateImageBehavior = false;
             this.listView11.View = System.Windows.Forms.View.Details;
@@ -1324,17 +1378,25 @@
             this.columnHeader72.Text = "Weeks Held";
             this.columnHeader72.Width = 150;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(358, 425);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AssignmentPanel);
             this.Controls.Add(this.Subject1Panel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Subject4Panel);
             this.Controls.Add(this.Subject3Panel);
             this.Controls.Add(this.Subject2Panel);
-            this.Controls.Add(this.AssignmentPanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.HomePanel.ResumeLayout(false);
@@ -1346,6 +1408,7 @@
             this.S1LectureList.ResumeLayout(false);
             this.S1ClassList.ResumeLayout(false);
             this.AssignmentPanel.ResumeLayout(false);
+            this.AssignmentPanel.PerformLayout();
             this.AssignmentList.ResumeLayout(false);
             this.Subject2Panel.ResumeLayout(false);
             this.Subject2Panel.PerformLayout();
@@ -1501,6 +1564,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader72;
         private System.Windows.Forms.ColumnHeader columnHeader77;
         private System.Windows.Forms.ColumnHeader columnHeader78;
+        private System.Windows.Forms.Button S1AddAss;
+        private System.Windows.Forms.Button S3AddAss;
+        private System.Windows.Forms.Button S4AddAss;
+        private System.Windows.Forms.Button S2AddAss;
+        private System.Windows.Forms.Label label7;
     }
 }
 

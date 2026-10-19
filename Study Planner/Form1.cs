@@ -304,7 +304,7 @@ namespace Study_Planner
             Assignment newAssignment = new Assignment(
                 "New Assignment", DateTime.Today, "", subject);
 
-            //only add the new assignment to its subject when the details form saves successfully
+            //Only add the new assignment to its subject when the details form saves successfully
             using (AssignmentDetailsForm details = new AssignmentDetailsForm(
                 newAssignment,
                 edited => subject.assignments.Add(edited)))

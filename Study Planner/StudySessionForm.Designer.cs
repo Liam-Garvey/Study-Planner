@@ -170,6 +170,7 @@
             this.ListStudyLog.TabIndex = 17;
             this.ListStudyLog.UseCompatibleStateImageBehavior = false;
             this.ListStudyLog.View = System.Windows.Forms.View.Details;
+            this.ListStudyLog.SelectedIndexChanged += new System.EventHandler(this.ListStudyLog_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

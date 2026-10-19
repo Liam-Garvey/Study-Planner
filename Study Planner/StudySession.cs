@@ -10,9 +10,6 @@ namespace Study_Planner
 {
     public class StudySession
     {
-
-        // properties
-
         public string StudyDescription {  get; set; }
         public DateTime StudyDate { get; set; }
         public TimeSpan StartTime { get; set; }

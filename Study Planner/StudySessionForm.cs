@@ -30,37 +30,47 @@ namespace Study_Planner
             int hours = (int)numHours.Value;
             int minutes = (int)numMinutes.Value;
             TimeSpan SessionDuration = new TimeSpan(hours, minutes, 0);
-            TimeSpan currentTime = DateTime.Now.TimeOfDay;
 
 
             // validation - all inputs entered otherwise can not add
             if (string.IsNullOrWhiteSpace(TaskDescription))
             {
-                MessageBox.Show("Please enter a description!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a description!", "Empty Description", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if ((SessionDate < DateTime.Now)) 
+            if ((SessionDate < DateTime.Today)) 
             {
-                MessageBox.Show("Please enter a date date!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter today or a future date", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if ((SessionDate + StartTime < DateTime.Now))
+            if ((SessionDate + StartTime <= (DateTime.Now.AddMinutes(-1))))
             {
-                MessageBox.Show("Please enter a valid time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a future time", "Invalid Time", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (hours == 0 && minutes == 0)
             {
-                MessageBox.Show("Please enter a duration of time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a duration of time!", "Invalid Duration", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
 
             StudySession newSession = new StudySession(SessionDate, StartTime, SessionDuration, TaskDescription);
-            sessions.Add(newSession);
+
+            DialogResult result = MessageBox.Show("Confirm your session", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                sessions.Add(newSession);
+                ClearInputs();
+            }
+            else if (result == DialogResult.No)
+            {
+                return;
+            }
+
 
             SessionsInListStudySessions();
             SessionsInStudyLog();
@@ -68,7 +78,6 @@ namespace Study_Planner
             // tester code
             //testTxt.Text = newSession.ToString();
             
-            ClearInputs();
         }
 
         private void ClearInputs()
@@ -134,20 +143,20 @@ namespace Study_Planner
 
         private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            // USER CONFIRM THAT THEY WANT TO COMPLETE THE SESSION
 
             if (refreshingView) { return; } // refreshing view
 
             StudySession session = (StudySession)e.Item.Tag;
 
             bool isChecked = e.Item.Checked;
-            //session.StudyCompleted = isChecked;
 
             if (session.StudyCompleted = isChecked)
             {
                 DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
+                    MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
+
                     BeginInvoke(new Action(RefreshLists));
                 }
                 else if (result == DialogResult.No)
@@ -170,6 +179,12 @@ namespace Study_Planner
                 SessionsInStudyLog();
             }
             finally { refreshingView = false; } 
+        }
+
+        private void ListStudyLog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
+
         }
     }
 }

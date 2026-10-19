@@ -18,13 +18,9 @@ namespace Study_Planner
             SessionsInStudyLog();
         }
 
-        // ADDS NEW SESSIONS
+
         private void BtnNewStudySession_Click(object sender, EventArgs e)
         {
-
-            // IMPORTANT TO DO
-            // MAKE SURE THERE IS A CONFIRM THE STUDY SESSION BUTTON
-            // MAKE SURE THERE IS INPUT VALIDATION for the task description
 
             string TaskDescription = txtStudyDescription.Text; 
             DateTime SessionDate = dtpSessionDate.Value.Date;
@@ -36,8 +32,8 @@ namespace Study_Planner
             TimeSpan SessionDuration = new TimeSpan(hours, minutes, 0);
             TimeSpan currentTime = DateTime.Now.TimeOfDay;
 
-            // validation - all inputs must be entered
 
+            // validation - all inputs entered otherwise can not add
             if (string.IsNullOrWhiteSpace(TaskDescription))
             {
                 MessageBox.Show("Please enter a description!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -50,7 +46,6 @@ namespace Study_Planner
                 return;
             }
 
-            // today's date and time 
             if ((SessionDate + StartTime < DateTime.Now))
             {
                 MessageBox.Show("Please enter a valid time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -62,6 +57,7 @@ namespace Study_Planner
                 MessageBox.Show("Please enter a duration of time!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
 
             StudySession newSession = new StudySession(SessionDate, StartTime, SessionDuration, TaskDescription);
             sessions.Add(newSession);
@@ -138,14 +134,29 @@ namespace Study_Planner
 
         private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
+            // USER CONFIRM THAT THEY WANT TO COMPLETE THE SESSION
+
             if (refreshingView) { return; } // refreshing view
 
             StudySession session = (StudySession)e.Item.Tag;
 
             bool isChecked = e.Item.Checked;
-            session.StudyCompleted = isChecked;
+            //session.StudyCompleted = isChecked;
 
-            BeginInvoke(new Action(RefreshLists));
+            if (session.StudyCompleted = isChecked)
+            {
+                DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    BeginInvoke(new Action(RefreshLists));
+                }
+                else if (result == DialogResult.No)
+                {
+                    e.Item.Checked = false;
+                    return;
+                }
+
+            }
 
         }
 

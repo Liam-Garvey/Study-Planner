@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\uts 2026\\semester 2\\ad.net\\assessment 2\\study-planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\assignmentdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\uts 2026\\semester 2\\ad.net\\assessment 2\\study-planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAAwAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:11.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T08:04:11.162Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "Study Planner\\StudySessionForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:06.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T08:04:06.674Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\StudySessionForm.cs [Design]",
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:02.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T08:04:02.485Z"
             },
             {
               "$type": "Document",
@@ -134,8 +131,7 @@
               "RelativeToolTip": "Study Planner\\AssignmentDetailsForm.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAkwGcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:42.557Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\AssignmentDetailsForm.cs [Design]",
               "RelativeToolTip": "Study Planner\\AssignmentDetailsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.559Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T07:25:42.559Z"
             },
             {
               "$type": "Document",
@@ -158,8 +153,7 @@
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Form1.cs [Design]",
               "RelativeToolTip": "Study Planner\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.307Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T07:25:44.307Z"
             },
             {
               "$type": "Document",
@@ -171,8 +165,7 @@
               "RelativeToolTip": "Study Planner\\StudySession.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA0wDgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:44.315Z"
             },
             {
               "$type": "Document",
@@ -184,8 +177,7 @@
               "RelativeToolTip": "Study Planner\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwEsAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:44.316Z"
             },
             {
               "$type": "Document",
@@ -197,8 +189,7 @@
               "RelativeToolTip": "Study Planner\\Subject.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAkwDAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:44.316Z"
             },
             {
               "$type": "Document",
@@ -210,8 +201,7 @@
               "RelativeToolTip": "Study Planner\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:44.318Z"
             }
           ]
         }

@@ -43,7 +43,7 @@ namespace Study_Planner
     public class Class
     {
         public string classType { get; private set; }
-        public string duration { get; private set; }
+        public TimeSpan duration { get; private set; }
         public TimeSpan startTime { get; private set; }
         public string classDay { get; private set; }
         public string classLocation { get; private set; }
@@ -52,7 +52,7 @@ namespace Study_Planner
         public Class(string type, string length, string time, string day, string location, string weeks="All", string description = "")
         {
             classType = type;
-            duration = length;
+            duration = TimeSpan.Parse(length);
             startTime = TimeSpan.Parse(time);
             classDay = day;
             classLocation = location;
@@ -62,7 +62,7 @@ namespace Study_Planner
         public Class(string length, string time, string day, string description="Attendance not required")
         {
             classType = "Lecture";
-            duration = length;
+            duration = TimeSpan.Parse(length);
             startTime = TimeSpan.Parse(time);
             classDay= day;
             classLocation = "Online";
@@ -83,10 +83,10 @@ namespace Study_Planner
         public bool isComplete { get; private set; }
 
         public Milestone(string milestoneName,
-            string milestoneDescription, DateTime date)
+            string milestoneDescription, DateTime date, bool complete=false)
         {
             UpdateDetails(milestoneName, milestoneDescription, date);
-            isComplete = false;
+            isComplete = complete;
         }
 
         public Milestone(string milestoneName,

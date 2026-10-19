@@ -74,10 +74,10 @@ namespace Study_Planner
                 }
                 foreach (Assignment ass in subject.assignments)
                 {
-                    fileWriter.WriteLine("Assignment," + ass.typeName + "," + ass.dueDate.Date + "," + ass.assignmentDescription);
+                    fileWriter.WriteLine("Assignment," + ass.typeName + "," + ass.finishDate.Date + "," + ass.typeDetails);
                     foreach(Milestone ms in ass.milestones)
                     {
-                        fileWriter.WriteLine("Milestone," + ms.name + "," + ms.description + "," + ms.expectedDate.ToString() + "," + ms.isComplete);
+                        fileWriter.WriteLine("Milestone," + ms.typeName + "," + ms.typeDetails + "," + ms.finishDate.ToString() + "," + ms.isComplete);
                     }
                 }
             }

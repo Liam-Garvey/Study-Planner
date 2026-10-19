@@ -12,8 +12,8 @@ FillGroupBox Method of Form1.cs
 Anonymous Method/LINQ/Lambda:
 progress member variable in Assignment.cs
 Interface#1:
-Type Interface, used by Class and Assignment, in Subject.cs
-
-
+Type Interface, used by Class, Assignment and Milestone classes. In Subject.cs
+Interface#2:
+Date Interface, used by Assignment and Milestone classes. In Subject.cs
 NUnit Testing:
 

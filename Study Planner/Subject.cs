@@ -48,7 +48,7 @@ namespace Study_Planner
         public TimeSpan startTime { get; private set; }
         public string classDay { get; private set; }
         public string classLocation { get; private set; }
-        public string classDescription { get; private set; }
+        public string typeDetails { get; set; }
         public string weeksRunning { get; private set; }
         //Different constructors allow for creation of class subtypes (lectures/other classes)
         public Class(string type, string length, string time, string day, string location, string weeks="All", string description = "")
@@ -58,7 +58,7 @@ namespace Study_Planner
             startTime = TimeSpan.Parse(time);
             classDay = day;
             classLocation = location;
-            classDescription = description;
+            typeDetails = description;
             weeksRunning = weeks;
         }
         public Class(string length, string time, string day, string description="Attendance not required")
@@ -68,7 +68,7 @@ namespace Study_Planner
             startTime = TimeSpan.Parse(time);
             classDay= day;
             classLocation = "Online";
-            classDescription = description;
+            typeDetails = description;
             weeksRunning = "All";
         }
         public string ClassInfo()
@@ -77,11 +77,11 @@ namespace Study_Planner
         }
     }
 
-    public class Milestone
+    public class Milestone : Type, Date
     {
-        public string name { get; private set; }
-        public string description { get; private set; }
-        public DateTime expectedDate { get; private set; }
+        public string typeName { get; set; }
+        public string typeDetails { get; set; }
+        public DateTime finishDate { get; set; }
         public bool isComplete { get; private set; }
         //Milestones default to incomplete due to being new
         public Milestone(string milestoneName,
@@ -107,9 +107,9 @@ namespace Study_Planner
                     "Enter a milestone name.", nameof(milestoneName));
             }
 
-            name = milestoneName.Trim();
-            description = milestoneDescription ?? "";
-            expectedDate = date;
+            typeName = milestoneName.Trim();
+            typeDetails = milestoneDescription ?? "";
+            finishDate = date;
         }
 
         public void SetComplete(bool complete = true)
@@ -120,5 +120,10 @@ namespace Study_Planner
     interface Type
     {
         string typeName { get; set; }
+        string typeDetails {  get; set; }
+    }
+    interface Date
+    {
+        DateTime finishDate { get; set; }
     }
 }

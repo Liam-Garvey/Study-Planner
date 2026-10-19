@@ -60,8 +60,8 @@ namespace Study_Planner
             try
             {
                 AssignmentTypeBox.Text = assignment.typeName;
-                AssignmentDate.Value = assignment.dueDate;
-                AssignmentDescriptionBox.Text = assignment.assignmentDescription;
+                AssignmentDate.Value = assignment.finishDate;
+                AssignmentDescriptionBox.Text = assignment.typeDetails;
                 Text = assignment.typeName + " - Details";
 
                 Control[] labels = Controls.Find("SubjectLabel", true);
@@ -206,10 +206,10 @@ namespace Study_Planner
             selectedMilestoneIndex = index;
             UpdateMilestoneButton.Enabled = index >= 0;
             Milestone milestone = index < 0 ? null : assignment.milestones[index];
-            MilestoneNameBox.Text = milestone == null ? "" : milestone.name;
-            MilestoneDescriptionBox.Text = milestone == null ? "" : milestone.description;
+            MilestoneNameBox.Text = milestone == null ? "" : milestone.typeName;
+            MilestoneDescriptionBox.Text = milestone == null ? "" : milestone.typeDetails;
             MilestoneDate.Value = milestone == null
-                ? AssignmentDate.Value.Date : milestone.expectedDate;
+                ? AssignmentDate.Value.Date : milestone.finishDate;
 
             loadedMilestoneName = MilestoneNameBox.Text;
             loadedMilestoneDescription = MilestoneDescriptionBox.Text;
@@ -233,8 +233,8 @@ namespace Study_Planner
                 MilestonesList.Items.Clear();
                 foreach (Milestone milestone in assignment.milestones)
                 {
-                    string text = milestone.name + " - "
-                        + milestone.expectedDate.ToString("dd/MM/yyyy");
+                    string text = milestone.typeName + " - "
+                        + milestone.finishDate.ToString("dd/MM/yyyy");
                     MilestonesList.Items.Add(text, milestone.isComplete);
                 }
                 LoadMilestoneEditor(-1);

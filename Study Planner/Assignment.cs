@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Study_Planner
 {
-    public class Assignment : Type
+    public class Assignment : Type, Date
     {
         public string typeName { get; set; }
-        public DateTime dueDate { get; private set; }
-        public string assignmentDescription { get; private set; }
+        public DateTime finishDate { get; set; }
+        public string typeDetails { get; set; }
         public List<Milestone> milestones { get; private set; }
         public Subject subject { get; private set; }
 
@@ -51,8 +51,8 @@ namespace Study_Planner
             if (string.IsNullOrWhiteSpace(type))
                 throw new ArgumentException("Enter an assignment type.", nameof(type));
             typeName = type.Trim();
-            dueDate = date.Date;
-            assignmentDescription = description ?? "";
+            finishDate = date.Date;
+            typeDetails = description ?? "";
         }
 
         public void AddMileStone(string name, string description, DateTime date, bool complete=false)
@@ -74,7 +74,7 @@ namespace Study_Planner
 
         public Assignment CreateEditCopy()
         {
-            return new Assignment(typeName, dueDate, assignmentDescription,
+            return new Assignment(typeName, finishDate, typeDetails,
                 subject, milestones);
         }
 
@@ -85,8 +85,8 @@ namespace Study_Planner
                 throw new ArgumentException("This edit belongs to another subject.");
 
             List<Milestone> replacement = CopyMilestones(edited.milestones);
-            UpdateDetails(edited.typeName, edited.dueDate,
-                edited.assignmentDescription);
+            UpdateDetails(edited.typeName, edited.finishDate,
+                edited.typeDetails);
             milestones = replacement;
         }
 
@@ -98,8 +98,8 @@ namespace Study_Planner
             {
                 if (item == null)
                     throw new ArgumentException("A milestone cannot be null.");
-                Milestone copy = new Milestone(item.name, item.description,
-                    item.expectedDate.Date);
+                Milestone copy = new Milestone(item.typeName, item.typeDetails,
+                    item.finishDate.Date);
                 copy.SetComplete(item.isComplete);
                 result.Add(copy);
             }
@@ -108,7 +108,7 @@ namespace Study_Planner
 
         public string AssignmentInfo()
         {
-            return typeName + " " + dueDate.ToString("dd/MM/yyyy")
+            return typeName + " " + finishDate.ToString("dd/MM/yyyy")
                 + " " + progress + "%";
         }
     }

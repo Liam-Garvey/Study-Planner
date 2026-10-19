@@ -98,10 +98,10 @@ namespace Study_Planner
                     ListViewItem listItem = new ListViewItem(subject.subjectID + " " + subject.subjectName);
                     listItem.Font = new Font(assList.Font, listItem.Font.Style);
                     listItem.SubItems.Add(assignment.typeName);
-                    listItem.SubItems.Add(assignment.dueDate.ToString("dd/MM/yyyy"));
+                    listItem.SubItems.Add(assignment.finishDate.ToString("dd/MM/yyyy"));
                     listItem.SubItems.Add(assignment.progress.ToString());
                     listItem.SubItems.Add(assignment.milestones.Count + " Milestones");
-                    listItem.SubItems.Add(assignment.assignmentDescription);
+                    listItem.SubItems.Add(assignment.typeDetails);
                     listItem.Tag = assignment;
                     assList.Items.Add(listItem);
                 }

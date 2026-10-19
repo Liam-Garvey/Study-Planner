@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.StudySessionButton = new System.Windows.Forms.Button();
             this.AssignmentListButton = new System.Windows.Forms.Button();
             this.subjectList = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,7 +84,7 @@
             this.S2AddAss = new System.Windows.Forms.Button();
             this.S2BackButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.S3Assignment = new System.Windows.Forms.ListView();
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -112,7 +113,7 @@
             this.S3AddAss = new System.Windows.Forms.Button();
             this.S3BackButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.S4Assignment = new System.Windows.Forms.ListView();
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -141,7 +142,7 @@
             this.S4AddAss = new System.Windows.Forms.Button();
             this.S4Back = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.listView9 = new System.Windows.Forms.ListView();
+            this.S2Assignment = new System.Windows.Forms.ListView();
             this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader56 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader57 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -166,7 +167,6 @@
             this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.StudySessionButton = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -199,17 +199,40 @@
             this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePanel.Location = new System.Drawing.Point(0, 0);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(800, 450);
+            this.HomePanel.Size = new System.Drawing.Size(1059, 461);
             this.HomePanel.TabIndex = 0;
             this.HomePanel.UseWaitCursor = true;
             this.HomePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomePanel_Paint);
             // 
+            // StudySessionButton
+            // 
+<<<<<<< HEAD
+            this.StudySessionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.StudySessionButton.Location = new System.Drawing.Point(563, 28);
+            this.StudySessionButton.Name = "StudySessionButton";
+            this.StudySessionButton.Size = new System.Drawing.Size(228, 88);
+=======
+            this.StudySessionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StudySessionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.StudySessionButton.Location = new System.Drawing.Point(269, 68);
+            this.StudySessionButton.Name = "StudySessionButton";
+            this.StudySessionButton.Size = new System.Drawing.Size(772, 174);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
+            this.StudySessionButton.TabIndex = 4;
+            this.StudySessionButton.Text = "View Study Sessions";
+            this.StudySessionButton.UseVisualStyleBackColor = true;
+            this.StudySessionButton.UseWaitCursor = true;
+            this.StudySessionButton.Click += new System.EventHandler(this.StudySessionButton_Click);
+            // 
             // AssignmentListButton
             // 
+            this.AssignmentListButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AssignmentListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.AssignmentListButton.Location = new System.Drawing.Point(556, 339);
+            this.AssignmentListButton.Location = new System.Drawing.Point(269, 245);
             this.AssignmentListButton.Name = "AssignmentListButton";
-            this.AssignmentListButton.Size = new System.Drawing.Size(228, 88);
+            this.AssignmentListButton.Size = new System.Drawing.Size(772, 178);
             this.AssignmentListButton.TabIndex = 3;
             this.AssignmentListButton.Text = "View All Assignments";
             this.AssignmentListButton.UseVisualStyleBackColor = true;
@@ -234,9 +257,10 @@
             this.groupBox1.Controls.Add(this.Subject2);
             this.groupBox1.Controls.Add(this.Subject3);
             this.groupBox1.Controls.Add(this.Subject4);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 450);
+            this.groupBox1.Size = new System.Drawing.Size(254, 461);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.UseWaitCursor = true;
@@ -302,15 +326,16 @@
             this.Subject1Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Subject1Panel.Location = new System.Drawing.Point(0, 0);
             this.Subject1Panel.Name = "Subject1Panel";
-            this.Subject1Panel.Size = new System.Drawing.Size(800, 450);
+            this.Subject1Panel.Size = new System.Drawing.Size(1059, 461);
             this.Subject1Panel.TabIndex = 6;
             this.Subject1Panel.Visible = false;
             this.Subject1Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Subject1Panel_Paint);
             // 
             // S1AddAss
             // 
+            this.S1AddAss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.S1AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S1AddAss.Location = new System.Drawing.Point(6, 413);
+            this.S1AddAss.Location = new System.Drawing.Point(12, 426);
             this.S1AddAss.Name = "S1AddAss";
             this.S1AddAss.Size = new System.Drawing.Size(145, 33);
             this.S1AddAss.TabIndex = 15;
@@ -320,8 +345,9 @@
             // 
             // S1BackButton
             // 
+            this.S1BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.S1BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S1BackButton.Location = new System.Drawing.Point(722, 414);
+            this.S1BackButton.Location = new System.Drawing.Point(972, 426);
             this.S1BackButton.Name = "S1BackButton";
             this.S1BackButton.Size = new System.Drawing.Size(75, 33);
             this.S1BackButton.TabIndex = 14;
@@ -331,11 +357,14 @@
             // 
             // S1AssignmentList
             // 
+            this.S1AssignmentList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.S1AssignmentList.Controls.Add(this.S1Assignment);
             this.S1AssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.S1AssignmentList.Location = new System.Drawing.Point(16, 228);
             this.S1AssignmentList.Name = "S1AssignmentList";
-            this.S1AssignmentList.Size = new System.Drawing.Size(772, 198);
+            this.S1AssignmentList.Size = new System.Drawing.Size(1025, 198);
             this.S1AssignmentList.TabIndex = 13;
             this.S1AssignmentList.TabStop = false;
             this.S1AssignmentList.Text = "Assignments";
@@ -356,7 +385,7 @@
             this.S1Assignment.Location = new System.Drawing.Point(3, 28);
             this.S1Assignment.MultiSelect = false;
             this.S1Assignment.Name = "S1Assignment";
-            this.S1Assignment.Size = new System.Drawing.Size(766, 167);
+            this.S1Assignment.Size = new System.Drawing.Size(1019, 167);
             this.S1Assignment.TabIndex = 17;
             this.S1Assignment.UseCompatibleStateImageBehavior = false;
             this.S1Assignment.View = System.Windows.Forms.View.Details;
@@ -404,8 +433,9 @@
             // 
             // FacultySession
             // 
+            this.FacultySession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FacultySession.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.FacultySession.Location = new System.Drawing.Point(394, 0);
+            this.FacultySession.Location = new System.Drawing.Point(644, 9);
             this.FacultySession.Name = "FacultySession";
             this.FacultySession.Size = new System.Drawing.Size(403, 31);
             this.FacultySession.TabIndex = 12;
@@ -418,7 +448,7 @@
             this.S1LectureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.S1LectureList.Location = new System.Drawing.Point(17, 34);
             this.S1LectureList.Name = "S1LectureList";
-            this.S1LectureList.Size = new System.Drawing.Size(388, 191);
+            this.S1LectureList.Size = new System.Drawing.Size(543, 191);
             this.S1LectureList.TabIndex = 1;
             this.S1LectureList.TabStop = false;
             this.S1LectureList.Text = "Lectures";
@@ -438,7 +468,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 28);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(382, 160);
+            this.listView1.Size = new System.Drawing.Size(537, 160);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -475,11 +505,13 @@
             // 
             // S1ClassList
             // 
+            this.S1ClassList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.S1ClassList.Controls.Add(this.listView2);
             this.S1ClassList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.S1ClassList.Location = new System.Drawing.Point(411, 34);
+            this.S1ClassList.Location = new System.Drawing.Point(563, 34);
             this.S1ClassList.Name = "S1ClassList";
-            this.S1ClassList.Size = new System.Drawing.Size(380, 191);
+            this.S1ClassList.Size = new System.Drawing.Size(478, 191);
             this.S1ClassList.TabIndex = 11;
             this.S1ClassList.TabStop = false;
             this.S1ClassList.Text = "Classes";
@@ -499,7 +531,7 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(3, 28);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(374, 160);
+            this.listView2.Size = new System.Drawing.Size(472, 160);
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -573,7 +605,7 @@
             this.AssignmentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AssignmentPanel.Location = new System.Drawing.Point(0, 0);
             this.AssignmentPanel.Name = "AssignmentPanel";
-            this.AssignmentPanel.Size = new System.Drawing.Size(800, 450);
+            this.AssignmentPanel.Size = new System.Drawing.Size(1059, 461);
             this.AssignmentPanel.TabIndex = 15;
             this.AssignmentPanel.Visible = false;
             // 
@@ -587,10 +619,11 @@
             // 
             // ALBackButton
             // 
+            this.ALBackButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ALBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ALBackButton.Location = new System.Drawing.Point(722, 411);
+            this.ALBackButton.Location = new System.Drawing.Point(0, 425);
             this.ALBackButton.Name = "ALBackButton";
-            this.ALBackButton.Size = new System.Drawing.Size(75, 36);
+            this.ALBackButton.Size = new System.Drawing.Size(1059, 36);
             this.ALBackButton.TabIndex = 15;
             this.ALBackButton.Text = "Back";
             this.ALBackButton.UseVisualStyleBackColor = true;
@@ -598,11 +631,14 @@
             // 
             // AssignmentList
             // 
+            this.AssignmentList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AssignmentList.Controls.Add(this.AllAssignmentList);
             this.AssignmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.AssignmentList.Location = new System.Drawing.Point(6, 3);
             this.AssignmentList.Name = "AssignmentList";
-            this.AssignmentList.Size = new System.Drawing.Size(791, 405);
+            this.AssignmentList.Size = new System.Drawing.Size(1050, 416);
             this.AssignmentList.TabIndex = 0;
             this.AssignmentList.TabStop = false;
             this.AssignmentList.Text = "Assignments";
@@ -622,7 +658,7 @@
             this.AllAssignmentList.Location = new System.Drawing.Point(3, 28);
             this.AllAssignmentList.MultiSelect = false;
             this.AllAssignmentList.Name = "AllAssignmentList";
-            this.AllAssignmentList.Size = new System.Drawing.Size(785, 374);
+            this.AllAssignmentList.Size = new System.Drawing.Size(1044, 385);
             this.AllAssignmentList.TabIndex = 16;
             this.AllAssignmentList.UseCompatibleStateImageBehavior = false;
             this.AllAssignmentList.View = System.Windows.Forms.View.Details;
@@ -671,14 +707,15 @@
             this.Subject2Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Subject2Panel.Location = new System.Drawing.Point(0, 0);
             this.Subject2Panel.Name = "Subject2Panel";
-            this.Subject2Panel.Size = new System.Drawing.Size(800, 450);
+            this.Subject2Panel.Size = new System.Drawing.Size(1059, 461);
             this.Subject2Panel.TabIndex = 16;
             this.Subject2Panel.Visible = false;
             // 
             // S2AddAss
             // 
+            this.S2AddAss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.S2AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S2AddAss.Location = new System.Drawing.Point(9, 408);
+            this.S2AddAss.Location = new System.Drawing.Point(12, 426);
             this.S2AddAss.Name = "S2AddAss";
             this.S2AddAss.Size = new System.Drawing.Size(145, 33);
             this.S2AddAss.TabIndex = 16;
@@ -688,8 +725,9 @@
             // 
             // S2BackButton
             // 
+            this.S2BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.S2BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S2BackButton.Location = new System.Drawing.Point(722, 414);
+            this.S2BackButton.Location = new System.Drawing.Point(972, 426);
             this.S2BackButton.Name = "S2BackButton";
             this.S2BackButton.Size = new System.Drawing.Size(75, 33);
             this.S2BackButton.TabIndex = 14;
@@ -699,35 +737,55 @@
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
+            this.groupBox2.Controls.Add(this.S3Assignment);
+=======
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.listView3);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(16, 225);
+            this.groupBox2.Location = new System.Drawing.Point(16, 228);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(772, 198);
+            this.groupBox2.Size = new System.Drawing.Size(1034, 198);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Assignments";
             this.groupBox2.UseCompatibleTextRendering = true;
             // 
-            // listView3
+            // S3Assignment
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S3Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader23,
             this.columnHeader24,
             this.columnHeader25,
             this.columnHeader26,
             this.columnHeader27,
             this.columnHeader28});
+<<<<<<< HEAD
+            this.S3Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S3Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S3Assignment.HideSelection = false;
+            this.S3Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S3Assignment.MultiSelect = false;
+            this.S3Assignment.Name = "S3Assignment";
+            this.S3Assignment.Size = new System.Drawing.Size(766, 167);
+            this.S3Assignment.TabIndex = 17;
+            this.S3Assignment.UseCompatibleStateImageBehavior = false;
+            this.S3Assignment.View = System.Windows.Forms.View.Details;
+=======
             this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(3, 28);
             this.listView3.MultiSelect = false;
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(766, 167);
+            this.listView3.Size = new System.Drawing.Size(1028, 167);
             this.listView3.TabIndex = 17;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             // 
             // columnHeader23
             // 
@@ -771,8 +829,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label2.Location = new System.Drawing.Point(394, 0);
+            this.label2.Location = new System.Drawing.Point(647, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(403, 31);
             this.label2.TabIndex = 12;
@@ -783,9 +842,9 @@
             // 
             this.groupBox3.Controls.Add(this.listView4);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox3.Location = new System.Drawing.Point(17, 37);
+            this.groupBox3.Location = new System.Drawing.Point(17, 34);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(388, 188);
+            this.groupBox3.Size = new System.Drawing.Size(537, 188);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lectures";
@@ -805,7 +864,7 @@
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(3, 28);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(382, 157);
+            this.listView4.Size = new System.Drawing.Size(531, 157);
             this.listView4.TabIndex = 15;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -842,11 +901,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.listView5);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox4.Location = new System.Drawing.Point(408, 37);
+            this.groupBox4.Location = new System.Drawing.Point(563, 34);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(380, 188);
+            this.groupBox4.Size = new System.Drawing.Size(487, 188);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Classes";
@@ -866,7 +927,7 @@
             this.listView5.HideSelection = false;
             this.listView5.Location = new System.Drawing.Point(3, 28);
             this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(374, 157);
+            this.listView5.Size = new System.Drawing.Size(481, 157);
             this.listView5.TabIndex = 16;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
@@ -914,14 +975,15 @@
             this.Subject3Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Subject3Panel.Location = new System.Drawing.Point(0, 0);
             this.Subject3Panel.Name = "Subject3Panel";
-            this.Subject3Panel.Size = new System.Drawing.Size(800, 450);
+            this.Subject3Panel.Size = new System.Drawing.Size(1059, 461);
             this.Subject3Panel.TabIndex = 17;
             this.Subject3Panel.Visible = false;
             // 
             // S3AddAss
             // 
+            this.S3AddAss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.S3AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S3AddAss.Location = new System.Drawing.Point(6, 408);
+            this.S3AddAss.Location = new System.Drawing.Point(12, 426);
             this.S3AddAss.Name = "S3AddAss";
             this.S3AddAss.Size = new System.Drawing.Size(145, 33);
             this.S3AddAss.TabIndex = 16;
@@ -931,8 +993,9 @@
             // 
             // S3BackButton
             // 
+            this.S3BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.S3BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S3BackButton.Location = new System.Drawing.Point(722, 414);
+            this.S3BackButton.Location = new System.Drawing.Point(972, 426);
             this.S3BackButton.Name = "S3BackButton";
             this.S3BackButton.Size = new System.Drawing.Size(75, 33);
             this.S3BackButton.TabIndex = 14;
@@ -942,35 +1005,55 @@
             // 
             // groupBox5
             // 
+<<<<<<< HEAD
+            this.groupBox5.Controls.Add(this.S4Assignment);
+=======
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.listView6);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox5.Location = new System.Drawing.Point(16, 225);
+            this.groupBox5.Location = new System.Drawing.Point(16, 228);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(772, 198);
+            this.groupBox5.Size = new System.Drawing.Size(1031, 198);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Assignments";
             this.groupBox5.UseCompatibleTextRendering = true;
             // 
-            // listView6
+            // S4Assignment
             // 
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S4Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader39,
             this.columnHeader40,
             this.columnHeader41,
             this.columnHeader42,
             this.columnHeader43,
             this.columnHeader44});
+<<<<<<< HEAD
+            this.S4Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S4Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S4Assignment.HideSelection = false;
+            this.S4Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S4Assignment.MultiSelect = false;
+            this.S4Assignment.Name = "S4Assignment";
+            this.S4Assignment.Size = new System.Drawing.Size(766, 167);
+            this.S4Assignment.TabIndex = 17;
+            this.S4Assignment.UseCompatibleStateImageBehavior = false;
+            this.S4Assignment.View = System.Windows.Forms.View.Details;
+=======
             this.listView6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView6.HideSelection = false;
             this.listView6.Location = new System.Drawing.Point(3, 28);
             this.listView6.MultiSelect = false;
             this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(766, 167);
+            this.listView6.Size = new System.Drawing.Size(1025, 167);
             this.listView6.TabIndex = 17;
             this.listView6.UseCompatibleStateImageBehavior = false;
             this.listView6.View = System.Windows.Forms.View.Details;
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             // 
             // columnHeader39
             // 
@@ -1014,8 +1097,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label4.Location = new System.Drawing.Point(394, 0);
+            this.label4.Location = new System.Drawing.Point(647, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(403, 31);
             this.label4.TabIndex = 12;
@@ -1026,9 +1110,9 @@
             // 
             this.groupBox6.Controls.Add(this.listView7);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox6.Location = new System.Drawing.Point(17, 37);
+            this.groupBox6.Location = new System.Drawing.Point(17, 34);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(388, 188);
+            this.groupBox6.Size = new System.Drawing.Size(540, 188);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Lectures";
@@ -1048,7 +1132,7 @@
             this.listView7.HideSelection = false;
             this.listView7.Location = new System.Drawing.Point(3, 28);
             this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(382, 157);
+            this.listView7.Size = new System.Drawing.Size(534, 157);
             this.listView7.TabIndex = 15;
             this.listView7.UseCompatibleStateImageBehavior = false;
             this.listView7.View = System.Windows.Forms.View.Details;
@@ -1085,11 +1169,13 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.listView8);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox7.Location = new System.Drawing.Point(408, 37);
+            this.groupBox7.Location = new System.Drawing.Point(563, 34);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(380, 188);
+            this.groupBox7.Size = new System.Drawing.Size(484, 188);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Classes";
@@ -1109,7 +1195,7 @@
             this.listView8.HideSelection = false;
             this.listView8.Location = new System.Drawing.Point(3, 28);
             this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(374, 157);
+            this.listView8.Size = new System.Drawing.Size(478, 157);
             this.listView8.TabIndex = 16;
             this.listView8.UseCompatibleStateImageBehavior = false;
             this.listView8.View = System.Windows.Forms.View.Details;
@@ -1157,14 +1243,15 @@
             this.Subject4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Subject4Panel.Location = new System.Drawing.Point(0, 0);
             this.Subject4Panel.Name = "Subject4Panel";
-            this.Subject4Panel.Size = new System.Drawing.Size(800, 450);
+            this.Subject4Panel.Size = new System.Drawing.Size(1059, 461);
             this.Subject4Panel.TabIndex = 18;
             this.Subject4Panel.Visible = false;
             // 
             // S4AddAss
             // 
+            this.S4AddAss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.S4AddAss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S4AddAss.Location = new System.Drawing.Point(6, 413);
+            this.S4AddAss.Location = new System.Drawing.Point(12, 426);
             this.S4AddAss.Name = "S4AddAss";
             this.S4AddAss.Size = new System.Drawing.Size(145, 33);
             this.S4AddAss.TabIndex = 16;
@@ -1174,8 +1261,9 @@
             // 
             // S4Back
             // 
+            this.S4Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.S4Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.S4Back.Location = new System.Drawing.Point(722, 414);
+            this.S4Back.Location = new System.Drawing.Point(972, 426);
             this.S4Back.Name = "S4Back";
             this.S4Back.Size = new System.Drawing.Size(75, 33);
             this.S4Back.TabIndex = 14;
@@ -1185,35 +1273,55 @@
             // 
             // groupBox8
             // 
+<<<<<<< HEAD
+            this.groupBox8.Controls.Add(this.S2Assignment);
+=======
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.listView9);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox8.Location = new System.Drawing.Point(16, 228);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(772, 198);
+            this.groupBox8.Size = new System.Drawing.Size(1028, 198);
             this.groupBox8.TabIndex = 13;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Assignments";
             this.groupBox8.UseCompatibleTextRendering = true;
             // 
-            // listView9
+            // S2Assignment
             // 
-            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S2Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader55,
             this.columnHeader56,
             this.columnHeader57,
             this.columnHeader58,
             this.columnHeader59,
             this.columnHeader60});
+<<<<<<< HEAD
+            this.S2Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S2Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S2Assignment.HideSelection = false;
+            this.S2Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S2Assignment.MultiSelect = false;
+            this.S2Assignment.Name = "S2Assignment";
+            this.S2Assignment.Size = new System.Drawing.Size(766, 167);
+            this.S2Assignment.TabIndex = 17;
+            this.S2Assignment.UseCompatibleStateImageBehavior = false;
+            this.S2Assignment.View = System.Windows.Forms.View.Details;
+=======
             this.listView9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView9.HideSelection = false;
             this.listView9.Location = new System.Drawing.Point(3, 28);
             this.listView9.MultiSelect = false;
             this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(766, 167);
+            this.listView9.Size = new System.Drawing.Size(1022, 167);
             this.listView9.TabIndex = 17;
             this.listView9.UseCompatibleStateImageBehavior = false;
             this.listView9.View = System.Windows.Forms.View.Details;
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             // 
             // columnHeader55
             // 
@@ -1257,8 +1365,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label6.Location = new System.Drawing.Point(394, 0);
+            this.label6.Location = new System.Drawing.Point(641, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(403, 31);
             this.label6.TabIndex = 12;
@@ -1269,9 +1378,9 @@
             // 
             this.groupBox9.Controls.Add(this.listView10);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox9.Location = new System.Drawing.Point(17, 37);
+            this.groupBox9.Location = new System.Drawing.Point(17, 34);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(388, 188);
+            this.groupBox9.Size = new System.Drawing.Size(540, 188);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Lectures";
@@ -1291,7 +1400,7 @@
             this.listView10.HideSelection = false;
             this.listView10.Location = new System.Drawing.Point(3, 28);
             this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(382, 157);
+            this.listView10.Size = new System.Drawing.Size(534, 157);
             this.listView10.TabIndex = 15;
             this.listView10.UseCompatibleStateImageBehavior = false;
             this.listView10.View = System.Windows.Forms.View.Details;
@@ -1328,11 +1437,13 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.listView11);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox10.Location = new System.Drawing.Point(408, 37);
+            this.groupBox10.Location = new System.Drawing.Point(563, 34);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(380, 188);
+            this.groupBox10.Size = new System.Drawing.Size(481, 188);
             this.groupBox10.TabIndex = 11;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Classes";
@@ -1352,7 +1463,7 @@
             this.listView11.HideSelection = false;
             this.listView11.Location = new System.Drawing.Point(3, 28);
             this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(374, 157);
+            this.listView11.Size = new System.Drawing.Size(475, 157);
             this.listView11.TabIndex = 16;
             this.listView11.UseCompatibleStateImageBehavior = false;
             this.listView11.View = System.Windows.Forms.View.Details;
@@ -1387,29 +1498,28 @@
             this.columnHeader72.Text = "Weeks Held";
             this.columnHeader72.Width = 150;
             // 
-            // StudySessionButton
-            // 
-            this.StudySessionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.StudySessionButton.Location = new System.Drawing.Point(563, 28);
-            this.StudySessionButton.Name = "StudySessionButton";
-            this.StudySessionButton.Size = new System.Drawing.Size(228, 88);
-            this.StudySessionButton.TabIndex = 4;
-            this.StudySessionButton.Text = "View Study Sessions";
-            this.StudySessionButton.UseVisualStyleBackColor = true;
-            this.StudySessionButton.UseWaitCursor = true;
-            this.StudySessionButton.Click += new System.EventHandler(this.StudySessionButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(800, 450);
+=======
+            this.ClientSize = new System.Drawing.Size(1059, 461);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Subject4Panel);
             this.Controls.Add(this.Subject3Panel);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             this.Controls.Add(this.Subject2Panel);
-            this.Controls.Add(this.AssignmentPanel);
             this.Controls.Add(this.Subject1Panel);
+<<<<<<< HEAD
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.Subject4Panel);
+            this.Controls.Add(this.Subject3Panel);
+=======
+            this.Controls.Add(this.AssignmentPanel);
+            this.MinimumSize = new System.Drawing.Size(1075, 500);
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             this.Name = "Form1";
             this.Text = "Form1";
             this.HomePanel.ResumeLayout(false);
@@ -1494,7 +1604,7 @@
         private System.Windows.Forms.Panel Subject2Panel;
         private System.Windows.Forms.Button S2BackButton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView S3Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
@@ -1520,7 +1630,7 @@
         private System.Windows.Forms.Panel Subject3Panel;
         private System.Windows.Forms.Button S3BackButton;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView S4Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader39;
         private System.Windows.Forms.ColumnHeader columnHeader40;
         private System.Windows.Forms.ColumnHeader columnHeader41;
@@ -1546,7 +1656,7 @@
         private System.Windows.Forms.Panel Subject4Panel;
         private System.Windows.Forms.Button S4Back;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ListView listView9;
+        private System.Windows.Forms.ListView S2Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader55;
         private System.Windows.Forms.ColumnHeader columnHeader56;
         private System.Windows.Forms.ColumnHeader columnHeader57;

@@ -24,14 +24,14 @@ namespace Study_Planner
 
             AllAssignmentList.SelectedIndexChanged -= AllAssignmentList_SelectedIndexChanged;
             S1Assignment.SelectedIndexChanged -= S1Assignment_SelectedIndexChanged;
-
+            //Assignment lists on the four subject panels
             ListView[] assignmentLists =
             {
             AllAssignmentList,
             S1Assignment,
-            listView3,
-            listView6,
-            listView9
+            S2Assignment,
+            S3Assignment,
+            S4Assignment
             };
 
             foreach (ListView list in assignmentLists)
@@ -46,6 +46,7 @@ namespace Study_Planner
 
         private void DisplaySubjectData(List<Subject> subjects)
         {
+            //Fills and activates the subject buttons on the Home page
             Button[] subjectButtons =
             { Subject1, Subject2, Subject3, Subject4 };
 
@@ -62,7 +63,7 @@ namespace Study_Planner
             }
             Panel[] panels = new Panel[] { Subject1Panel, Subject2Panel, Subject3Panel, Subject4Panel };
             for (int i = 0; i < panels.Length && i < subjects.Count; ++i)
-            {
+            {   //Fills out all info in each of the subject panels
                 Subject subject = subjects[i];
                 Control.ControlCollection panelItems = panels[i].Controls;
                 panelItems[3].Text = subject.subjectID + " " + subject.subjectName;
@@ -77,7 +78,7 @@ namespace Study_Planner
         {
             ListView list = (ListView)box.Controls[0];
             foreach (T item in classes)
-            {
+            {   //Adds a list item for each class in the list of <T> classes
                 ListViewItem listItem = new ListViewItem(item.classType);
                 listItem.Font = new Font(list.Font, listItem.Font.Style);
                 listItem.SubItems.Add(item.startTime.ToString());
@@ -94,7 +95,7 @@ namespace Study_Planner
             foreach (Subject subject in subjects)
             {
                 foreach (Assignment assignment in subject.assignments)
-                {
+                {   //Adds a list item for each assignment in the subject
                     ListViewItem listItem = new ListViewItem(subject.subjectID + " " + subject.subjectName);
                     listItem.Font = new Font(assList.Font, listItem.Font.Style);
                     listItem.SubItems.Add(assignment.assignmentType);
@@ -109,10 +110,11 @@ namespace Study_Planner
         }
         private void RefreshAssignmentLists()
         {
+            //ignore selection changes while rebuilding the list to prevent the editor reopening
             refreshingAssignments = true;
 
             try
-            {
+            {   //Reloads the assignment list after any change to them
                 AllAssignmentList.Items.Clear();
                 FillAssignmentList(subjects, AssignmentPanel);
 
@@ -124,9 +126,9 @@ namespace Study_Planner
 
                 ListView[] lists =
                 {
-            S1Assignment, listView3, listView6, listView9
+            S1Assignment, S3Assignment, S4Assignment, S2Assignment
         };
-
+                //Reloads the subject panels after any change to them
                 for (int i = 0; i < panels.Length; i++)
                 {
                     lists[i].Items.Clear();
@@ -161,7 +163,7 @@ namespace Study_Planner
         }
 
         private void ChangePanel(Panel oldPanel, Panel newPanel)
-        {
+        {   //Switches which panel within the forms is seen by the user by changing the panels visibility
             oldPanel.Visible = false;
             newPanel.Visible = true;
         }
@@ -253,13 +255,13 @@ namespace Study_Planner
         {
             ListViewItem item = (ListViewItem)sender;
             Assignment assignment = (Assignment)item.Tag;
-
+            //Opens the assignment form to update an assignment
             using (AssignmentDetailsForm details =
                 new AssignmentDetailsForm(assignment))
             {
                 details.ShowDialog(this);
             }
-
+            //Display updated details on associated forms
             RefreshAssignmentLists();
         }
 
@@ -269,7 +271,7 @@ namespace Study_Planner
         }
 
         private void S1Assignment_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {   //Opens an assignment page based on the selected ListViewItem
             if (refreshingAssignments)
             {
                 return;
@@ -299,10 +301,15 @@ namespace Study_Planner
             HomePanel.BringToFront();
         }
         private void AddAssignment(Subject subject)
-        {
+        {   //subject is used to assign a Subject to the created assignment
             Assignment newAssignment = new Assignment(
                 "New Assignment", DateTime.Today, "", subject);
+<<<<<<< HEAD
+            //Opens a form allowing users to create a custom assignment
+=======
 
+            //only add the new assignment to its subject when the details form saves successfully
+>>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             using (AssignmentDetailsForm details = new AssignmentDetailsForm(
                 newAssignment,
                 edited => subject.assignments.Add(edited)))
@@ -310,7 +317,7 @@ namespace Study_Planner
             details.Text = "Add Assignment";
             details.ShowDialog(this);
         }
-
+        //Displays updated assignment data on associated forms/panels
         RefreshAssignmentLists();
     }
 
@@ -335,7 +342,7 @@ namespace Study_Planner
         }
 
         private void StudySessionButton_Click(object sender, EventArgs e)
-        {
+        {   //Loads and shows the sutdy session form
             using (StudySessionForm studySessions = new StudySessionForm())
             {
                 studySessions.ShowDialog(this);

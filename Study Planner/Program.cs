@@ -20,9 +20,6 @@ namespace Study_Planner
             LoadSubjectData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // REMEMBER TO REMOVE THIS LATER !!!
-            //Application.Run(new StudySessionForm());
             Application.Run(new Form1(subjects));
             SaveSubjectData();
         }
@@ -37,6 +34,7 @@ namespace Study_Planner
                 string[] line = fileReader.ReadLine().Split(',');
                 if (line[0] == "Subject")
                 {
+                    // ensures all subject elements are added correctly by only adding them to the subject after reading a new subject
                     if (assignment != null) { subject.assignments.Add(assignment); assignment = null; }
                     if (subject != null) { subjects.Add(subject); }
                     subject = new Subject(line[1], line[2], line[3], line[4]);
@@ -47,7 +45,7 @@ namespace Study_Planner
                 {
                     subject.AddClass(line[1], line[2], line[3], line[4], line[5], line[6]);
                 } else if (line[0] == "Assignment")
-                {
+                {// ensures all milestones are added to the correct assignment by only adding the assingment once something other than milestone is read
                     if (assignment != null) {  subject.assignments.Add(assignment); assignment = null; }
                     assignment = new Assignment(line[1], line[2], line[3], subject);
                 } else if (line[0] == "Milestone")
@@ -55,15 +53,16 @@ namespace Study_Planner
                     assignment.AddMileStone(line[1], line[2], line[3], Convert.ToBoolean(line[4]));
                 }
             }
+            //adds the last subject and assignment from the csv file to their respective parents
             subject.assignments.Add(assignment);
             subjects.Add(subject);
             fileReader.Close();
         }
         private static void SaveSubjectData()
-        {
+        {   //clears the current file
             StreamWriter fileWriter = new StreamWriter("Data\\SubjectData.csv");
             foreach (Subject subject in subjects)
-            {
+            {   //converts each element of the subjects into a csv format that can be used by the project later
                 fileWriter.WriteLine("Subject," + subject.subjectName + "," + subject.subjectID + "," + 
                     subject.subjectFaculty + "," + subject.teachingSession);
                 foreach (Class lecture in subject.lectures)

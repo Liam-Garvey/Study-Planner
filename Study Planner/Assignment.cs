@@ -17,24 +17,22 @@ namespace Study_Planner
         {
             get
             {
-                if (milestones.Count == 0) return 0;
-                int completed = 0;
-                foreach (Milestone item in milestones)
-                    if (item.isComplete) completed++;
+                if (milestones.Count == 0)
+                {
+                    return 0;
+                }
+                //count completed milestones using LINQ and a lambda to calculate progress
+                int completed = milestones.Count(milestone => milestone.isComplete);
+
                 return (int)(completed * 100L / milestones.Count);
             }
         }
 
         public Assignment(string type, DateTime date, string description,
-            Subject relatedSubject, List<Milestone> milestone = null,
-            string id = null)
+            Subject relatedSubject, List<Milestone> milestone = null)
         {
             if (relatedSubject == null)
                 throw new ArgumentNullException(nameof(relatedSubject));
-
-            assignmentId = id == null ? Guid.NewGuid().ToString("N") : id.Trim();
-            if (assignmentId.Length == 0)
-                throw new ArgumentException("An assignment ID is required.", nameof(id));
 
             subject = relatedSubject;
             UpdateDetails(type, date, description);
@@ -42,9 +40,8 @@ namespace Study_Planner
         }
 
         public Assignment(string type, string date, string description,
-            Subject relatedSubject, List<Milestone> milestone = null,
-            string id = null)
-            : this(type, DateTime.Parse(date), description, relatedSubject, milestone, id)
+            Subject relatedSubject, List<Milestone> milestone = null)
+            : this(type, DateTime.Parse(date), description, relatedSubject, milestone)
         {
         }
 
@@ -65,8 +62,6 @@ namespace Study_Planner
         public void AddMileStone(string name, string description, string date, bool complete=false)
         {
             AddMileStone(name, description, DateTime.Parse(date), complete);
-            //AddMileStone(name, description, DateTime.ParseExact(date,
-            //    "dd/MM/yyyy", CultureInfo.InvariantCulture), complete);
         }
 
         public void SetMilestoneCompletion(int index, bool complete = true)
@@ -79,14 +74,14 @@ namespace Study_Planner
         public Assignment CreateEditCopy()
         {
             return new Assignment(assignmentType, dueDate, assignmentDescription,
-                subject, milestones, assignmentId);
+                subject, milestones);
         }
 
         public void ApplyDetailsFrom(Assignment edited)
         {
             if (edited == null) throw new ArgumentNullException(nameof(edited));
-            if (edited.assignmentId != assignmentId || edited.subject != subject)
-                throw new ArgumentException("This edit belongs to another assignment.");
+            if (edited.subject != subject)
+                throw new ArgumentException("This edit belongs to another subject.");
 
             List<Milestone> replacement = CopyMilestones(edited.milestones);
             UpdateDetails(edited.assignmentType, edited.dueDate,
@@ -94,6 +89,7 @@ namespace Study_Planner
             milestones = replacement;
         }
 
+        //create separate milestone objects so discarded edits cannot affect the originals
         private static List<Milestone> CopyMilestones(List<Milestone> source)
         {
             List<Milestone> result = new List<Milestone>();

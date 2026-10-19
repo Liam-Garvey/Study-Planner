@@ -292,6 +292,8 @@
             this.Controls.Add(this.ProgressLabel);
             this.Controls.Add(this.MilestonesList);
             this.Controls.Add(this.SaveAssignmentButton);
+            this.MaximumSize = new System.Drawing.Size(675, 475);
+            this.MinimumSize = new System.Drawing.Size(675, 475);
             this.Name = "AssignmentDetailsForm";
             this.Text = "Assignment Details";
             this.groupBox1.ResumeLayout(false);

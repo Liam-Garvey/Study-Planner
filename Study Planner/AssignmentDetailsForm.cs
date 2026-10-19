@@ -50,10 +50,12 @@ namespace Study_Planner
             if (selectedAssignment == null)
                 throw new ArgumentNullException(nameof(selectedAssignment));
 
+            //keep edits separate from original assignment until user saves
             assignment = selectedAssignment.CreateEditCopy();
+            //can provide an Add action, otherwise save udates the original
             this.saveAssignment = saveAssignment
                 ?? new Action<Assignment>(selectedAssignment.ApplyDetailsFrom);
-
+            
             loadingControls = true;
             try
             {
@@ -106,6 +108,7 @@ namespace Study_Planner
                 return false;
             }
 
+            //milestone fields must be added or updated in the list before saving the assignment
             if (milestoneEditorDirty)
             {
                 MessageBox.Show(this,

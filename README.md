@@ -15,5 +15,3 @@ Interface#1:
 Type Interface, used by Class, Assignment and Milestone classes. In Subject.cs
 Interface#2:
 Date Interface, used by Assignment and Milestone classes. In Subject.cs
-NUnit Testing:
-

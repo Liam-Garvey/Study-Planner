@@ -10,59 +10,49 @@ namespace Study_Planner
 {
     public class StudySession
     {
-        public DateTime startTime { get; set; }
-        public DateTime studyDetails { get; set; }
-        public TimeSpan sessionDuration { get; set; }
-        public string studyDescription { get; set; }
-        public bool studyCompleted { get; set; }
-        public string studyLog { get; set; }
+        public string StudyDescription {  get; set; }
+        public DateTime StudyDate { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan SessionDuration { get; set; }
+        public bool StudyCompleted { get; set; }
 
-        public StudySession(DateTime details, string description="")
-        {
-            studyDetails = details;
-            studyDescription = description;
-            studyCompleted = false;
-            studyLog = "";
+        public StudySession(DateTime date, TimeSpan start, TimeSpan duration, string description) {
+            StartTime = start;
+            StudyDate = date;
+            SessionDuration = duration;
+            StudyDescription = description;
+            StudyCompleted = false;
         }
-        public StudySession(string details, string description="")
+
+        public StudySession(DateTime date, TimeSpan start, TimeSpan duration, string description, bool completed)
         {
-            studyDetails = DateTime.Parse(details);
-            studyDescription = description;
-            studyCompleted = false;
-            studyLog = "";
+            StartTime = start;
+            StudyDate = date;
+            SessionDuration = duration;
+            StudyDescription = description;
+            StudyCompleted = completed;
         }
-        public StudySession(int seconds, int minutes, int hours, int day, int month, int year, string description="")
+
+        public string GetFormattedDuration()
         {
-            studyDetails = new DateTime(year, month, day, hours, minutes, seconds);
-            studyDescription = description;
-            studyCompleted = false;
-            studyLog = "";
+            return SessionDuration.ToString(@"hh' hr 'mm' min'");
         }
-        public DateTime EndDetails
+
+        public string GetFormattedStartTime()
         {
-            get
-            {
-                return startTime + sessionDuration;
-            }
+            return (StudyDate + StartTime).ToString("hh:mm tt");
         }
-        public TimeSpan EndTime
+
+        public string GetFormattedStudyDate() 
         {
-            get
-            {
-                return studyDetails.TimeOfDay + sessionDuration;
-            }
+            return StudyDate.ToString("dd/MM/yyyy");
         }
-        public TimeSpan GetTimeofDay()
+
+        public override string ToString()
         {
-            return studyDetails.TimeOfDay;
-        }
-        public DayOfWeek GetDayofWeek()
-        {
-            return studyDetails.DayOfWeek;
-        }
-        public string GetDate()
-        {
-            return studyDetails.Day + "/" + studyDetails.Month + "/" + studyDetails.Year;
+            DateTime start = StudyDate + StartTime;
+
+            return $"{StudyDate:dd/MM/yyyy}, {start:hh:mm tt}, {SessionDuration}, {StudyDescription}";
         }
     }
 }

@@ -69,6 +69,7 @@
             this.object_f1e1a1f3_5292_40fa_9bc7_9cef9fb39a3a = new System.Windows.Forms.ListView();
             this.object_8ad210a1_19a5_44c9_a98c_a93cc5d78d9f = new System.Windows.Forms.ListView();
             this.AssignmentPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.ALBackButton = new System.Windows.Forms.Button();
             this.AssignmentList = new System.Windows.Forms.GroupBox();
             this.AllAssignmentList = new System.Windows.Forms.ListView();
@@ -165,7 +166,6 @@
             this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
             this.HomePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Subject1Panel.SuspendLayout();
@@ -575,6 +575,14 @@
             this.AssignmentPanel.Size = new System.Drawing.Size(800, 450);
             this.AssignmentPanel.TabIndex = 15;
             this.AssignmentPanel.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(358, 425);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 16;
             // 
             // ALBackButton
             // 
@@ -1378,25 +1386,17 @@
             this.columnHeader72.Text = "Weeks Held";
             this.columnHeader72.Width = 150;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(358, 425);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 16;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AssignmentPanel);
-            this.Controls.Add(this.Subject1Panel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Subject4Panel);
             this.Controls.Add(this.Subject3Panel);
             this.Controls.Add(this.Subject2Panel);
+            this.Controls.Add(this.AssignmentPanel);
+            this.Controls.Add(this.Subject1Panel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.HomePanel.ResumeLayout(false);

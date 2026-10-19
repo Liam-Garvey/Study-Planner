@@ -17,10 +17,7 @@ namespace Study_Planner
         [STAThread]
         static void Main()
         {
-            var date1 = new DateTime(2008, 5, 1, 8, 30, 52);
-            //Console.WriteLine((new StudySession(52, 30, 8, 1, 5, 2008)).GetDate().ToString());
             LoadSubjectData();
-            Console.WriteLine(subjects[3].assignments[1].milestones.Count);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

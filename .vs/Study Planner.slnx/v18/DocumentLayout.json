@@ -18,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 439,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudySessionForm.cs",
+              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
+              "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
+              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
+              "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwGAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T07:24:57.159Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -31,19 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T07:57:09.62Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudySessionForm.cs",
-              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
-              "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
-              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
-              "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAQwLIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T07:24:57.159Z",
-              "EditorCaption": ""
             }
           ]
         }

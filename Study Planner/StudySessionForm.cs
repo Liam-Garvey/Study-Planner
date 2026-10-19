@@ -14,11 +14,25 @@ namespace Study_Planner
         public StudySessionForm()
         {
             InitializeComponent();
+            AutoResizingLists();
             AddDummyData();
             SessionsInListStudySessions();
             SessionsInStudyLog();
         }
 
+        /* UI Resizing */
+        private void AutoResizingLists() {
+            ListStudySessions.Columns[0].Width = 300;
+            ListStudySessions.Columns[1].Width = 100;
+            ListStudySessions.Columns[2].Width = 100;
+            ListStudySessions.Columns[3].Width = 100;
+
+            ListStudyLog.Columns[0].Width = 200;
+            ListStudyLog.Columns[0].Width = 100;
+            ListStudyLog.Columns[0].Width = 100;
+        }
+
+        /* Study Session Functionality */
 
         private void BtnNewStudySession_Click(object sender, EventArgs e)
         {
@@ -73,12 +87,11 @@ namespace Study_Planner
             }
 
 
-            SessionsInListStudySessions();
-            SessionsInStudyLog();
+            RefreshLists();
 
             // tester code
             //testTxt.Text = newSession.ToString();
-            
+
         }
 
         private void ClearInputs()
@@ -143,6 +156,7 @@ namespace Study_Planner
         {
             SessionsInListStudySessions();
             SessionsInStudyLog();
+            AutoResizingLists();
         }
 
         private StudySession GetSelectedItem() 

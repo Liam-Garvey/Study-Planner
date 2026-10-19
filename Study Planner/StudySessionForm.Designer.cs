@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UpcomingStudySession = new System.Windows.Forms.GroupBox();
             this.ListStudySessions = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColStartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.testTxt = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ListStudyLog = new System.Windows.Forms.ListView();
@@ -76,7 +76,8 @@
             // 
             // UpcomingStudySession
             // 
-            this.UpcomingStudySession.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.UpcomingStudySession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UpcomingStudySession.AutoSize = true;
             this.UpcomingStudySession.Controls.Add(this.ListStudySessions);
@@ -91,11 +92,12 @@
             // 
             // ListStudySessions
             // 
+            this.ListStudySessions.BackColor = System.Drawing.SystemColors.Window;
             this.ListStudySessions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
+            this.ColDescription,
+            this.ColDate,
+            this.ColStartTime,
+            this.ColDuration});
             this.ListStudySessions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListStudySessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ListStudySessions.FullRowSelect = true;
@@ -108,25 +110,25 @@
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader2
+            // ColDescription
             // 
-            this.columnHeader2.Text = "Description";
-            this.columnHeader2.Width = 350;
+            this.ColDescription.Text = "Description";
+            this.ColDescription.Width = 80;
             // 
-            // columnHeader3
+            // ColDate
             // 
-            this.columnHeader3.Text = "Date";
-            this.columnHeader3.Width = 93;
+            this.ColDate.Text = "Date";
+            this.ColDate.Width = 41;
             // 
-            // columnHeader4
+            // ColStartTime
             // 
-            this.columnHeader4.Text = "Start Time";
-            this.columnHeader4.Width = 127;
+            this.ColStartTime.Text = "Start Time";
+            this.ColStartTime.Width = 73;
             // 
-            // columnHeader5
+            // ColDuration
             // 
-            this.columnHeader5.Text = "Duration";
-            this.columnHeader5.Width = 98;
+            this.ColDuration.Text = "Duration";
+            this.ColDuration.Width = 568;
             // 
             // testTxt
             // 
@@ -140,8 +142,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.ListStudyLog);
@@ -199,8 +200,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
@@ -340,6 +340,7 @@
             // 
             // BtnRemoveSession
             // 
+            this.BtnRemoveSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRemoveSession.BackColor = System.Drawing.Color.Firebrick;
             this.BtnRemoveSession.ForeColor = System.Drawing.SystemColors.Info;
             this.BtnRemoveSession.Location = new System.Drawing.Point(658, 24);
@@ -352,12 +353,15 @@
             // 
             // BtnSessionCompleted
             // 
+            this.BtnSessionCompleted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSessionCompleted.BackColor = System.Drawing.Color.SeaGreen;
+            this.BtnSessionCompleted.ForeColor = System.Drawing.Color.White;
             this.BtnSessionCompleted.Location = new System.Drawing.Point(528, 24);
             this.BtnSessionCompleted.Name = "BtnSessionCompleted";
             this.BtnSessionCompleted.Size = new System.Drawing.Size(111, 23);
             this.BtnSessionCompleted.TabIndex = 18;
             this.BtnSessionCompleted.Text = "Session Completed";
-            this.BtnSessionCompleted.UseVisualStyleBackColor = true;
+            this.BtnSessionCompleted.UseVisualStyleBackColor = false;
             this.BtnSessionCompleted.Click += new System.EventHandler(this.BtnSessionCompleted_Click);
             // 
             // StudySessionForm
@@ -372,7 +376,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.UpcomingStudySession);
             this.Controls.Add(this.label1);
-            this.MinimumSize = new System.Drawing.Size(750, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "StudySessionForm";
             this.Text = "StudySessionForm";
             this.UpcomingStudySession.ResumeLayout(false);
@@ -406,10 +410,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label testTxt;
         private System.Windows.Forms.ListView ListStudySessions;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader ColDescription;
+        private System.Windows.Forms.ColumnHeader ColDate;
+        private System.Windows.Forms.ColumnHeader ColStartTime;
+        private System.Windows.Forms.ColumnHeader ColDuration;
         private System.Windows.Forms.ListView ListStudyLog;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader6;

@@ -84,7 +84,7 @@
             this.S2AddAss = new System.Windows.Forms.Button();
             this.S2BackButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.S2Assignment = new System.Windows.Forms.ListView();
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -113,7 +113,7 @@
             this.S3AddAss = new System.Windows.Forms.Button();
             this.S3BackButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.S3Assignment = new System.Windows.Forms.ListView();
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -142,7 +142,7 @@
             this.S4AddAss = new System.Windows.Forms.Button();
             this.S4Back = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.listView9 = new System.Windows.Forms.ListView();
+            this.S4Assignment = new System.Windows.Forms.ListView();
             this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader56 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader57 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -733,7 +733,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.listView3);
+            this.groupBox2.Controls.Add(this.S2Assignment);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(16, 228);
             this.groupBox2.Name = "groupBox2";
@@ -743,25 +743,25 @@
             this.groupBox2.Text = "Assignments";
             this.groupBox2.UseCompatibleTextRendering = true;
             // 
-            // listView3
+            // S2Assignment
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S2Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader23,
             this.columnHeader24,
             this.columnHeader25,
             this.columnHeader26,
             this.columnHeader27,
             this.columnHeader28});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(3, 28);
-            this.listView3.MultiSelect = false;
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(1028, 167);
-            this.listView3.TabIndex = 17;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.S2Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S2Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S2Assignment.HideSelection = false;
+            this.S2Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S2Assignment.MultiSelect = false;
+            this.S2Assignment.Name = "S2Assignment";
+            this.S2Assignment.Size = new System.Drawing.Size(1028, 167);
+            this.S2Assignment.TabIndex = 17;
+            this.S2Assignment.UseCompatibleStateImageBehavior = false;
+            this.S2Assignment.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader23
             // 
@@ -984,7 +984,7 @@
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.listView6);
+            this.groupBox5.Controls.Add(this.S3Assignment);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox5.Location = new System.Drawing.Point(16, 228);
             this.groupBox5.Name = "groupBox5";
@@ -994,25 +994,25 @@
             this.groupBox5.Text = "Assignments";
             this.groupBox5.UseCompatibleTextRendering = true;
             // 
-            // listView6
+            // S3Assignment
             // 
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S3Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader39,
             this.columnHeader40,
             this.columnHeader41,
             this.columnHeader42,
             this.columnHeader43,
             this.columnHeader44});
-            this.listView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView6.HideSelection = false;
-            this.listView6.Location = new System.Drawing.Point(3, 28);
-            this.listView6.MultiSelect = false;
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(1025, 167);
-            this.listView6.TabIndex = 17;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            this.listView6.View = System.Windows.Forms.View.Details;
+            this.S3Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S3Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S3Assignment.HideSelection = false;
+            this.S3Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S3Assignment.MultiSelect = false;
+            this.S3Assignment.Name = "S3Assignment";
+            this.S3Assignment.Size = new System.Drawing.Size(1025, 167);
+            this.S3Assignment.TabIndex = 17;
+            this.S3Assignment.UseCompatibleStateImageBehavior = false;
+            this.S3Assignment.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader39
             // 
@@ -1235,7 +1235,7 @@
             this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox8.Controls.Add(this.listView9);
+            this.groupBox8.Controls.Add(this.S4Assignment);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox8.Location = new System.Drawing.Point(16, 228);
             this.groupBox8.Name = "groupBox8";
@@ -1245,25 +1245,25 @@
             this.groupBox8.Text = "Assignments";
             this.groupBox8.UseCompatibleTextRendering = true;
             // 
-            // listView9
+            // S4Assignment
             // 
-            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.S4Assignment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader55,
             this.columnHeader56,
             this.columnHeader57,
             this.columnHeader58,
             this.columnHeader59,
             this.columnHeader60});
-            this.listView9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView9.HideSelection = false;
-            this.listView9.Location = new System.Drawing.Point(3, 28);
-            this.listView9.MultiSelect = false;
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(1022, 167);
-            this.listView9.TabIndex = 17;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            this.listView9.View = System.Windows.Forms.View.Details;
+            this.S4Assignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.S4Assignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S4Assignment.HideSelection = false;
+            this.S4Assignment.Location = new System.Drawing.Point(3, 28);
+            this.S4Assignment.MultiSelect = false;
+            this.S4Assignment.Name = "S4Assignment";
+            this.S4Assignment.Size = new System.Drawing.Size(1022, 167);
+            this.S4Assignment.TabIndex = 17;
+            this.S4Assignment.UseCompatibleStateImageBehavior = false;
+            this.S4Assignment.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader55
             // 
@@ -1445,12 +1445,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 461);
-            this.Controls.Add(this.HomePanel);
-            this.Controls.Add(this.Subject4Panel);
-            this.Controls.Add(this.Subject3Panel);
             this.Controls.Add(this.Subject2Panel);
             this.Controls.Add(this.Subject1Panel);
             this.Controls.Add(this.AssignmentPanel);
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.Subject4Panel);
+            this.Controls.Add(this.Subject3Panel);
             this.MinimumSize = new System.Drawing.Size(1075, 500);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1536,7 +1536,7 @@
         private System.Windows.Forms.Panel Subject2Panel;
         private System.Windows.Forms.Button S2BackButton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView S2Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
@@ -1562,7 +1562,7 @@
         private System.Windows.Forms.Panel Subject3Panel;
         private System.Windows.Forms.Button S3BackButton;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView S3Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader39;
         private System.Windows.Forms.ColumnHeader columnHeader40;
         private System.Windows.Forms.ColumnHeader columnHeader41;
@@ -1588,7 +1588,7 @@
         private System.Windows.Forms.Panel Subject4Panel;
         private System.Windows.Forms.Button S4Back;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ListView listView9;
+        private System.Windows.Forms.ListView S4Assignment;
         private System.Windows.Forms.ColumnHeader columnHeader55;
         private System.Windows.Forms.ColumnHeader columnHeader56;
         private System.Windows.Forms.ColumnHeader columnHeader57;

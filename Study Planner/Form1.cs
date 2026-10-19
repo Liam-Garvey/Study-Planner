@@ -29,9 +29,9 @@ namespace Study_Planner
             {
             AllAssignmentList,
             S1Assignment,
-            listView3,
-            listView6,
-            listView9
+            S2Assignment,
+            S3Assignment,
+            S4Assignment
             };
 
             foreach (ListView list in assignmentLists)
@@ -125,7 +125,7 @@ namespace Study_Planner
 
                 ListView[] lists =
                 {
-            S1Assignment, listView3, listView6, listView9
+            S1Assignment, S2Assignment, S3Assignment, S4Assignment
         };
 
                 for (int i = 0; i < panels.Length; i++)
@@ -300,7 +300,7 @@ namespace Study_Planner
             HomePanel.BringToFront();
         }
         private void AddAssignment(Subject subject)
-        {
+        {   //Associates passed subject with new assignment
             Assignment newAssignment = new Assignment(
                 "New Assignment", DateTime.Today, "", subject);
 
@@ -337,7 +337,7 @@ namespace Study_Planner
         }
 
         private void StudySessionButton_Click(object sender, EventArgs e)
-        {
+        {   //Creates a study session form
             using (StudySessionForm studySessions = new StudySessionForm())
             {
                 studySessions.ShowDialog(this);

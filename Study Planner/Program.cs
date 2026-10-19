@@ -33,8 +33,8 @@ namespace Study_Planner
             Application.SetCompatibleTextRenderingDefault(false);
 
             // REMEMBER TO REMOVE THIS LATER !!!
-            Application.Run(new StudySessionForm());
-            //Application.Run(new Form1(subjects));
+            //Application.Run(new StudySessionForm());
+            Application.Run(new Form1(subjects));
         }
         private static void LoadSubjectData()
         {

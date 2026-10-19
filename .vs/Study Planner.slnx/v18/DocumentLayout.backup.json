@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\users\\hayley\\documents\\repos\\study-planner\\study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\users\\hayley\\documents\\repos\\study-planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\users\\hayley\\documents\\repos\\study-planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\users\\hayley\\documents\\repos\\study-planner\\study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 439,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Program.cs",
+              "RelativeDocumentMoniker": "Study Planner\\Program.cs",
+              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Program.cs",
+              "RelativeToolTip": "Study Planner\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T04:12:08.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Form1.cs",
+              "RelativeDocumentMoniker": "Study Planner\\Form1.cs",
+              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Form1.cs",
+              "RelativeToolTip": "Study Planner\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T04:11:55.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Form1.cs",
+              "RelativeDocumentMoniker": "Study Planner\\Form1.cs",
+              "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\Form1.cs [Design]",
+              "RelativeToolTip": "Study Planner\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T04:11:50.147Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "StudySessionForm.cs",
               "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
               "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwGAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T07:24:57.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "StudySessionForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
               "ToolTip": "C:\\Users\\hayley\\Documents\\repos\\Study-Planner\\Study Planner\\StudySessionForm.cs [Design]",
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T07:57:09.62Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-14T07:57:09.62Z"
             }
           ]
         }

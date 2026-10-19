@@ -21,3 +21,4 @@ C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug
 C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study_Planner.AssignmentDetailsForm.resources
 C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study_Planner.Form1.resources
 C:\Users\hayley\Documents\repos\Study-Planner\Study Planner\obj\Debug\Study_Planner.StudySessionForm.resources
+C:\UTS 2026\Semester 2\AD.NeT\Assessment 2\Study-Planner\Study Planner\obj\Debug\Study_Planner.StudySessionForm.resources

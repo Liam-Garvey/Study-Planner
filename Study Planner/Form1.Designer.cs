@@ -1454,7 +1454,6 @@
             this.MinimumSize = new System.Drawing.Size(1075, 500);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.HomePanel.ResumeLayout(false);
             this.HomePanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);

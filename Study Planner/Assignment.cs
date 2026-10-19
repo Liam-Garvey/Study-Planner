@@ -44,8 +44,7 @@ namespace Study_Planner
         public Assignment(string type, string date, string description,
             Subject relatedSubject, List<Milestone> milestone = null,
             string id = null)
-            : this(type, DateTime.ParseExact(date, "dd/MM/yyyy",
-                CultureInfo.InvariantCulture), description, relatedSubject, milestone, id)
+            : this(type, DateTime.Parse(date), description, relatedSubject, milestone, id)
         {
         }
 
@@ -58,15 +57,16 @@ namespace Study_Planner
             assignmentDescription = description ?? "";
         }
 
-        public void AddMileStone(string name, string description, DateTime date)
+        public void AddMileStone(string name, string description, DateTime date, bool complete=false)
         {
-            milestones.Add(new Milestone(name, description, date.Date));
+            milestones.Add(new Milestone(name, description, date.Date, complete));
         }
 
-        public void AddMileStone(string name, string description, string date)
+        public void AddMileStone(string name, string description, string date, bool complete=false)
         {
-            AddMileStone(name, description, DateTime.ParseExact(date,
-                "dd/MM/yyyy", CultureInfo.InvariantCulture));
+            AddMileStone(name, description, DateTime.Parse(date), complete);
+            //AddMileStone(name, description, DateTime.ParseExact(date,
+            //    "dd/MM/yyyy", CultureInfo.InvariantCulture), complete);
         }
 
         public void SetMilestoneCompletion(int index, bool complete = true)

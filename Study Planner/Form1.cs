@@ -81,39 +81,11 @@ namespace Study_Planner
                 ListViewItem listItem = new ListViewItem(item.classType);
                 listItem.Font = new Font(list.Font, listItem.Font.Style);
                 listItem.SubItems.Add(item.startTime.ToString());
-                listItem.SubItems.Add(item.duration);
+                listItem.SubItems.Add(item.duration.ToString());
                 listItem.SubItems.Add(item.classDay);
                 listItem.SubItems.Add(item.classLocation);
                 listItem.SubItems.Add(item.weeksRunning);
                 list.Items.Add(listItem);
-            }
-        }
-        private void FillAssignmentButtons(List<Assignment> assignments, GroupBox box)
-        {
-            Button[] buttons = box.Controls
-                .OfType<Button>()
-                .OrderBy(button => button.Top)
-                .ThenBy(button => button.Left)
-                .ToArray();
-            for (int i = 0; i < buttons.Length; i++)
-            {
-                Button button = buttons[i];
-
-                button.Click -= AssignmentButton_Click;
-
-                bool hasAssignment = i < assignments.Count;
-
-                button.Visible = hasAssignment;
-                button.Enabled = hasAssignment;
-                button.Tag = hasAssignment ? assignments[i] : null;
-                button.Text = hasAssignment
-                    ? assignments[i].AssignmentInfo()
-                    : "";
-
-                if (hasAssignment)
-                {
-                    button.Click += AssignmentButton_Click;
-                }
             }
         }
         private void FillAssignmentList(List<Subject> subjects, Panel panel)

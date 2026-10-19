@@ -300,8 +300,19 @@ namespace Study_Planner
         }
         private void AddAssignment(Subject subject)
         {
+            Assignment newAssignment = new Assignment(
+                "New Assignment", DateTime.Today, "", subject);
 
+            using (AssignmentDetailsForm details = new AssignmentDetailsForm(
+                newAssignment,
+                edited => subject.assignments.Add(edited)))
+        {
+            details.Text = "Add Assignment";
+            details.ShowDialog(this);
         }
+
+        RefreshAssignmentLists();
+    }
 
         private void S1AddAss_Click(object sender, EventArgs e)
         {

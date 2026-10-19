@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Linq;
+using System.Windows.Forms;
+
 
 namespace Study_Planner
 {
@@ -106,7 +107,6 @@ namespace Study_Planner
                 item.SubItems.Add(session.GetFormattedStartTime());
                 item.SubItems.Add(session.GetFormattedDuration());
                 item.Tag = session;
-                item.Checked = session.StudyCompleted;
                 ListStudySessions.Items.Add(item);
             }
 
@@ -127,7 +127,6 @@ namespace Study_Planner
                 item.SubItems.Add(session.GetFormattedDuration());
                 item.SubItems.Add(session.GetFormattedStudyDate());
                 item.Tag = session;
-                item.Checked = session.StudyCompleted;
                 ListStudyLog.Items.Add(item);
             }
         }
@@ -141,6 +140,8 @@ namespace Study_Planner
             sessions.Add(new StudySession(DateTime.Today.AddDays(1), new TimeSpan(14, 0, 0), new TimeSpan(1, 0, 0), "Do labs", true));
         }
 
+        // OLD FUNCTIONALITY
+        /*
         private void ListStudySessions_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
 
@@ -150,41 +151,65 @@ namespace Study_Planner
 
             bool isChecked = e.Item.Checked;
 
-            if (session.StudyCompleted = isChecked)
+            DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
-
-                    BeginInvoke(new Action(RefreshLists));
-                }
-                else if (result == DialogResult.No)
-                {
-                    e.Item.Checked = false;
-                    return;
-                }
-
+                session.StudyCompleted = true;
+                MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
+                BeginInvoke(new Action(RefreshLists));
+            }
+            
+            else if (result == DialogResult.No)
+            {
+                e.Item.Checked = false;
+                return;
             }
 
         }
+        */
 
         private void RefreshLists() 
         {
-            refreshingView = true;
-
-            try
-            {
-                SessionsInListStudySessions();
-                SessionsInStudyLog();
-            }
-            finally { refreshingView = false; } 
+            SessionsInListStudySessions();
+            SessionsInStudyLog();
         }
 
-        private void ListStudyLog_SelectedIndexChanged(object sender, EventArgs e)
+        private StudySession GetSelectedItem() 
         {
-            //DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
+            return (StudySession)ListStudySessions.SelectedItems[0].Tag;
+        }
 
+        private void btnRemoveSession_Click(object sender, EventArgs e)
+        {
+
+            StudySession session = GetSelectedItem();
+            
+            DialogResult result = MessageBox.Show("Do you want to remove this session?", "Remove session", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                sessions.Remove(session);
+                RefreshLists();
+                MessageBox.Show("Session removed", "Remove session", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnSessionCompleted_Click(object sender, EventArgs e)
+        {
+            StudySession session = GetSelectedItem();
+
+            DialogResult result = MessageBox.Show("Did you complete the session?", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                session.StudyCompleted = true;
+                MessageBox.Show("Good Job! :)", "Session Completed", MessageBoxButtons.OK);
+                BeginInvoke(new Action(RefreshLists));
+            }
+
+            else if (result == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }

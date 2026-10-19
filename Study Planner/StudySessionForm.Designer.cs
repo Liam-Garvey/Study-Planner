@@ -54,6 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
             this.dtpSessionDate = new System.Windows.Forms.DateTimePicker();
+            this.btnRemoveSession = new System.Windows.Forms.Button();
+            this.btnSessionCompleted = new System.Windows.Forms.Button();
             this.UpcomingStudySession.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,7 +91,6 @@
             // 
             // ListStudySessions
             // 
-            this.ListStudySessions.CheckBoxes = true;
             this.ListStudySessions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
@@ -106,12 +107,11 @@
             this.ListStudySessions.TabIndex = 0;
             this.ListStudySessions.UseCompatibleStateImageBehavior = false;
             this.ListStudySessions.View = System.Windows.Forms.View.Details;
-            this.ListStudySessions.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.ListStudySessions_ItemChecked);
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Description";
-            this.columnHeader2.Width = 245;
+            this.columnHeader2.Width = 350;
             // 
             // columnHeader3
             // 
@@ -170,7 +170,6 @@
             this.ListStudyLog.TabIndex = 17;
             this.ListStudyLog.UseCompatibleStateImageBehavior = false;
             this.ListStudyLog.View = System.Windows.Forms.View.Details;
-            this.ListStudyLog.SelectedIndexChanged += new System.EventHandler(this.ListStudyLog_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -339,11 +338,33 @@
             this.dtpSessionDate.Size = new System.Drawing.Size(227, 23);
             this.dtpSessionDate.TabIndex = 5;
             // 
+            // btnRemoveSession
+            // 
+            this.btnRemoveSession.Location = new System.Drawing.Point(658, 24);
+            this.btnRemoveSession.Name = "btnRemoveSession";
+            this.btnRemoveSession.Size = new System.Drawing.Size(110, 23);
+            this.btnRemoveSession.TabIndex = 17;
+            this.btnRemoveSession.Text = "Remove Session";
+            this.btnRemoveSession.UseVisualStyleBackColor = true;
+            this.btnRemoveSession.Click += new System.EventHandler(this.btnRemoveSession_Click);
+            // 
+            // btnSessionCompleted
+            // 
+            this.btnSessionCompleted.Location = new System.Drawing.Point(528, 24);
+            this.btnSessionCompleted.Name = "btnSessionCompleted";
+            this.btnSessionCompleted.Size = new System.Drawing.Size(111, 23);
+            this.btnSessionCompleted.TabIndex = 18;
+            this.btnSessionCompleted.Text = "Session Completed";
+            this.btnSessionCompleted.UseVisualStyleBackColor = true;
+            this.btnSessionCompleted.Click += new System.EventHandler(this.btnSessionCompleted_Click);
+            // 
             // StudySessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 461);
+            this.Controls.Add(this.btnSessionCompleted);
+            this.Controls.Add(this.btnRemoveSession);
             this.Controls.Add(this.testTxt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -391,5 +412,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Button btnRemoveSession;
+        private System.Windows.Forms.Button btnSessionCompleted;
     }
 }

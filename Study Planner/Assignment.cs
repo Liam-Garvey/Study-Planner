@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Study_Planner
 {
     public class Assignment
     {
-        public string assignmentId { get; private set; }
         public string assignmentType { get; private set; }
         public DateTime dueDate { get; private set; }
         public string assignmentDescription { get; private set; }

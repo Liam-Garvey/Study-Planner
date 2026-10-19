@@ -20,9 +20,6 @@ namespace Study_Planner
             LoadSubjectData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // REMEMBER TO REMOVE THIS LATER !!!
-            //Application.Run(new StudySessionForm());
             Application.Run(new Form1(subjects));
             SaveSubjectData();
         }
@@ -36,7 +33,7 @@ namespace Study_Planner
             {
                 string[] line = fileReader.ReadLine().Split(',');
                 if (line[0] == "Subject")
-                {
+                {   //Ensures data is distributed correctly by only adding patient when new patient is reached in csv data
                     if (assignment != null) { subject.assignments.Add(assignment); assignment = null; }
                     if (subject != null) { subjects.Add(subject); }
                     subject = new Subject(line[1], line[2], line[3], line[4]);
@@ -47,23 +44,23 @@ namespace Study_Planner
                 {
                     subject.AddClass(line[1], line[2], line[3], line[4], line[5], line[6]);
                 } else if (line[0] == "Assignment")
-                {
+                {   //Resetting assignment ensures no duplicates are created and all milestones are attributed correctly
                     if (assignment != null) {  subject.assignments.Add(assignment); assignment = null; }
                     assignment = new Assignment(line[1], line[2], line[3], subject);
                 } else if (line[0] == "Milestone")
                 {
                     assignment.AddMileStone(line[1], line[2], line[3], Convert.ToBoolean(line[4]));
                 }
-            }
+            }//Adds the trailing assignment and patient gathered from the csv data
             subject.assignments.Add(assignment);
             subjects.Add(subject);
             fileReader.Close();
         }
         private static void SaveSubjectData()
-        {
+        {   //Resets the csv file to a blank state
             StreamWriter fileWriter = new StreamWriter("Data\\SubjectData.csv");
             foreach (Subject subject in subjects)
-            {
+            {   //Iterates through all subjects and rewrites their data to the csv file in a format that can be read by the application
                 fileWriter.WriteLine("Subject," + subject.subjectName + "," + subject.subjectID + "," + 
                     subject.subjectFaculty + "," + subject.teachingSession);
                 foreach (Class lecture in subject.lectures)

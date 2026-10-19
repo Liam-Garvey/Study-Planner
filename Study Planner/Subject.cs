@@ -23,6 +23,7 @@ namespace Study_Planner
             classes = new List<Class>();
             assignments = new List<Assignment>();
         }
+        //Multiple AddAssignment methods for user-created and csv data
         public void AddAssignment(string type, DateTime date, string description, List<Milestone> milestone = null)
         {
             assignments.Add(new Assignment(type, date, description, this, milestone));
@@ -49,6 +50,7 @@ namespace Study_Planner
         public string classLocation { get; private set; }
         public string classDescription { get; private set; }
         public string weeksRunning { get; private set; }
+        //Different constructors allow for creation of class subtypes (lectures/other classes)
         public Class(string type, string length, string time, string day, string location, string weeks="All", string description = "")
         {
             classType = type;
@@ -81,7 +83,7 @@ namespace Study_Planner
         public string description { get; private set; }
         public DateTime expectedDate { get; private set; }
         public bool isComplete { get; private set; }
-
+        //Milestones default to incomplete due to being new
         public Milestone(string milestoneName,
             string milestoneDescription, DateTime date, bool complete=false)
         {
@@ -100,7 +102,7 @@ namespace Study_Planner
             string milestoneDescription, DateTime date)
         {
             if (string.IsNullOrWhiteSpace(milestoneName))
-            {
+            {   //Prevents empty input/accidental interaction with add milestone button
                 throw new ArgumentException(
                     "Enter a milestone name.", nameof(milestoneName));
             }

@@ -24,7 +24,7 @@ namespace Study_Planner
 
             AllAssignmentList.SelectedIndexChanged -= AllAssignmentList_SelectedIndexChanged;
             S1Assignment.SelectedIndexChanged -= S1Assignment_SelectedIndexChanged;
-
+            //All lists of assignments across different panels
             ListView[] assignmentLists =
             {
             AllAssignmentList,
@@ -45,7 +45,7 @@ namespace Study_Planner
         }
 
         private void DisplaySubjectData(List<Subject> subjects)
-        {
+        {   //Displays data on and activate subject buttons on Home page
             Button[] subjectButtons =
             { Subject1, Subject2, Subject3, Subject4 };
 
@@ -62,7 +62,7 @@ namespace Study_Planner
             }
             Panel[] panels = new Panel[] { Subject1Panel, Subject2Panel, Subject3Panel, Subject4Panel };
             for (int i = 0; i < panels.Length && i < subjects.Count; ++i)
-            {
+            {   //Fills out all sections of the subject panels
                 Subject subject = subjects[i];
                 Control.ControlCollection panelItems = panels[i].Controls;
                 panelItems[3].Text = subject.subjectID + " " + subject.subjectName;
@@ -74,7 +74,7 @@ namespace Study_Planner
             FillAssignmentList(subjects, AssignmentPanel);
         }
         private void FillGroupBox<T>(List<T> classes, GroupBox box) where T : Class
-        {
+        {   //Fills the class listboxes, one line for each item
             ListView list = (ListView)box.Controls[0];
             foreach (T item in classes)
             {
@@ -92,7 +92,7 @@ namespace Study_Planner
         {
             ListView assList = (ListView)panel.Controls[2].Controls[0];
             foreach (Subject subject in subjects)
-            {
+            {   //Fills the assignment listbox, one line for each item
                 foreach (Assignment assignment in subject.assignments)
                 {
                     ListViewItem listItem = new ListViewItem(subject.subjectID + " " + subject.subjectName);
@@ -109,11 +109,11 @@ namespace Study_Planner
         }
         private void RefreshAssignmentLists()
         {
-            //ignore selection changes while rebuilding the list to prevent the editor reopening
+            //Ignore selection changes while rebuilding the list to prevent the editor reopening
             refreshingAssignments = true;
 
             try
-            {
+            {   //Empties, then refilles the assignment list panel
                 AllAssignmentList.Items.Clear();
                 FillAssignmentList(subjects, AssignmentPanel);
 
@@ -127,7 +127,7 @@ namespace Study_Planner
                 {
             S1Assignment, S2Assignment, S3Assignment, S4Assignment
         };
-
+                //Empties then refilles each assignment page
                 for (int i = 0; i < panels.Length; i++)
                 {
                     lists[i].Items.Clear();
@@ -149,20 +149,20 @@ namespace Study_Planner
         private void AssignmentList_ItemActivate(object sender, EventArgs e)
         {
             if (refreshingAssignments)
-            {
+            {   //Does nothing if project already refreshing
                 return;
             }
 
             ListView list = (ListView)sender;
-
+            //Prevents the change from 1 to 0 selections from throwing an exception
             if (list.SelectedItems.Count > 0)
-            {
+            {   
                 LoadAssignment(list.SelectedItems[0], e);
             }
         }
 
         private void ChangePanel(Panel oldPanel, Panel newPanel)
-        {
+        {   //Controls which panels the user interacts with by chanigng panel visibility
             oldPanel.Visible = false;
             newPanel.Visible = true;
         }
@@ -251,7 +251,7 @@ namespace Study_Planner
             }
         }
         private void LoadAssignment(object sender, EventArgs e)
-        {
+        {   //Load the assignment of the ListViewItem that was selected
             ListViewItem item = (ListViewItem)sender;
             Assignment assignment = (Assignment)item.Tag;
 

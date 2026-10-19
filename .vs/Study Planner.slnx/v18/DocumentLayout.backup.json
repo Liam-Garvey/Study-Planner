@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\uts 2026\\semester 2\\ad.net\\assessment 2\\study-planner\\study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\assignmentdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\assignmentdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\studysessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\assignmentdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\assignmentdetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|c:\\uts 2026\\semester 2\\ad.net\\assessment 2\\study-planner\\study planner\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|solutionrelative:study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D7CF676-4426-410F-A8C6-5D026BD53717}|Study Planner\\Study Planner.csproj|C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\study planner\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Assignment.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Assignment.cs",
               "RelativeDocumentMoniker": "Study Planner\\Assignment.cs",
@@ -70,12 +70,11 @@
               "RelativeToolTip": "Study Planner\\Assignment.cs",
               "ViewState": "AgIAAFsAAAAAAAAAAAAawG4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:42.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "StudySessionForm.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\StudySessionForm.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
@@ -83,12 +82,11 @@
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAwwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:11.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T08:04:11.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StudySessionForm.Designer.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\StudySessionForm.Designer.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.Designer.cs",
@@ -96,46 +94,42 @@
               "RelativeToolTip": "Study Planner\\StudySessionForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:06.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T08:04:06.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "StudySessionForm.cs [Design]",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\StudySessionForm.cs",
               "RelativeDocumentMoniker": "Study Planner\\StudySessionForm.cs",
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\StudySessionForm.cs [Design]",
               "RelativeToolTip": "Study Planner\\StudySessionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:04:02.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T08:04:02.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Form1.cs",
               "RelativeDocumentMoniker": "Study Planner\\Form1.cs",
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Form1.cs",
               "RelativeToolTip": "Study Planner\\Form1.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAtwGcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAlwGQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:42.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AssignmentDetailsForm.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\AssignmentDetailsForm.cs",
               "RelativeDocumentMoniker": "Study Planner\\AssignmentDetailsForm.cs",
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\AssignmentDetailsForm.cs",
               "RelativeToolTip": "Study Planner\\AssignmentDetailsForm.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAawOwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAlwD4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:42.557Z"
             },
             {
               "$type": "Document",
@@ -146,8 +140,7 @@
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\AssignmentDetailsForm.cs [Design]",
               "RelativeToolTip": "Study Planner\\AssignmentDetailsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:42.559Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T07:25:42.559Z"
             },
             {
               "$type": "Document",
@@ -158,8 +151,7 @@
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Form1.cs [Design]",
               "RelativeToolTip": "Study Planner\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.307Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-10-19T07:25:44.307Z"
             },
             {
               "$type": "Document",
@@ -175,26 +167,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Program.cs",
               "RelativeDocumentMoniker": "Study Planner\\Program.cs",
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Program.cs",
               "RelativeToolTip": "Study Planner\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAA8wE8AAAB0AAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwEwAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T07:25:44.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Subject.cs",
               "RelativeDocumentMoniker": "Study Planner\\Subject.cs",
               "ToolTip": "C:\\UTS 2026\\Semester 2\\AD.NeT\\Assessment 2\\Study-Planner\\Study Planner\\Subject.cs",
               "RelativeToolTip": "Study Planner\\Subject.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAwG8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAywG8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T07:25:44.316Z",
               "EditorCaption": ""
@@ -209,8 +201,7 @@
               "RelativeToolTip": "Study Planner\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:25:44.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:25:44.318Z"
             }
           ]
         }

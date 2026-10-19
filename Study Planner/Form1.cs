@@ -109,6 +109,7 @@ namespace Study_Planner
         }
         private void RefreshAssignmentLists()
         {
+            //ignore selection changes while rebuilding the list to prevent the editor reopening
             refreshingAssignments = true;
 
             try
@@ -303,6 +304,7 @@ namespace Study_Planner
             Assignment newAssignment = new Assignment(
                 "New Assignment", DateTime.Today, "", subject);
 
+            //only add the new assignment to its subject when the details form saves successfully
             using (AssignmentDetailsForm details = new AssignmentDetailsForm(
                 newAssignment,
                 edited => subject.assignments.Add(edited)))

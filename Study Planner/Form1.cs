@@ -304,12 +304,7 @@ namespace Study_Planner
         {   //subject is used to assign a Subject to the created assignment
             Assignment newAssignment = new Assignment(
                 "New Assignment", DateTime.Today, "", subject);
-<<<<<<< HEAD
-            //Opens a form allowing users to create a custom assignment
-=======
 
-            //only add the new assignment to its subject when the details form saves successfully
->>>>>>> c252e9471765c3183161ad7a62d921c88b3d3bc2
             using (AssignmentDetailsForm details = new AssignmentDetailsForm(
                 newAssignment,
                 edited => subject.assignments.Add(edited)))
